@@ -1,4 +1,4 @@
-package com.gitchat.netty.chat.client.commamd;
+package com.gitchat.netty.chat.client.command;
 
 import com.gitchat.netty.chat.ChatInfo;
 import io.netty.channel.Channel;

@@ -15,7 +15,7 @@ public final class ChatInfo {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface ChatOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.protobuf.Chat)
+      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.chat.Chat)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -24,61 +24,100 @@ public final class ChatInfo {
     com.google.protobuf.ByteString getVersion();
 
     /**
-     * <code>.com.gitchat.netty.protobuf.Chat.MessageType msg_type = 2;</code>
+     * <code>.com.gitchat.netty.chat.Chat.MessageType msg_type = 2;</code>
      */
     int getMsgTypeValue();
     /**
-     * <code>.com.gitchat.netty.protobuf.Chat.MessageType msg_type = 2;</code>
+     * <code>.com.gitchat.netty.chat.Chat.MessageType msg_type = 2;</code>
      */
     com.gitchat.netty.chat.ChatInfo.Chat.MessageType getMsgType();
 
     /**
-     * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+     * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
      */
-    boolean hasReq();
+    boolean hasLoginRequest();
     /**
-     * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+     * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
      */
-    com.gitchat.netty.chat.ChatInfo.Request getReq();
+    com.gitchat.netty.chat.ChatInfo.LoginRequest getLoginRequest();
     /**
-     * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+     * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
      */
-    com.gitchat.netty.chat.ChatInfo.RequestOrBuilder getReqOrBuilder();
+    com.gitchat.netty.chat.ChatInfo.LoginRequestOrBuilder getLoginRequestOrBuilder();
 
     /**
-     * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+     * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
      */
-    boolean hasResp();
+    boolean hasLoginResponse();
     /**
-     * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+     * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
      */
-    com.gitchat.netty.chat.ChatInfo.Response getResp();
+    com.gitchat.netty.chat.ChatInfo.LoginResponse getLoginResponse();
     /**
-     * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+     * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
      */
-    com.gitchat.netty.chat.ChatInfo.ResponseOrBuilder getRespOrBuilder();
+    com.gitchat.netty.chat.ChatInfo.LoginResponseOrBuilder getLoginResponseOrBuilder();
 
     /**
-     * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+     * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
      */
-    boolean hasNotifi();
+    boolean hasCreateGroupRequest();
     /**
-     * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+     * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
      */
-    com.gitchat.netty.chat.ChatInfo.Notification getNotifi();
+    com.gitchat.netty.chat.ChatInfo.CreateGroupRequest getCreateGroupRequest();
     /**
-     * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+     * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
      */
-    com.gitchat.netty.chat.ChatInfo.NotificationOrBuilder getNotifiOrBuilder();
+    com.gitchat.netty.chat.ChatInfo.CreateGroupRequestOrBuilder getCreateGroupRequestOrBuilder();
+
+    /**
+     * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+     */
+    boolean hasCreateGroupResponse();
+    /**
+     * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+     */
+    com.gitchat.netty.chat.ChatInfo.CreateGroupResponse getCreateGroupResponse();
+    /**
+     * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+     */
+    com.gitchat.netty.chat.ChatInfo.CreateGroupResponseOrBuilder getCreateGroupResponseOrBuilder();
+
+    /**
+     * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+     */
+    boolean hasSingleChat();
+    /**
+     * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+     */
+    com.gitchat.netty.chat.ChatInfo.SingleChat getSingleChat();
+    /**
+     * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+     */
+    com.gitchat.netty.chat.ChatInfo.SingleChatOrBuilder getSingleChatOrBuilder();
+
+    /**
+     * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+     */
+    boolean hasGroupChat();
+    /**
+     * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+     */
+    com.gitchat.netty.chat.ChatInfo.GroupChat getGroupChat();
+    /**
+     * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+     */
+    com.gitchat.netty.chat.ChatInfo.GroupChatOrBuilder getGroupChatOrBuilder();
 
     public com.gitchat.netty.chat.ChatInfo.Chat.DataCase getDataCase();
   }
   /**
-   * Protobuf type {@code com.gitchat.netty.protobuf.Chat}
+   * Protobuf type {@code com.gitchat.netty.chat.Chat}
    */
   public  static final class Chat extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.gitchat.netty.protobuf.Chat)
+      // @@protoc_insertion_point(message_implements:com.gitchat.netty.chat.Chat)
       ChatOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Chat.newBuilder() to construct.
@@ -126,45 +165,87 @@ public final class ChatInfo {
               break;
             }
             case 26: {
-              com.gitchat.netty.chat.ChatInfo.Request.Builder subBuilder = null;
+              com.gitchat.netty.chat.ChatInfo.LoginRequest.Builder subBuilder = null;
               if (dataCase_ == 3) {
-                subBuilder = ((com.gitchat.netty.chat.ChatInfo.Request) data_).toBuilder();
+                subBuilder = ((com.gitchat.netty.chat.ChatInfo.LoginRequest) data_).toBuilder();
               }
               data_ =
-                  input.readMessage(com.gitchat.netty.chat.ChatInfo.Request.parser(), extensionRegistry);
+                  input.readMessage(com.gitchat.netty.chat.ChatInfo.LoginRequest.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.gitchat.netty.chat.ChatInfo.Request) data_);
+                subBuilder.mergeFrom((com.gitchat.netty.chat.ChatInfo.LoginRequest) data_);
                 data_ = subBuilder.buildPartial();
               }
               dataCase_ = 3;
               break;
             }
             case 34: {
-              com.gitchat.netty.chat.ChatInfo.Response.Builder subBuilder = null;
+              com.gitchat.netty.chat.ChatInfo.LoginResponse.Builder subBuilder = null;
               if (dataCase_ == 4) {
-                subBuilder = ((com.gitchat.netty.chat.ChatInfo.Response) data_).toBuilder();
+                subBuilder = ((com.gitchat.netty.chat.ChatInfo.LoginResponse) data_).toBuilder();
               }
               data_ =
-                  input.readMessage(com.gitchat.netty.chat.ChatInfo.Response.parser(), extensionRegistry);
+                  input.readMessage(com.gitchat.netty.chat.ChatInfo.LoginResponse.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.gitchat.netty.chat.ChatInfo.Response) data_);
+                subBuilder.mergeFrom((com.gitchat.netty.chat.ChatInfo.LoginResponse) data_);
                 data_ = subBuilder.buildPartial();
               }
               dataCase_ = 4;
               break;
             }
             case 42: {
-              com.gitchat.netty.chat.ChatInfo.Notification.Builder subBuilder = null;
+              com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.Builder subBuilder = null;
               if (dataCase_ == 5) {
-                subBuilder = ((com.gitchat.netty.chat.ChatInfo.Notification) data_).toBuilder();
+                subBuilder = ((com.gitchat.netty.chat.ChatInfo.CreateGroupRequest) data_).toBuilder();
               }
               data_ =
-                  input.readMessage(com.gitchat.netty.chat.ChatInfo.Notification.parser(), extensionRegistry);
+                  input.readMessage(com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.gitchat.netty.chat.ChatInfo.Notification) data_);
+                subBuilder.mergeFrom((com.gitchat.netty.chat.ChatInfo.CreateGroupRequest) data_);
                 data_ = subBuilder.buildPartial();
               }
               dataCase_ = 5;
+              break;
+            }
+            case 50: {
+              com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.Builder subBuilder = null;
+              if (dataCase_ == 6) {
+                subBuilder = ((com.gitchat.netty.chat.ChatInfo.CreateGroupResponse) data_).toBuilder();
+              }
+              data_ =
+                  input.readMessage(com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.gitchat.netty.chat.ChatInfo.CreateGroupResponse) data_);
+                data_ = subBuilder.buildPartial();
+              }
+              dataCase_ = 6;
+              break;
+            }
+            case 58: {
+              com.gitchat.netty.chat.ChatInfo.SingleChat.Builder subBuilder = null;
+              if (dataCase_ == 7) {
+                subBuilder = ((com.gitchat.netty.chat.ChatInfo.SingleChat) data_).toBuilder();
+              }
+              data_ =
+                  input.readMessage(com.gitchat.netty.chat.ChatInfo.SingleChat.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.gitchat.netty.chat.ChatInfo.SingleChat) data_);
+                data_ = subBuilder.buildPartial();
+              }
+              dataCase_ = 7;
+              break;
+            }
+            case 66: {
+              com.gitchat.netty.chat.ChatInfo.GroupChat.Builder subBuilder = null;
+              if (dataCase_ == 8) {
+                subBuilder = ((com.gitchat.netty.chat.ChatInfo.GroupChat) data_).toBuilder();
+              }
+              data_ =
+                  input.readMessage(com.gitchat.netty.chat.ChatInfo.GroupChat.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.gitchat.netty.chat.ChatInfo.GroupChat) data_);
+                data_ = subBuilder.buildPartial();
+              }
+              dataCase_ = 8;
               break;
             }
             default: {
@@ -188,19 +269,19 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Chat_descriptor;
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_Chat_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Chat_fieldAccessorTable
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_Chat_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.gitchat.netty.chat.ChatInfo.Chat.class, com.gitchat.netty.chat.ChatInfo.Chat.Builder.class);
     }
 
     /**
-     * Protobuf enum {@code com.gitchat.netty.protobuf.Chat.MessageType}
+     * Protobuf enum {@code com.gitchat.netty.chat.Chat.MessageType}
      */
     public enum MessageType
         implements com.google.protobuf.ProtocolMessageEnum {
@@ -213,13 +294,21 @@ public final class ChatInfo {
        */
       LOGIN_RESPONSE(1),
       /**
-       * <code>SINGLE_CHAT = 2;</code>
+       * <code>CREATE_GROUP_REQUEST = 2;</code>
        */
-      SINGLE_CHAT(2),
+      CREATE_GROUP_REQUEST(2),
       /**
-       * <code>GROUP_CHAT = 3;</code>
+       * <code>CREATE_GROUP_RESPONSE = 3;</code>
        */
-      GROUP_CHAT(3),
+      CREATE_GROUP_RESPONSE(3),
+      /**
+       * <code>SINGLE_CHAT = 4;</code>
+       */
+      SINGLE_CHAT(4),
+      /**
+       * <code>GROUP_CHAT = 5;</code>
+       */
+      GROUP_CHAT(5),
       UNRECOGNIZED(-1),
       ;
 
@@ -232,13 +321,21 @@ public final class ChatInfo {
        */
       public static final int LOGIN_RESPONSE_VALUE = 1;
       /**
-       * <code>SINGLE_CHAT = 2;</code>
+       * <code>CREATE_GROUP_REQUEST = 2;</code>
        */
-      public static final int SINGLE_CHAT_VALUE = 2;
+      public static final int CREATE_GROUP_REQUEST_VALUE = 2;
       /**
-       * <code>GROUP_CHAT = 3;</code>
+       * <code>CREATE_GROUP_RESPONSE = 3;</code>
        */
-      public static final int GROUP_CHAT_VALUE = 3;
+      public static final int CREATE_GROUP_RESPONSE_VALUE = 3;
+      /**
+       * <code>SINGLE_CHAT = 4;</code>
+       */
+      public static final int SINGLE_CHAT_VALUE = 4;
+      /**
+       * <code>GROUP_CHAT = 5;</code>
+       */
+      public static final int GROUP_CHAT_VALUE = 5;
 
 
       public final int getNumber() {
@@ -261,8 +358,10 @@ public final class ChatInfo {
         switch (value) {
           case 0: return LOGIN_REQUEST;
           case 1: return LOGIN_RESPONSE;
-          case 2: return SINGLE_CHAT;
-          case 3: return GROUP_CHAT;
+          case 2: return CREATE_GROUP_REQUEST;
+          case 3: return CREATE_GROUP_RESPONSE;
+          case 4: return SINGLE_CHAT;
+          case 5: return GROUP_CHAT;
           default: return null;
         }
       }
@@ -312,16 +411,19 @@ public final class ChatInfo {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:com.gitchat.netty.protobuf.Chat.MessageType)
+      // @@protoc_insertion_point(enum_scope:com.gitchat.netty.chat.Chat.MessageType)
     }
 
     private int dataCase_ = 0;
     private java.lang.Object data_;
     public enum DataCase
         implements com.google.protobuf.Internal.EnumLite {
-      REQ(3),
-      RESP(4),
-      NOTIFI(5),
+      LOGIN_REQUEST(3),
+      LOGIN_RESPONSE(4),
+      CREATE_GROUP_REQUEST(5),
+      CREATE_GROUP_RESPONSE(6),
+      SINGLE_CHAT(7),
+      GROUP_CHAT(8),
       DATA_NOT_SET(0);
       private final int value;
       private DataCase(int value) {
@@ -337,9 +439,12 @@ public final class ChatInfo {
 
       public static DataCase forNumber(int value) {
         switch (value) {
-          case 3: return REQ;
-          case 4: return RESP;
-          case 5: return NOTIFI;
+          case 3: return LOGIN_REQUEST;
+          case 4: return LOGIN_RESPONSE;
+          case 5: return CREATE_GROUP_REQUEST;
+          case 6: return CREATE_GROUP_RESPONSE;
+          case 7: return SINGLE_CHAT;
+          case 8: return GROUP_CHAT;
           case 0: return DATA_NOT_SET;
           default: return null;
         }
@@ -367,13 +472,13 @@ public final class ChatInfo {
     public static final int MSG_TYPE_FIELD_NUMBER = 2;
     private int msgType_;
     /**
-     * <code>.com.gitchat.netty.protobuf.Chat.MessageType msg_type = 2;</code>
+     * <code>.com.gitchat.netty.chat.Chat.MessageType msg_type = 2;</code>
      */
     public int getMsgTypeValue() {
       return msgType_;
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.Chat.MessageType msg_type = 2;</code>
+     * <code>.com.gitchat.netty.chat.Chat.MessageType msg_type = 2;</code>
      */
     public com.gitchat.netty.chat.ChatInfo.Chat.MessageType getMsgType() {
       @SuppressWarnings("deprecation")
@@ -381,82 +486,160 @@ public final class ChatInfo {
       return result == null ? com.gitchat.netty.chat.ChatInfo.Chat.MessageType.UNRECOGNIZED : result;
     }
 
-    public static final int REQ_FIELD_NUMBER = 3;
+    public static final int LOGIN_REQUEST_FIELD_NUMBER = 3;
     /**
-     * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+     * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
      */
-    public boolean hasReq() {
+    public boolean hasLoginRequest() {
       return dataCase_ == 3;
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+     * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
      */
-    public com.gitchat.netty.chat.ChatInfo.Request getReq() {
+    public com.gitchat.netty.chat.ChatInfo.LoginRequest getLoginRequest() {
       if (dataCase_ == 3) {
-         return (com.gitchat.netty.chat.ChatInfo.Request) data_;
+         return (com.gitchat.netty.chat.ChatInfo.LoginRequest) data_;
       }
-      return com.gitchat.netty.chat.ChatInfo.Request.getDefaultInstance();
+      return com.gitchat.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+     * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
      */
-    public com.gitchat.netty.chat.ChatInfo.RequestOrBuilder getReqOrBuilder() {
+    public com.gitchat.netty.chat.ChatInfo.LoginRequestOrBuilder getLoginRequestOrBuilder() {
       if (dataCase_ == 3) {
-         return (com.gitchat.netty.chat.ChatInfo.Request) data_;
+         return (com.gitchat.netty.chat.ChatInfo.LoginRequest) data_;
       }
-      return com.gitchat.netty.chat.ChatInfo.Request.getDefaultInstance();
+      return com.gitchat.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
     }
 
-    public static final int RESP_FIELD_NUMBER = 4;
+    public static final int LOGIN_RESPONSE_FIELD_NUMBER = 4;
     /**
-     * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+     * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
      */
-    public boolean hasResp() {
+    public boolean hasLoginResponse() {
       return dataCase_ == 4;
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+     * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
      */
-    public com.gitchat.netty.chat.ChatInfo.Response getResp() {
+    public com.gitchat.netty.chat.ChatInfo.LoginResponse getLoginResponse() {
       if (dataCase_ == 4) {
-         return (com.gitchat.netty.chat.ChatInfo.Response) data_;
+         return (com.gitchat.netty.chat.ChatInfo.LoginResponse) data_;
       }
-      return com.gitchat.netty.chat.ChatInfo.Response.getDefaultInstance();
+      return com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+     * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
      */
-    public com.gitchat.netty.chat.ChatInfo.ResponseOrBuilder getRespOrBuilder() {
+    public com.gitchat.netty.chat.ChatInfo.LoginResponseOrBuilder getLoginResponseOrBuilder() {
       if (dataCase_ == 4) {
-         return (com.gitchat.netty.chat.ChatInfo.Response) data_;
+         return (com.gitchat.netty.chat.ChatInfo.LoginResponse) data_;
       }
-      return com.gitchat.netty.chat.ChatInfo.Response.getDefaultInstance();
+      return com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
     }
 
-    public static final int NOTIFI_FIELD_NUMBER = 5;
+    public static final int CREATE_GROUP_REQUEST_FIELD_NUMBER = 5;
     /**
-     * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+     * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
      */
-    public boolean hasNotifi() {
+    public boolean hasCreateGroupRequest() {
       return dataCase_ == 5;
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+     * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
      */
-    public com.gitchat.netty.chat.ChatInfo.Notification getNotifi() {
+    public com.gitchat.netty.chat.ChatInfo.CreateGroupRequest getCreateGroupRequest() {
       if (dataCase_ == 5) {
-         return (com.gitchat.netty.chat.ChatInfo.Notification) data_;
+         return (com.gitchat.netty.chat.ChatInfo.CreateGroupRequest) data_;
       }
-      return com.gitchat.netty.chat.ChatInfo.Notification.getDefaultInstance();
+      return com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance();
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+     * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
      */
-    public com.gitchat.netty.chat.ChatInfo.NotificationOrBuilder getNotifiOrBuilder() {
+    public com.gitchat.netty.chat.ChatInfo.CreateGroupRequestOrBuilder getCreateGroupRequestOrBuilder() {
       if (dataCase_ == 5) {
-         return (com.gitchat.netty.chat.ChatInfo.Notification) data_;
+         return (com.gitchat.netty.chat.ChatInfo.CreateGroupRequest) data_;
       }
-      return com.gitchat.netty.chat.ChatInfo.Notification.getDefaultInstance();
+      return com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance();
+    }
+
+    public static final int CREATE_GROUP_RESPONSE_FIELD_NUMBER = 6;
+    /**
+     * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+     */
+    public boolean hasCreateGroupResponse() {
+      return dataCase_ == 6;
+    }
+    /**
+     * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+     */
+    public com.gitchat.netty.chat.ChatInfo.CreateGroupResponse getCreateGroupResponse() {
+      if (dataCase_ == 6) {
+         return (com.gitchat.netty.chat.ChatInfo.CreateGroupResponse) data_;
+      }
+      return com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance();
+    }
+    /**
+     * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+     */
+    public com.gitchat.netty.chat.ChatInfo.CreateGroupResponseOrBuilder getCreateGroupResponseOrBuilder() {
+      if (dataCase_ == 6) {
+         return (com.gitchat.netty.chat.ChatInfo.CreateGroupResponse) data_;
+      }
+      return com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance();
+    }
+
+    public static final int SINGLE_CHAT_FIELD_NUMBER = 7;
+    /**
+     * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+     */
+    public boolean hasSingleChat() {
+      return dataCase_ == 7;
+    }
+    /**
+     * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+     */
+    public com.gitchat.netty.chat.ChatInfo.SingleChat getSingleChat() {
+      if (dataCase_ == 7) {
+         return (com.gitchat.netty.chat.ChatInfo.SingleChat) data_;
+      }
+      return com.gitchat.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
+    }
+    /**
+     * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+     */
+    public com.gitchat.netty.chat.ChatInfo.SingleChatOrBuilder getSingleChatOrBuilder() {
+      if (dataCase_ == 7) {
+         return (com.gitchat.netty.chat.ChatInfo.SingleChat) data_;
+      }
+      return com.gitchat.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
+    }
+
+    public static final int GROUP_CHAT_FIELD_NUMBER = 8;
+    /**
+     * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+     */
+    public boolean hasGroupChat() {
+      return dataCase_ == 8;
+    }
+    /**
+     * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+     */
+    public com.gitchat.netty.chat.ChatInfo.GroupChat getGroupChat() {
+      if (dataCase_ == 8) {
+         return (com.gitchat.netty.chat.ChatInfo.GroupChat) data_;
+      }
+      return com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
+    }
+    /**
+     * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+     */
+    public com.gitchat.netty.chat.ChatInfo.GroupChatOrBuilder getGroupChatOrBuilder() {
+      if (dataCase_ == 8) {
+         return (com.gitchat.netty.chat.ChatInfo.GroupChat) data_;
+      }
+      return com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -480,13 +663,22 @@ public final class ChatInfo {
         output.writeEnum(2, msgType_);
       }
       if (dataCase_ == 3) {
-        output.writeMessage(3, (com.gitchat.netty.chat.ChatInfo.Request) data_);
+        output.writeMessage(3, (com.gitchat.netty.chat.ChatInfo.LoginRequest) data_);
       }
       if (dataCase_ == 4) {
-        output.writeMessage(4, (com.gitchat.netty.chat.ChatInfo.Response) data_);
+        output.writeMessage(4, (com.gitchat.netty.chat.ChatInfo.LoginResponse) data_);
       }
       if (dataCase_ == 5) {
-        output.writeMessage(5, (com.gitchat.netty.chat.ChatInfo.Notification) data_);
+        output.writeMessage(5, (com.gitchat.netty.chat.ChatInfo.CreateGroupRequest) data_);
+      }
+      if (dataCase_ == 6) {
+        output.writeMessage(6, (com.gitchat.netty.chat.ChatInfo.CreateGroupResponse) data_);
+      }
+      if (dataCase_ == 7) {
+        output.writeMessage(7, (com.gitchat.netty.chat.ChatInfo.SingleChat) data_);
+      }
+      if (dataCase_ == 8) {
+        output.writeMessage(8, (com.gitchat.netty.chat.ChatInfo.GroupChat) data_);
       }
       unknownFields.writeTo(output);
     }
@@ -507,15 +699,27 @@ public final class ChatInfo {
       }
       if (dataCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.gitchat.netty.chat.ChatInfo.Request) data_);
+          .computeMessageSize(3, (com.gitchat.netty.chat.ChatInfo.LoginRequest) data_);
       }
       if (dataCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (com.gitchat.netty.chat.ChatInfo.Response) data_);
+          .computeMessageSize(4, (com.gitchat.netty.chat.ChatInfo.LoginResponse) data_);
       }
       if (dataCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (com.gitchat.netty.chat.ChatInfo.Notification) data_);
+          .computeMessageSize(5, (com.gitchat.netty.chat.ChatInfo.CreateGroupRequest) data_);
+      }
+      if (dataCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (com.gitchat.netty.chat.ChatInfo.CreateGroupResponse) data_);
+      }
+      if (dataCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (com.gitchat.netty.chat.ChatInfo.SingleChat) data_);
+      }
+      if (dataCase_ == 8) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, (com.gitchat.netty.chat.ChatInfo.GroupChat) data_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -541,16 +745,28 @@ public final class ChatInfo {
       if (!result) return false;
       switch (dataCase_) {
         case 3:
-          result = result && getReq()
-              .equals(other.getReq());
+          result = result && getLoginRequest()
+              .equals(other.getLoginRequest());
           break;
         case 4:
-          result = result && getResp()
-              .equals(other.getResp());
+          result = result && getLoginResponse()
+              .equals(other.getLoginResponse());
           break;
         case 5:
-          result = result && getNotifi()
-              .equals(other.getNotifi());
+          result = result && getCreateGroupRequest()
+              .equals(other.getCreateGroupRequest());
+          break;
+        case 6:
+          result = result && getCreateGroupResponse()
+              .equals(other.getCreateGroupResponse());
+          break;
+        case 7:
+          result = result && getSingleChat()
+              .equals(other.getSingleChat());
+          break;
+        case 8:
+          result = result && getGroupChat()
+              .equals(other.getGroupChat());
           break;
         case 0:
         default:
@@ -572,16 +788,28 @@ public final class ChatInfo {
       hash = (53 * hash) + msgType_;
       switch (dataCase_) {
         case 3:
-          hash = (37 * hash) + REQ_FIELD_NUMBER;
-          hash = (53 * hash) + getReq().hashCode();
+          hash = (37 * hash) + LOGIN_REQUEST_FIELD_NUMBER;
+          hash = (53 * hash) + getLoginRequest().hashCode();
           break;
         case 4:
-          hash = (37 * hash) + RESP_FIELD_NUMBER;
-          hash = (53 * hash) + getResp().hashCode();
+          hash = (37 * hash) + LOGIN_RESPONSE_FIELD_NUMBER;
+          hash = (53 * hash) + getLoginResponse().hashCode();
           break;
         case 5:
-          hash = (37 * hash) + NOTIFI_FIELD_NUMBER;
-          hash = (53 * hash) + getNotifi().hashCode();
+          hash = (37 * hash) + CREATE_GROUP_REQUEST_FIELD_NUMBER;
+          hash = (53 * hash) + getCreateGroupRequest().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + CREATE_GROUP_RESPONSE_FIELD_NUMBER;
+          hash = (53 * hash) + getCreateGroupResponse().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + SINGLE_CHAT_FIELD_NUMBER;
+          hash = (53 * hash) + getSingleChat().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + GROUP_CHAT_FIELD_NUMBER;
+          hash = (53 * hash) + getGroupChat().hashCode();
           break;
         case 0:
         default:
@@ -682,21 +910,21 @@ public final class ChatInfo {
       return builder;
     }
     /**
-     * Protobuf type {@code com.gitchat.netty.protobuf.Chat}
+     * Protobuf type {@code com.gitchat.netty.chat.Chat}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.protobuf.Chat)
+        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.chat.Chat)
         com.gitchat.netty.chat.ChatInfo.ChatOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Chat_descriptor;
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_Chat_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Chat_fieldAccessorTable
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_Chat_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.gitchat.netty.chat.ChatInfo.Chat.class, com.gitchat.netty.chat.ChatInfo.Chat.Builder.class);
       }
@@ -731,7 +959,7 @@ public final class ChatInfo {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Chat_descriptor;
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_Chat_descriptor;
       }
 
       @java.lang.Override
@@ -754,24 +982,45 @@ public final class ChatInfo {
         result.version_ = version_;
         result.msgType_ = msgType_;
         if (dataCase_ == 3) {
-          if (reqBuilder_ == null) {
+          if (loginRequestBuilder_ == null) {
             result.data_ = data_;
           } else {
-            result.data_ = reqBuilder_.build();
+            result.data_ = loginRequestBuilder_.build();
           }
         }
         if (dataCase_ == 4) {
-          if (respBuilder_ == null) {
+          if (loginResponseBuilder_ == null) {
             result.data_ = data_;
           } else {
-            result.data_ = respBuilder_.build();
+            result.data_ = loginResponseBuilder_.build();
           }
         }
         if (dataCase_ == 5) {
-          if (notifiBuilder_ == null) {
+          if (createGroupRequestBuilder_ == null) {
             result.data_ = data_;
           } else {
-            result.data_ = notifiBuilder_.build();
+            result.data_ = createGroupRequestBuilder_.build();
+          }
+        }
+        if (dataCase_ == 6) {
+          if (createGroupResponseBuilder_ == null) {
+            result.data_ = data_;
+          } else {
+            result.data_ = createGroupResponseBuilder_.build();
+          }
+        }
+        if (dataCase_ == 7) {
+          if (singleChatBuilder_ == null) {
+            result.data_ = data_;
+          } else {
+            result.data_ = singleChatBuilder_.build();
+          }
+        }
+        if (dataCase_ == 8) {
+          if (groupChatBuilder_ == null) {
+            result.data_ = data_;
+          } else {
+            result.data_ = groupChatBuilder_.build();
           }
         }
         result.dataCase_ = dataCase_;
@@ -830,16 +1079,28 @@ public final class ChatInfo {
           setMsgTypeValue(other.getMsgTypeValue());
         }
         switch (other.getDataCase()) {
-          case REQ: {
-            mergeReq(other.getReq());
+          case LOGIN_REQUEST: {
+            mergeLoginRequest(other.getLoginRequest());
             break;
           }
-          case RESP: {
-            mergeResp(other.getResp());
+          case LOGIN_RESPONSE: {
+            mergeLoginResponse(other.getLoginResponse());
             break;
           }
-          case NOTIFI: {
-            mergeNotifi(other.getNotifi());
+          case CREATE_GROUP_REQUEST: {
+            mergeCreateGroupRequest(other.getCreateGroupRequest());
+            break;
+          }
+          case CREATE_GROUP_RESPONSE: {
+            mergeCreateGroupResponse(other.getCreateGroupResponse());
+            break;
+          }
+          case SINGLE_CHAT: {
+            mergeSingleChat(other.getSingleChat());
+            break;
+          }
+          case GROUP_CHAT: {
+            mergeGroupChat(other.getGroupChat());
             break;
           }
           case DATA_NOT_SET: {
@@ -921,13 +1182,13 @@ public final class ChatInfo {
 
       private int msgType_ = 0;
       /**
-       * <code>.com.gitchat.netty.protobuf.Chat.MessageType msg_type = 2;</code>
+       * <code>.com.gitchat.netty.chat.Chat.MessageType msg_type = 2;</code>
        */
       public int getMsgTypeValue() {
         return msgType_;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Chat.MessageType msg_type = 2;</code>
+       * <code>.com.gitchat.netty.chat.Chat.MessageType msg_type = 2;</code>
        */
       public Builder setMsgTypeValue(int value) {
         msgType_ = value;
@@ -935,7 +1196,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Chat.MessageType msg_type = 2;</code>
+       * <code>.com.gitchat.netty.chat.Chat.MessageType msg_type = 2;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.Chat.MessageType getMsgType() {
         @SuppressWarnings("deprecation")
@@ -943,7 +1204,7 @@ public final class ChatInfo {
         return result == null ? com.gitchat.netty.chat.ChatInfo.Chat.MessageType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Chat.MessageType msg_type = 2;</code>
+       * <code>.com.gitchat.netty.chat.Chat.MessageType msg_type = 2;</code>
        */
       public Builder setMsgType(com.gitchat.netty.chat.ChatInfo.Chat.MessageType value) {
         if (value == null) {
@@ -955,7 +1216,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Chat.MessageType msg_type = 2;</code>
+       * <code>.com.gitchat.netty.chat.Chat.MessageType msg_type = 2;</code>
        */
       public Builder clearMsgType() {
         
@@ -965,67 +1226,67 @@ public final class ChatInfo {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.Request, com.gitchat.netty.chat.ChatInfo.Request.Builder, com.gitchat.netty.chat.ChatInfo.RequestOrBuilder> reqBuilder_;
+          com.gitchat.netty.chat.ChatInfo.LoginRequest, com.gitchat.netty.chat.ChatInfo.LoginRequest.Builder, com.gitchat.netty.chat.ChatInfo.LoginRequestOrBuilder> loginRequestBuilder_;
       /**
-       * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+       * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
        */
-      public boolean hasReq() {
+      public boolean hasLoginRequest() {
         return dataCase_ == 3;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+       * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
        */
-      public com.gitchat.netty.chat.ChatInfo.Request getReq() {
-        if (reqBuilder_ == null) {
+      public com.gitchat.netty.chat.ChatInfo.LoginRequest getLoginRequest() {
+        if (loginRequestBuilder_ == null) {
           if (dataCase_ == 3) {
-            return (com.gitchat.netty.chat.ChatInfo.Request) data_;
+            return (com.gitchat.netty.chat.ChatInfo.LoginRequest) data_;
           }
-          return com.gitchat.netty.chat.ChatInfo.Request.getDefaultInstance();
+          return com.gitchat.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
         } else {
           if (dataCase_ == 3) {
-            return reqBuilder_.getMessage();
+            return loginRequestBuilder_.getMessage();
           }
-          return com.gitchat.netty.chat.ChatInfo.Request.getDefaultInstance();
+          return com.gitchat.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+       * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
        */
-      public Builder setReq(com.gitchat.netty.chat.ChatInfo.Request value) {
-        if (reqBuilder_ == null) {
+      public Builder setLoginRequest(com.gitchat.netty.chat.ChatInfo.LoginRequest value) {
+        if (loginRequestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           data_ = value;
           onChanged();
         } else {
-          reqBuilder_.setMessage(value);
+          loginRequestBuilder_.setMessage(value);
         }
         dataCase_ = 3;
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+       * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
        */
-      public Builder setReq(
-          com.gitchat.netty.chat.ChatInfo.Request.Builder builderForValue) {
-        if (reqBuilder_ == null) {
+      public Builder setLoginRequest(
+          com.gitchat.netty.chat.ChatInfo.LoginRequest.Builder builderForValue) {
+        if (loginRequestBuilder_ == null) {
           data_ = builderForValue.build();
           onChanged();
         } else {
-          reqBuilder_.setMessage(builderForValue.build());
+          loginRequestBuilder_.setMessage(builderForValue.build());
         }
         dataCase_ = 3;
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+       * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
        */
-      public Builder mergeReq(com.gitchat.netty.chat.ChatInfo.Request value) {
-        if (reqBuilder_ == null) {
+      public Builder mergeLoginRequest(com.gitchat.netty.chat.ChatInfo.LoginRequest value) {
+        if (loginRequestBuilder_ == null) {
           if (dataCase_ == 3 &&
-              data_ != com.gitchat.netty.chat.ChatInfo.Request.getDefaultInstance()) {
-            data_ = com.gitchat.netty.chat.ChatInfo.Request.newBuilder((com.gitchat.netty.chat.ChatInfo.Request) data_)
+              data_ != com.gitchat.netty.chat.ChatInfo.LoginRequest.getDefaultInstance()) {
+            data_ = com.gitchat.netty.chat.ChatInfo.LoginRequest.newBuilder((com.gitchat.netty.chat.ChatInfo.LoginRequest) data_)
                 .mergeFrom(value).buildPartial();
           } else {
             data_ = value;
@@ -1033,18 +1294,18 @@ public final class ChatInfo {
           onChanged();
         } else {
           if (dataCase_ == 3) {
-            reqBuilder_.mergeFrom(value);
+            loginRequestBuilder_.mergeFrom(value);
           }
-          reqBuilder_.setMessage(value);
+          loginRequestBuilder_.setMessage(value);
         }
         dataCase_ = 3;
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+       * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
        */
-      public Builder clearReq() {
-        if (reqBuilder_ == null) {
+      public Builder clearLoginRequest() {
+        if (loginRequestBuilder_ == null) {
           if (dataCase_ == 3) {
             dataCase_ = 0;
             data_ = null;
@@ -1055,113 +1316,113 @@ public final class ChatInfo {
             dataCase_ = 0;
             data_ = null;
           }
-          reqBuilder_.clear();
+          loginRequestBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+       * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
        */
-      public com.gitchat.netty.chat.ChatInfo.Request.Builder getReqBuilder() {
-        return getReqFieldBuilder().getBuilder();
+      public com.gitchat.netty.chat.ChatInfo.LoginRequest.Builder getLoginRequestBuilder() {
+        return getLoginRequestFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+       * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
        */
-      public com.gitchat.netty.chat.ChatInfo.RequestOrBuilder getReqOrBuilder() {
-        if ((dataCase_ == 3) && (reqBuilder_ != null)) {
-          return reqBuilder_.getMessageOrBuilder();
+      public com.gitchat.netty.chat.ChatInfo.LoginRequestOrBuilder getLoginRequestOrBuilder() {
+        if ((dataCase_ == 3) && (loginRequestBuilder_ != null)) {
+          return loginRequestBuilder_.getMessageOrBuilder();
         } else {
           if (dataCase_ == 3) {
-            return (com.gitchat.netty.chat.ChatInfo.Request) data_;
+            return (com.gitchat.netty.chat.ChatInfo.LoginRequest) data_;
           }
-          return com.gitchat.netty.chat.ChatInfo.Request.getDefaultInstance();
+          return com.gitchat.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Request req = 3;</code>
+       * <code>.com.gitchat.netty.chat.LoginRequest login_request = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.Request, com.gitchat.netty.chat.ChatInfo.Request.Builder, com.gitchat.netty.chat.ChatInfo.RequestOrBuilder> 
-          getReqFieldBuilder() {
-        if (reqBuilder_ == null) {
+          com.gitchat.netty.chat.ChatInfo.LoginRequest, com.gitchat.netty.chat.ChatInfo.LoginRequest.Builder, com.gitchat.netty.chat.ChatInfo.LoginRequestOrBuilder> 
+          getLoginRequestFieldBuilder() {
+        if (loginRequestBuilder_ == null) {
           if (!(dataCase_ == 3)) {
-            data_ = com.gitchat.netty.chat.ChatInfo.Request.getDefaultInstance();
+            data_ = com.gitchat.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
           }
-          reqBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.gitchat.netty.chat.ChatInfo.Request, com.gitchat.netty.chat.ChatInfo.Request.Builder, com.gitchat.netty.chat.ChatInfo.RequestOrBuilder>(
-                  (com.gitchat.netty.chat.ChatInfo.Request) data_,
+          loginRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.gitchat.netty.chat.ChatInfo.LoginRequest, com.gitchat.netty.chat.ChatInfo.LoginRequest.Builder, com.gitchat.netty.chat.ChatInfo.LoginRequestOrBuilder>(
+                  (com.gitchat.netty.chat.ChatInfo.LoginRequest) data_,
                   getParentForChildren(),
                   isClean());
           data_ = null;
         }
         dataCase_ = 3;
         onChanged();;
-        return reqBuilder_;
+        return loginRequestBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.Response, com.gitchat.netty.chat.ChatInfo.Response.Builder, com.gitchat.netty.chat.ChatInfo.ResponseOrBuilder> respBuilder_;
+          com.gitchat.netty.chat.ChatInfo.LoginResponse, com.gitchat.netty.chat.ChatInfo.LoginResponse.Builder, com.gitchat.netty.chat.ChatInfo.LoginResponseOrBuilder> loginResponseBuilder_;
       /**
-       * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+       * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
        */
-      public boolean hasResp() {
+      public boolean hasLoginResponse() {
         return dataCase_ == 4;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+       * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
        */
-      public com.gitchat.netty.chat.ChatInfo.Response getResp() {
-        if (respBuilder_ == null) {
+      public com.gitchat.netty.chat.ChatInfo.LoginResponse getLoginResponse() {
+        if (loginResponseBuilder_ == null) {
           if (dataCase_ == 4) {
-            return (com.gitchat.netty.chat.ChatInfo.Response) data_;
+            return (com.gitchat.netty.chat.ChatInfo.LoginResponse) data_;
           }
-          return com.gitchat.netty.chat.ChatInfo.Response.getDefaultInstance();
+          return com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
         } else {
           if (dataCase_ == 4) {
-            return respBuilder_.getMessage();
+            return loginResponseBuilder_.getMessage();
           }
-          return com.gitchat.netty.chat.ChatInfo.Response.getDefaultInstance();
+          return com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+       * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
        */
-      public Builder setResp(com.gitchat.netty.chat.ChatInfo.Response value) {
-        if (respBuilder_ == null) {
+      public Builder setLoginResponse(com.gitchat.netty.chat.ChatInfo.LoginResponse value) {
+        if (loginResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           data_ = value;
           onChanged();
         } else {
-          respBuilder_.setMessage(value);
+          loginResponseBuilder_.setMessage(value);
         }
         dataCase_ = 4;
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+       * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
        */
-      public Builder setResp(
-          com.gitchat.netty.chat.ChatInfo.Response.Builder builderForValue) {
-        if (respBuilder_ == null) {
+      public Builder setLoginResponse(
+          com.gitchat.netty.chat.ChatInfo.LoginResponse.Builder builderForValue) {
+        if (loginResponseBuilder_ == null) {
           data_ = builderForValue.build();
           onChanged();
         } else {
-          respBuilder_.setMessage(builderForValue.build());
+          loginResponseBuilder_.setMessage(builderForValue.build());
         }
         dataCase_ = 4;
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+       * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
        */
-      public Builder mergeResp(com.gitchat.netty.chat.ChatInfo.Response value) {
-        if (respBuilder_ == null) {
+      public Builder mergeLoginResponse(com.gitchat.netty.chat.ChatInfo.LoginResponse value) {
+        if (loginResponseBuilder_ == null) {
           if (dataCase_ == 4 &&
-              data_ != com.gitchat.netty.chat.ChatInfo.Response.getDefaultInstance()) {
-            data_ = com.gitchat.netty.chat.ChatInfo.Response.newBuilder((com.gitchat.netty.chat.ChatInfo.Response) data_)
+              data_ != com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance()) {
+            data_ = com.gitchat.netty.chat.ChatInfo.LoginResponse.newBuilder((com.gitchat.netty.chat.ChatInfo.LoginResponse) data_)
                 .mergeFrom(value).buildPartial();
           } else {
             data_ = value;
@@ -1169,18 +1430,18 @@ public final class ChatInfo {
           onChanged();
         } else {
           if (dataCase_ == 4) {
-            respBuilder_.mergeFrom(value);
+            loginResponseBuilder_.mergeFrom(value);
           }
-          respBuilder_.setMessage(value);
+          loginResponseBuilder_.setMessage(value);
         }
         dataCase_ = 4;
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+       * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
        */
-      public Builder clearResp() {
-        if (respBuilder_ == null) {
+      public Builder clearLoginResponse() {
+        if (loginResponseBuilder_ == null) {
           if (dataCase_ == 4) {
             dataCase_ = 0;
             data_ = null;
@@ -1191,113 +1452,113 @@ public final class ChatInfo {
             dataCase_ = 0;
             data_ = null;
           }
-          respBuilder_.clear();
+          loginResponseBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+       * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
        */
-      public com.gitchat.netty.chat.ChatInfo.Response.Builder getRespBuilder() {
-        return getRespFieldBuilder().getBuilder();
+      public com.gitchat.netty.chat.ChatInfo.LoginResponse.Builder getLoginResponseBuilder() {
+        return getLoginResponseFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+       * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
        */
-      public com.gitchat.netty.chat.ChatInfo.ResponseOrBuilder getRespOrBuilder() {
-        if ((dataCase_ == 4) && (respBuilder_ != null)) {
-          return respBuilder_.getMessageOrBuilder();
+      public com.gitchat.netty.chat.ChatInfo.LoginResponseOrBuilder getLoginResponseOrBuilder() {
+        if ((dataCase_ == 4) && (loginResponseBuilder_ != null)) {
+          return loginResponseBuilder_.getMessageOrBuilder();
         } else {
           if (dataCase_ == 4) {
-            return (com.gitchat.netty.chat.ChatInfo.Response) data_;
+            return (com.gitchat.netty.chat.ChatInfo.LoginResponse) data_;
           }
-          return com.gitchat.netty.chat.ChatInfo.Response.getDefaultInstance();
+          return com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Response resp = 4;</code>
+       * <code>.com.gitchat.netty.chat.LoginResponse login_response = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.Response, com.gitchat.netty.chat.ChatInfo.Response.Builder, com.gitchat.netty.chat.ChatInfo.ResponseOrBuilder> 
-          getRespFieldBuilder() {
-        if (respBuilder_ == null) {
+          com.gitchat.netty.chat.ChatInfo.LoginResponse, com.gitchat.netty.chat.ChatInfo.LoginResponse.Builder, com.gitchat.netty.chat.ChatInfo.LoginResponseOrBuilder> 
+          getLoginResponseFieldBuilder() {
+        if (loginResponseBuilder_ == null) {
           if (!(dataCase_ == 4)) {
-            data_ = com.gitchat.netty.chat.ChatInfo.Response.getDefaultInstance();
+            data_ = com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
           }
-          respBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.gitchat.netty.chat.ChatInfo.Response, com.gitchat.netty.chat.ChatInfo.Response.Builder, com.gitchat.netty.chat.ChatInfo.ResponseOrBuilder>(
-                  (com.gitchat.netty.chat.ChatInfo.Response) data_,
+          loginResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.gitchat.netty.chat.ChatInfo.LoginResponse, com.gitchat.netty.chat.ChatInfo.LoginResponse.Builder, com.gitchat.netty.chat.ChatInfo.LoginResponseOrBuilder>(
+                  (com.gitchat.netty.chat.ChatInfo.LoginResponse) data_,
                   getParentForChildren(),
                   isClean());
           data_ = null;
         }
         dataCase_ = 4;
         onChanged();;
-        return respBuilder_;
+        return loginResponseBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.Notification, com.gitchat.netty.chat.ChatInfo.Notification.Builder, com.gitchat.netty.chat.ChatInfo.NotificationOrBuilder> notifiBuilder_;
+          com.gitchat.netty.chat.ChatInfo.CreateGroupRequest, com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.Builder, com.gitchat.netty.chat.ChatInfo.CreateGroupRequestOrBuilder> createGroupRequestBuilder_;
       /**
-       * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+       * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
-      public boolean hasNotifi() {
+      public boolean hasCreateGroupRequest() {
         return dataCase_ == 5;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+       * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
-      public com.gitchat.netty.chat.ChatInfo.Notification getNotifi() {
-        if (notifiBuilder_ == null) {
+      public com.gitchat.netty.chat.ChatInfo.CreateGroupRequest getCreateGroupRequest() {
+        if (createGroupRequestBuilder_ == null) {
           if (dataCase_ == 5) {
-            return (com.gitchat.netty.chat.ChatInfo.Notification) data_;
+            return (com.gitchat.netty.chat.ChatInfo.CreateGroupRequest) data_;
           }
-          return com.gitchat.netty.chat.ChatInfo.Notification.getDefaultInstance();
+          return com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance();
         } else {
           if (dataCase_ == 5) {
-            return notifiBuilder_.getMessage();
+            return createGroupRequestBuilder_.getMessage();
           }
-          return com.gitchat.netty.chat.ChatInfo.Notification.getDefaultInstance();
+          return com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+       * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
-      public Builder setNotifi(com.gitchat.netty.chat.ChatInfo.Notification value) {
-        if (notifiBuilder_ == null) {
+      public Builder setCreateGroupRequest(com.gitchat.netty.chat.ChatInfo.CreateGroupRequest value) {
+        if (createGroupRequestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           data_ = value;
           onChanged();
         } else {
-          notifiBuilder_.setMessage(value);
+          createGroupRequestBuilder_.setMessage(value);
         }
         dataCase_ = 5;
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+       * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
-      public Builder setNotifi(
-          com.gitchat.netty.chat.ChatInfo.Notification.Builder builderForValue) {
-        if (notifiBuilder_ == null) {
+      public Builder setCreateGroupRequest(
+          com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.Builder builderForValue) {
+        if (createGroupRequestBuilder_ == null) {
           data_ = builderForValue.build();
           onChanged();
         } else {
-          notifiBuilder_.setMessage(builderForValue.build());
+          createGroupRequestBuilder_.setMessage(builderForValue.build());
         }
         dataCase_ = 5;
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+       * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
-      public Builder mergeNotifi(com.gitchat.netty.chat.ChatInfo.Notification value) {
-        if (notifiBuilder_ == null) {
+      public Builder mergeCreateGroupRequest(com.gitchat.netty.chat.ChatInfo.CreateGroupRequest value) {
+        if (createGroupRequestBuilder_ == null) {
           if (dataCase_ == 5 &&
-              data_ != com.gitchat.netty.chat.ChatInfo.Notification.getDefaultInstance()) {
-            data_ = com.gitchat.netty.chat.ChatInfo.Notification.newBuilder((com.gitchat.netty.chat.ChatInfo.Notification) data_)
+              data_ != com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance()) {
+            data_ = com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.newBuilder((com.gitchat.netty.chat.ChatInfo.CreateGroupRequest) data_)
                 .mergeFrom(value).buildPartial();
           } else {
             data_ = value;
@@ -1305,18 +1566,18 @@ public final class ChatInfo {
           onChanged();
         } else {
           if (dataCase_ == 5) {
-            notifiBuilder_.mergeFrom(value);
+            createGroupRequestBuilder_.mergeFrom(value);
           }
-          notifiBuilder_.setMessage(value);
+          createGroupRequestBuilder_.setMessage(value);
         }
         dataCase_ = 5;
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+       * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
-      public Builder clearNotifi() {
-        if (notifiBuilder_ == null) {
+      public Builder clearCreateGroupRequest() {
+        if (createGroupRequestBuilder_ == null) {
           if (dataCase_ == 5) {
             dataCase_ = 0;
             data_ = null;
@@ -1327,49 +1588,457 @@ public final class ChatInfo {
             dataCase_ = 0;
             data_ = null;
           }
-          notifiBuilder_.clear();
+          createGroupRequestBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+       * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
-      public com.gitchat.netty.chat.ChatInfo.Notification.Builder getNotifiBuilder() {
-        return getNotifiFieldBuilder().getBuilder();
+      public com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.Builder getCreateGroupRequestBuilder() {
+        return getCreateGroupRequestFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+       * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
-      public com.gitchat.netty.chat.ChatInfo.NotificationOrBuilder getNotifiOrBuilder() {
-        if ((dataCase_ == 5) && (notifiBuilder_ != null)) {
-          return notifiBuilder_.getMessageOrBuilder();
+      public com.gitchat.netty.chat.ChatInfo.CreateGroupRequestOrBuilder getCreateGroupRequestOrBuilder() {
+        if ((dataCase_ == 5) && (createGroupRequestBuilder_ != null)) {
+          return createGroupRequestBuilder_.getMessageOrBuilder();
         } else {
           if (dataCase_ == 5) {
-            return (com.gitchat.netty.chat.ChatInfo.Notification) data_;
+            return (com.gitchat.netty.chat.ChatInfo.CreateGroupRequest) data_;
           }
-          return com.gitchat.netty.chat.ChatInfo.Notification.getDefaultInstance();
+          return com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.Notification notifi = 5;</code>
+       * <code>.com.gitchat.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.Notification, com.gitchat.netty.chat.ChatInfo.Notification.Builder, com.gitchat.netty.chat.ChatInfo.NotificationOrBuilder> 
-          getNotifiFieldBuilder() {
-        if (notifiBuilder_ == null) {
+          com.gitchat.netty.chat.ChatInfo.CreateGroupRequest, com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.Builder, com.gitchat.netty.chat.ChatInfo.CreateGroupRequestOrBuilder> 
+          getCreateGroupRequestFieldBuilder() {
+        if (createGroupRequestBuilder_ == null) {
           if (!(dataCase_ == 5)) {
-            data_ = com.gitchat.netty.chat.ChatInfo.Notification.getDefaultInstance();
+            data_ = com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance();
           }
-          notifiBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.gitchat.netty.chat.ChatInfo.Notification, com.gitchat.netty.chat.ChatInfo.Notification.Builder, com.gitchat.netty.chat.ChatInfo.NotificationOrBuilder>(
-                  (com.gitchat.netty.chat.ChatInfo.Notification) data_,
+          createGroupRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.gitchat.netty.chat.ChatInfo.CreateGroupRequest, com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.Builder, com.gitchat.netty.chat.ChatInfo.CreateGroupRequestOrBuilder>(
+                  (com.gitchat.netty.chat.ChatInfo.CreateGroupRequest) data_,
                   getParentForChildren(),
                   isClean());
           data_ = null;
         }
         dataCase_ = 5;
         onChanged();;
-        return notifiBuilder_;
+        return createGroupRequestBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gitchat.netty.chat.ChatInfo.CreateGroupResponse, com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.Builder, com.gitchat.netty.chat.ChatInfo.CreateGroupResponseOrBuilder> createGroupResponseBuilder_;
+      /**
+       * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+       */
+      public boolean hasCreateGroupResponse() {
+        return dataCase_ == 6;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.CreateGroupResponse getCreateGroupResponse() {
+        if (createGroupResponseBuilder_ == null) {
+          if (dataCase_ == 6) {
+            return (com.gitchat.netty.chat.ChatInfo.CreateGroupResponse) data_;
+          }
+          return com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance();
+        } else {
+          if (dataCase_ == 6) {
+            return createGroupResponseBuilder_.getMessage();
+          }
+          return com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+       */
+      public Builder setCreateGroupResponse(com.gitchat.netty.chat.ChatInfo.CreateGroupResponse value) {
+        if (createGroupResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          createGroupResponseBuilder_.setMessage(value);
+        }
+        dataCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+       */
+      public Builder setCreateGroupResponse(
+          com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.Builder builderForValue) {
+        if (createGroupResponseBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          createGroupResponseBuilder_.setMessage(builderForValue.build());
+        }
+        dataCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+       */
+      public Builder mergeCreateGroupResponse(com.gitchat.netty.chat.ChatInfo.CreateGroupResponse value) {
+        if (createGroupResponseBuilder_ == null) {
+          if (dataCase_ == 6 &&
+              data_ != com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance()) {
+            data_ = com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.newBuilder((com.gitchat.netty.chat.ChatInfo.CreateGroupResponse) data_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataCase_ == 6) {
+            createGroupResponseBuilder_.mergeFrom(value);
+          }
+          createGroupResponseBuilder_.setMessage(value);
+        }
+        dataCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+       */
+      public Builder clearCreateGroupResponse() {
+        if (createGroupResponseBuilder_ == null) {
+          if (dataCase_ == 6) {
+            dataCase_ = 0;
+            data_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataCase_ == 6) {
+            dataCase_ = 0;
+            data_ = null;
+          }
+          createGroupResponseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.Builder getCreateGroupResponseBuilder() {
+        return getCreateGroupResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.CreateGroupResponseOrBuilder getCreateGroupResponseOrBuilder() {
+        if ((dataCase_ == 6) && (createGroupResponseBuilder_ != null)) {
+          return createGroupResponseBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataCase_ == 6) {
+            return (com.gitchat.netty.chat.ChatInfo.CreateGroupResponse) data_;
+          }
+          return com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.CreateGroupResponse create_group_response = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gitchat.netty.chat.ChatInfo.CreateGroupResponse, com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.Builder, com.gitchat.netty.chat.ChatInfo.CreateGroupResponseOrBuilder> 
+          getCreateGroupResponseFieldBuilder() {
+        if (createGroupResponseBuilder_ == null) {
+          if (!(dataCase_ == 6)) {
+            data_ = com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance();
+          }
+          createGroupResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.gitchat.netty.chat.ChatInfo.CreateGroupResponse, com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.Builder, com.gitchat.netty.chat.ChatInfo.CreateGroupResponseOrBuilder>(
+                  (com.gitchat.netty.chat.ChatInfo.CreateGroupResponse) data_,
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        dataCase_ = 6;
+        onChanged();;
+        return createGroupResponseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gitchat.netty.chat.ChatInfo.SingleChat, com.gitchat.netty.chat.ChatInfo.SingleChat.Builder, com.gitchat.netty.chat.ChatInfo.SingleChatOrBuilder> singleChatBuilder_;
+      /**
+       * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+       */
+      public boolean hasSingleChat() {
+        return dataCase_ == 7;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.SingleChat getSingleChat() {
+        if (singleChatBuilder_ == null) {
+          if (dataCase_ == 7) {
+            return (com.gitchat.netty.chat.ChatInfo.SingleChat) data_;
+          }
+          return com.gitchat.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
+        } else {
+          if (dataCase_ == 7) {
+            return singleChatBuilder_.getMessage();
+          }
+          return com.gitchat.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+       */
+      public Builder setSingleChat(com.gitchat.netty.chat.ChatInfo.SingleChat value) {
+        if (singleChatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          singleChatBuilder_.setMessage(value);
+        }
+        dataCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+       */
+      public Builder setSingleChat(
+          com.gitchat.netty.chat.ChatInfo.SingleChat.Builder builderForValue) {
+        if (singleChatBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          singleChatBuilder_.setMessage(builderForValue.build());
+        }
+        dataCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+       */
+      public Builder mergeSingleChat(com.gitchat.netty.chat.ChatInfo.SingleChat value) {
+        if (singleChatBuilder_ == null) {
+          if (dataCase_ == 7 &&
+              data_ != com.gitchat.netty.chat.ChatInfo.SingleChat.getDefaultInstance()) {
+            data_ = com.gitchat.netty.chat.ChatInfo.SingleChat.newBuilder((com.gitchat.netty.chat.ChatInfo.SingleChat) data_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataCase_ == 7) {
+            singleChatBuilder_.mergeFrom(value);
+          }
+          singleChatBuilder_.setMessage(value);
+        }
+        dataCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+       */
+      public Builder clearSingleChat() {
+        if (singleChatBuilder_ == null) {
+          if (dataCase_ == 7) {
+            dataCase_ = 0;
+            data_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataCase_ == 7) {
+            dataCase_ = 0;
+            data_ = null;
+          }
+          singleChatBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.SingleChat.Builder getSingleChatBuilder() {
+        return getSingleChatFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.SingleChatOrBuilder getSingleChatOrBuilder() {
+        if ((dataCase_ == 7) && (singleChatBuilder_ != null)) {
+          return singleChatBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataCase_ == 7) {
+            return (com.gitchat.netty.chat.ChatInfo.SingleChat) data_;
+          }
+          return com.gitchat.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.SingleChat single_chat = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gitchat.netty.chat.ChatInfo.SingleChat, com.gitchat.netty.chat.ChatInfo.SingleChat.Builder, com.gitchat.netty.chat.ChatInfo.SingleChatOrBuilder> 
+          getSingleChatFieldBuilder() {
+        if (singleChatBuilder_ == null) {
+          if (!(dataCase_ == 7)) {
+            data_ = com.gitchat.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
+          }
+          singleChatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.gitchat.netty.chat.ChatInfo.SingleChat, com.gitchat.netty.chat.ChatInfo.SingleChat.Builder, com.gitchat.netty.chat.ChatInfo.SingleChatOrBuilder>(
+                  (com.gitchat.netty.chat.ChatInfo.SingleChat) data_,
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        dataCase_ = 7;
+        onChanged();;
+        return singleChatBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gitchat.netty.chat.ChatInfo.GroupChat, com.gitchat.netty.chat.ChatInfo.GroupChat.Builder, com.gitchat.netty.chat.ChatInfo.GroupChatOrBuilder> groupChatBuilder_;
+      /**
+       * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+       */
+      public boolean hasGroupChat() {
+        return dataCase_ == 8;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.GroupChat getGroupChat() {
+        if (groupChatBuilder_ == null) {
+          if (dataCase_ == 8) {
+            return (com.gitchat.netty.chat.ChatInfo.GroupChat) data_;
+          }
+          return com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
+        } else {
+          if (dataCase_ == 8) {
+            return groupChatBuilder_.getMessage();
+          }
+          return com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+       */
+      public Builder setGroupChat(com.gitchat.netty.chat.ChatInfo.GroupChat value) {
+        if (groupChatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          groupChatBuilder_.setMessage(value);
+        }
+        dataCase_ = 8;
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+       */
+      public Builder setGroupChat(
+          com.gitchat.netty.chat.ChatInfo.GroupChat.Builder builderForValue) {
+        if (groupChatBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          groupChatBuilder_.setMessage(builderForValue.build());
+        }
+        dataCase_ = 8;
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+       */
+      public Builder mergeGroupChat(com.gitchat.netty.chat.ChatInfo.GroupChat value) {
+        if (groupChatBuilder_ == null) {
+          if (dataCase_ == 8 &&
+              data_ != com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance()) {
+            data_ = com.gitchat.netty.chat.ChatInfo.GroupChat.newBuilder((com.gitchat.netty.chat.ChatInfo.GroupChat) data_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataCase_ == 8) {
+            groupChatBuilder_.mergeFrom(value);
+          }
+          groupChatBuilder_.setMessage(value);
+        }
+        dataCase_ = 8;
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+       */
+      public Builder clearGroupChat() {
+        if (groupChatBuilder_ == null) {
+          if (dataCase_ == 8) {
+            dataCase_ = 0;
+            data_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataCase_ == 8) {
+            dataCase_ = 0;
+            data_ = null;
+          }
+          groupChatBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.GroupChat.Builder getGroupChatBuilder() {
+        return getGroupChatFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.GroupChatOrBuilder getGroupChatOrBuilder() {
+        if ((dataCase_ == 8) && (groupChatBuilder_ != null)) {
+          return groupChatBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataCase_ == 8) {
+            return (com.gitchat.netty.chat.ChatInfo.GroupChat) data_;
+          }
+          return com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.GroupChat group_chat = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gitchat.netty.chat.ChatInfo.GroupChat, com.gitchat.netty.chat.ChatInfo.GroupChat.Builder, com.gitchat.netty.chat.ChatInfo.GroupChatOrBuilder> 
+          getGroupChatFieldBuilder() {
+        if (groupChatBuilder_ == null) {
+          if (!(dataCase_ == 8)) {
+            data_ = com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
+          }
+          groupChatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.gitchat.netty.chat.ChatInfo.GroupChat, com.gitchat.netty.chat.ChatInfo.GroupChat.Builder, com.gitchat.netty.chat.ChatInfo.GroupChatOrBuilder>(
+                  (com.gitchat.netty.chat.ChatInfo.GroupChat) data_,
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        dataCase_ = 8;
+        onChanged();;
+        return groupChatBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1384,10 +2053,10 @@ public final class ChatInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.protobuf.Chat)
+      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.chat.Chat)
     }
 
-    // @@protoc_insertion_point(class_scope:com.gitchat.netty.protobuf.Chat)
+    // @@protoc_insertion_point(class_scope:com.gitchat.netty.chat.Chat)
     private static final com.gitchat.netty.chat.ChatInfo.Chat DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.gitchat.netty.chat.ChatInfo.Chat();
@@ -1424,2058 +2093,8 @@ public final class ChatInfo {
 
   }
 
-  public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.protobuf.Request)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-     */
-    boolean hasLogin();
-    /**
-     * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-     */
-    com.gitchat.netty.chat.ChatInfo.LoginRequest getLogin();
-    /**
-     * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-     */
-    com.gitchat.netty.chat.ChatInfo.LoginRequestOrBuilder getLoginOrBuilder();
-
-    /**
-     * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-     */
-    boolean hasSingleChat();
-    /**
-     * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-     */
-    com.gitchat.netty.chat.ChatInfo.SingleChat getSingleChat();
-    /**
-     * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-     */
-    com.gitchat.netty.chat.ChatInfo.SingleChatOrBuilder getSingleChatOrBuilder();
-
-    /**
-     * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-     */
-    boolean hasGroupChat();
-    /**
-     * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-     */
-    com.gitchat.netty.chat.ChatInfo.GroupChat getGroupChat();
-    /**
-     * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-     */
-    com.gitchat.netty.chat.ChatInfo.GroupChatOrBuilder getGroupChatOrBuilder();
-
-    public com.gitchat.netty.chat.ChatInfo.Request.ReqCase getReqCase();
-  }
-  /**
-   * <pre>
-   * 请求消息
-   * </pre>
-   *
-   * Protobuf type {@code com.gitchat.netty.protobuf.Request}
-   */
-  public  static final class Request extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.gitchat.netty.protobuf.Request)
-      RequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Request.newBuilder() to construct.
-    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Request() {
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Request(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.gitchat.netty.chat.ChatInfo.LoginRequest.Builder subBuilder = null;
-              if (reqCase_ == 1) {
-                subBuilder = ((com.gitchat.netty.chat.ChatInfo.LoginRequest) req_).toBuilder();
-              }
-              req_ =
-                  input.readMessage(com.gitchat.netty.chat.ChatInfo.LoginRequest.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.gitchat.netty.chat.ChatInfo.LoginRequest) req_);
-                req_ = subBuilder.buildPartial();
-              }
-              reqCase_ = 1;
-              break;
-            }
-            case 18: {
-              com.gitchat.netty.chat.ChatInfo.SingleChat.Builder subBuilder = null;
-              if (reqCase_ == 2) {
-                subBuilder = ((com.gitchat.netty.chat.ChatInfo.SingleChat) req_).toBuilder();
-              }
-              req_ =
-                  input.readMessage(com.gitchat.netty.chat.ChatInfo.SingleChat.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.gitchat.netty.chat.ChatInfo.SingleChat) req_);
-                req_ = subBuilder.buildPartial();
-              }
-              reqCase_ = 2;
-              break;
-            }
-            case 26: {
-              com.gitchat.netty.chat.ChatInfo.GroupChat.Builder subBuilder = null;
-              if (reqCase_ == 3) {
-                subBuilder = ((com.gitchat.netty.chat.ChatInfo.GroupChat) req_).toBuilder();
-              }
-              req_ =
-                  input.readMessage(com.gitchat.netty.chat.ChatInfo.GroupChat.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.gitchat.netty.chat.ChatInfo.GroupChat) req_);
-                req_ = subBuilder.buildPartial();
-              }
-              reqCase_ = 3;
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Request_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Request_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.gitchat.netty.chat.ChatInfo.Request.class, com.gitchat.netty.chat.ChatInfo.Request.Builder.class);
-    }
-
-    private int reqCase_ = 0;
-    private java.lang.Object req_;
-    public enum ReqCase
-        implements com.google.protobuf.Internal.EnumLite {
-      LOGIN(1),
-      SINGLE_CHAT(2),
-      GROUP_CHAT(3),
-      REQ_NOT_SET(0);
-      private final int value;
-      private ReqCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static ReqCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static ReqCase forNumber(int value) {
-        switch (value) {
-          case 1: return LOGIN;
-          case 2: return SINGLE_CHAT;
-          case 3: return GROUP_CHAT;
-          case 0: return REQ_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public ReqCase
-    getReqCase() {
-      return ReqCase.forNumber(
-          reqCase_);
-    }
-
-    public static final int LOGIN_FIELD_NUMBER = 1;
-    /**
-     * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-     */
-    public boolean hasLogin() {
-      return reqCase_ == 1;
-    }
-    /**
-     * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-     */
-    public com.gitchat.netty.chat.ChatInfo.LoginRequest getLogin() {
-      if (reqCase_ == 1) {
-         return (com.gitchat.netty.chat.ChatInfo.LoginRequest) req_;
-      }
-      return com.gitchat.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
-    }
-    /**
-     * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-     */
-    public com.gitchat.netty.chat.ChatInfo.LoginRequestOrBuilder getLoginOrBuilder() {
-      if (reqCase_ == 1) {
-         return (com.gitchat.netty.chat.ChatInfo.LoginRequest) req_;
-      }
-      return com.gitchat.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
-    }
-
-    public static final int SINGLE_CHAT_FIELD_NUMBER = 2;
-    /**
-     * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-     */
-    public boolean hasSingleChat() {
-      return reqCase_ == 2;
-    }
-    /**
-     * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-     */
-    public com.gitchat.netty.chat.ChatInfo.SingleChat getSingleChat() {
-      if (reqCase_ == 2) {
-         return (com.gitchat.netty.chat.ChatInfo.SingleChat) req_;
-      }
-      return com.gitchat.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
-    }
-    /**
-     * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-     */
-    public com.gitchat.netty.chat.ChatInfo.SingleChatOrBuilder getSingleChatOrBuilder() {
-      if (reqCase_ == 2) {
-         return (com.gitchat.netty.chat.ChatInfo.SingleChat) req_;
-      }
-      return com.gitchat.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
-    }
-
-    public static final int GROUP_CHAT_FIELD_NUMBER = 3;
-    /**
-     * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-     */
-    public boolean hasGroupChat() {
-      return reqCase_ == 3;
-    }
-    /**
-     * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-     */
-    public com.gitchat.netty.chat.ChatInfo.GroupChat getGroupChat() {
-      if (reqCase_ == 3) {
-         return (com.gitchat.netty.chat.ChatInfo.GroupChat) req_;
-      }
-      return com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
-    }
-    /**
-     * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-     */
-    public com.gitchat.netty.chat.ChatInfo.GroupChatOrBuilder getGroupChatOrBuilder() {
-      if (reqCase_ == 3) {
-         return (com.gitchat.netty.chat.ChatInfo.GroupChat) req_;
-      }
-      return com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (reqCase_ == 1) {
-        output.writeMessage(1, (com.gitchat.netty.chat.ChatInfo.LoginRequest) req_);
-      }
-      if (reqCase_ == 2) {
-        output.writeMessage(2, (com.gitchat.netty.chat.ChatInfo.SingleChat) req_);
-      }
-      if (reqCase_ == 3) {
-        output.writeMessage(3, (com.gitchat.netty.chat.ChatInfo.GroupChat) req_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (reqCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.gitchat.netty.chat.ChatInfo.LoginRequest) req_);
-      }
-      if (reqCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.gitchat.netty.chat.ChatInfo.SingleChat) req_);
-      }
-      if (reqCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.gitchat.netty.chat.ChatInfo.GroupChat) req_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.gitchat.netty.chat.ChatInfo.Request)) {
-        return super.equals(obj);
-      }
-      com.gitchat.netty.chat.ChatInfo.Request other = (com.gitchat.netty.chat.ChatInfo.Request) obj;
-
-      boolean result = true;
-      result = result && getReqCase().equals(
-          other.getReqCase());
-      if (!result) return false;
-      switch (reqCase_) {
-        case 1:
-          result = result && getLogin()
-              .equals(other.getLogin());
-          break;
-        case 2:
-          result = result && getSingleChat()
-              .equals(other.getSingleChat());
-          break;
-        case 3:
-          result = result && getGroupChat()
-              .equals(other.getGroupChat());
-          break;
-        case 0:
-        default:
-      }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      switch (reqCase_) {
-        case 1:
-          hash = (37 * hash) + LOGIN_FIELD_NUMBER;
-          hash = (53 * hash) + getLogin().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + SINGLE_CHAT_FIELD_NUMBER;
-          hash = (53 * hash) + getSingleChat().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + GROUP_CHAT_FIELD_NUMBER;
-          hash = (53 * hash) + getGroupChat().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.gitchat.netty.chat.ChatInfo.Request parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Request parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Request parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Request parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Request parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Request parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Request parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Request parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Request parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Request parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Request parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Request parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.gitchat.netty.chat.ChatInfo.Request prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * 请求消息
-     * </pre>
-     *
-     * Protobuf type {@code com.gitchat.netty.protobuf.Request}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.protobuf.Request)
-        com.gitchat.netty.chat.ChatInfo.RequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Request_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Request_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.gitchat.netty.chat.ChatInfo.Request.class, com.gitchat.netty.chat.ChatInfo.Request.Builder.class);
-      }
-
-      // Construct using com.gitchat.netty.chat.ChatInfo.Request.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        reqCase_ = 0;
-        req_ = null;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Request_descriptor;
-      }
-
-      @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.Request getDefaultInstanceForType() {
-        return com.gitchat.netty.chat.ChatInfo.Request.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.Request build() {
-        com.gitchat.netty.chat.ChatInfo.Request result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.Request buildPartial() {
-        com.gitchat.netty.chat.ChatInfo.Request result = new com.gitchat.netty.chat.ChatInfo.Request(this);
-        if (reqCase_ == 1) {
-          if (loginBuilder_ == null) {
-            result.req_ = req_;
-          } else {
-            result.req_ = loginBuilder_.build();
-          }
-        }
-        if (reqCase_ == 2) {
-          if (singleChatBuilder_ == null) {
-            result.req_ = req_;
-          } else {
-            result.req_ = singleChatBuilder_.build();
-          }
-        }
-        if (reqCase_ == 3) {
-          if (groupChatBuilder_ == null) {
-            result.req_ = req_;
-          } else {
-            result.req_ = groupChatBuilder_.build();
-          }
-        }
-        result.reqCase_ = reqCase_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.gitchat.netty.chat.ChatInfo.Request) {
-          return mergeFrom((com.gitchat.netty.chat.ChatInfo.Request)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.gitchat.netty.chat.ChatInfo.Request other) {
-        if (other == com.gitchat.netty.chat.ChatInfo.Request.getDefaultInstance()) return this;
-        switch (other.getReqCase()) {
-          case LOGIN: {
-            mergeLogin(other.getLogin());
-            break;
-          }
-          case SINGLE_CHAT: {
-            mergeSingleChat(other.getSingleChat());
-            break;
-          }
-          case GROUP_CHAT: {
-            mergeGroupChat(other.getGroupChat());
-            break;
-          }
-          case REQ_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.gitchat.netty.chat.ChatInfo.Request parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.gitchat.netty.chat.ChatInfo.Request) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int reqCase_ = 0;
-      private java.lang.Object req_;
-      public ReqCase
-          getReqCase() {
-        return ReqCase.forNumber(
-            reqCase_);
-      }
-
-      public Builder clearReq() {
-        reqCase_ = 0;
-        req_ = null;
-        onChanged();
-        return this;
-      }
-
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.LoginRequest, com.gitchat.netty.chat.ChatInfo.LoginRequest.Builder, com.gitchat.netty.chat.ChatInfo.LoginRequestOrBuilder> loginBuilder_;
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-       */
-      public boolean hasLogin() {
-        return reqCase_ == 1;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.LoginRequest getLogin() {
-        if (loginBuilder_ == null) {
-          if (reqCase_ == 1) {
-            return (com.gitchat.netty.chat.ChatInfo.LoginRequest) req_;
-          }
-          return com.gitchat.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
-        } else {
-          if (reqCase_ == 1) {
-            return loginBuilder_.getMessage();
-          }
-          return com.gitchat.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-       */
-      public Builder setLogin(com.gitchat.netty.chat.ChatInfo.LoginRequest value) {
-        if (loginBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          req_ = value;
-          onChanged();
-        } else {
-          loginBuilder_.setMessage(value);
-        }
-        reqCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-       */
-      public Builder setLogin(
-          com.gitchat.netty.chat.ChatInfo.LoginRequest.Builder builderForValue) {
-        if (loginBuilder_ == null) {
-          req_ = builderForValue.build();
-          onChanged();
-        } else {
-          loginBuilder_.setMessage(builderForValue.build());
-        }
-        reqCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-       */
-      public Builder mergeLogin(com.gitchat.netty.chat.ChatInfo.LoginRequest value) {
-        if (loginBuilder_ == null) {
-          if (reqCase_ == 1 &&
-              req_ != com.gitchat.netty.chat.ChatInfo.LoginRequest.getDefaultInstance()) {
-            req_ = com.gitchat.netty.chat.ChatInfo.LoginRequest.newBuilder((com.gitchat.netty.chat.ChatInfo.LoginRequest) req_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            req_ = value;
-          }
-          onChanged();
-        } else {
-          if (reqCase_ == 1) {
-            loginBuilder_.mergeFrom(value);
-          }
-          loginBuilder_.setMessage(value);
-        }
-        reqCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-       */
-      public Builder clearLogin() {
-        if (loginBuilder_ == null) {
-          if (reqCase_ == 1) {
-            reqCase_ = 0;
-            req_ = null;
-            onChanged();
-          }
-        } else {
-          if (reqCase_ == 1) {
-            reqCase_ = 0;
-            req_ = null;
-          }
-          loginBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.LoginRequest.Builder getLoginBuilder() {
-        return getLoginFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.LoginRequestOrBuilder getLoginOrBuilder() {
-        if ((reqCase_ == 1) && (loginBuilder_ != null)) {
-          return loginBuilder_.getMessageOrBuilder();
-        } else {
-          if (reqCase_ == 1) {
-            return (com.gitchat.netty.chat.ChatInfo.LoginRequest) req_;
-          }
-          return com.gitchat.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginRequest login = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.LoginRequest, com.gitchat.netty.chat.ChatInfo.LoginRequest.Builder, com.gitchat.netty.chat.ChatInfo.LoginRequestOrBuilder> 
-          getLoginFieldBuilder() {
-        if (loginBuilder_ == null) {
-          if (!(reqCase_ == 1)) {
-            req_ = com.gitchat.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
-          }
-          loginBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.gitchat.netty.chat.ChatInfo.LoginRequest, com.gitchat.netty.chat.ChatInfo.LoginRequest.Builder, com.gitchat.netty.chat.ChatInfo.LoginRequestOrBuilder>(
-                  (com.gitchat.netty.chat.ChatInfo.LoginRequest) req_,
-                  getParentForChildren(),
-                  isClean());
-          req_ = null;
-        }
-        reqCase_ = 1;
-        onChanged();;
-        return loginBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.SingleChat, com.gitchat.netty.chat.ChatInfo.SingleChat.Builder, com.gitchat.netty.chat.ChatInfo.SingleChatOrBuilder> singleChatBuilder_;
-      /**
-       * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-       */
-      public boolean hasSingleChat() {
-        return reqCase_ == 2;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.SingleChat getSingleChat() {
-        if (singleChatBuilder_ == null) {
-          if (reqCase_ == 2) {
-            return (com.gitchat.netty.chat.ChatInfo.SingleChat) req_;
-          }
-          return com.gitchat.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
-        } else {
-          if (reqCase_ == 2) {
-            return singleChatBuilder_.getMessage();
-          }
-          return com.gitchat.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-       */
-      public Builder setSingleChat(com.gitchat.netty.chat.ChatInfo.SingleChat value) {
-        if (singleChatBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          req_ = value;
-          onChanged();
-        } else {
-          singleChatBuilder_.setMessage(value);
-        }
-        reqCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-       */
-      public Builder setSingleChat(
-          com.gitchat.netty.chat.ChatInfo.SingleChat.Builder builderForValue) {
-        if (singleChatBuilder_ == null) {
-          req_ = builderForValue.build();
-          onChanged();
-        } else {
-          singleChatBuilder_.setMessage(builderForValue.build());
-        }
-        reqCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-       */
-      public Builder mergeSingleChat(com.gitchat.netty.chat.ChatInfo.SingleChat value) {
-        if (singleChatBuilder_ == null) {
-          if (reqCase_ == 2 &&
-              req_ != com.gitchat.netty.chat.ChatInfo.SingleChat.getDefaultInstance()) {
-            req_ = com.gitchat.netty.chat.ChatInfo.SingleChat.newBuilder((com.gitchat.netty.chat.ChatInfo.SingleChat) req_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            req_ = value;
-          }
-          onChanged();
-        } else {
-          if (reqCase_ == 2) {
-            singleChatBuilder_.mergeFrom(value);
-          }
-          singleChatBuilder_.setMessage(value);
-        }
-        reqCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-       */
-      public Builder clearSingleChat() {
-        if (singleChatBuilder_ == null) {
-          if (reqCase_ == 2) {
-            reqCase_ = 0;
-            req_ = null;
-            onChanged();
-          }
-        } else {
-          if (reqCase_ == 2) {
-            reqCase_ = 0;
-            req_ = null;
-          }
-          singleChatBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.SingleChat.Builder getSingleChatBuilder() {
-        return getSingleChatFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.SingleChatOrBuilder getSingleChatOrBuilder() {
-        if ((reqCase_ == 2) && (singleChatBuilder_ != null)) {
-          return singleChatBuilder_.getMessageOrBuilder();
-        } else {
-          if (reqCase_ == 2) {
-            return (com.gitchat.netty.chat.ChatInfo.SingleChat) req_;
-          }
-          return com.gitchat.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.SingleChat single_chat = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.SingleChat, com.gitchat.netty.chat.ChatInfo.SingleChat.Builder, com.gitchat.netty.chat.ChatInfo.SingleChatOrBuilder> 
-          getSingleChatFieldBuilder() {
-        if (singleChatBuilder_ == null) {
-          if (!(reqCase_ == 2)) {
-            req_ = com.gitchat.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
-          }
-          singleChatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.gitchat.netty.chat.ChatInfo.SingleChat, com.gitchat.netty.chat.ChatInfo.SingleChat.Builder, com.gitchat.netty.chat.ChatInfo.SingleChatOrBuilder>(
-                  (com.gitchat.netty.chat.ChatInfo.SingleChat) req_,
-                  getParentForChildren(),
-                  isClean());
-          req_ = null;
-        }
-        reqCase_ = 2;
-        onChanged();;
-        return singleChatBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.GroupChat, com.gitchat.netty.chat.ChatInfo.GroupChat.Builder, com.gitchat.netty.chat.ChatInfo.GroupChatOrBuilder> groupChatBuilder_;
-      /**
-       * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-       */
-      public boolean hasGroupChat() {
-        return reqCase_ == 3;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.GroupChat getGroupChat() {
-        if (groupChatBuilder_ == null) {
-          if (reqCase_ == 3) {
-            return (com.gitchat.netty.chat.ChatInfo.GroupChat) req_;
-          }
-          return com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
-        } else {
-          if (reqCase_ == 3) {
-            return groupChatBuilder_.getMessage();
-          }
-          return com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-       */
-      public Builder setGroupChat(com.gitchat.netty.chat.ChatInfo.GroupChat value) {
-        if (groupChatBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          req_ = value;
-          onChanged();
-        } else {
-          groupChatBuilder_.setMessage(value);
-        }
-        reqCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-       */
-      public Builder setGroupChat(
-          com.gitchat.netty.chat.ChatInfo.GroupChat.Builder builderForValue) {
-        if (groupChatBuilder_ == null) {
-          req_ = builderForValue.build();
-          onChanged();
-        } else {
-          groupChatBuilder_.setMessage(builderForValue.build());
-        }
-        reqCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-       */
-      public Builder mergeGroupChat(com.gitchat.netty.chat.ChatInfo.GroupChat value) {
-        if (groupChatBuilder_ == null) {
-          if (reqCase_ == 3 &&
-              req_ != com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance()) {
-            req_ = com.gitchat.netty.chat.ChatInfo.GroupChat.newBuilder((com.gitchat.netty.chat.ChatInfo.GroupChat) req_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            req_ = value;
-          }
-          onChanged();
-        } else {
-          if (reqCase_ == 3) {
-            groupChatBuilder_.mergeFrom(value);
-          }
-          groupChatBuilder_.setMessage(value);
-        }
-        reqCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-       */
-      public Builder clearGroupChat() {
-        if (groupChatBuilder_ == null) {
-          if (reqCase_ == 3) {
-            reqCase_ = 0;
-            req_ = null;
-            onChanged();
-          }
-        } else {
-          if (reqCase_ == 3) {
-            reqCase_ = 0;
-            req_ = null;
-          }
-          groupChatBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.GroupChat.Builder getGroupChatBuilder() {
-        return getGroupChatFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.GroupChatOrBuilder getGroupChatOrBuilder() {
-        if ((reqCase_ == 3) && (groupChatBuilder_ != null)) {
-          return groupChatBuilder_.getMessageOrBuilder();
-        } else {
-          if (reqCase_ == 3) {
-            return (com.gitchat.netty.chat.ChatInfo.GroupChat) req_;
-          }
-          return com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.GroupChat group_chat = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.GroupChat, com.gitchat.netty.chat.ChatInfo.GroupChat.Builder, com.gitchat.netty.chat.ChatInfo.GroupChatOrBuilder> 
-          getGroupChatFieldBuilder() {
-        if (groupChatBuilder_ == null) {
-          if (!(reqCase_ == 3)) {
-            req_ = com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
-          }
-          groupChatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.gitchat.netty.chat.ChatInfo.GroupChat, com.gitchat.netty.chat.ChatInfo.GroupChat.Builder, com.gitchat.netty.chat.ChatInfo.GroupChatOrBuilder>(
-                  (com.gitchat.netty.chat.ChatInfo.GroupChat) req_,
-                  getParentForChildren(),
-                  isClean());
-          req_ = null;
-        }
-        reqCase_ = 3;
-        onChanged();;
-        return groupChatBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.protobuf.Request)
-    }
-
-    // @@protoc_insertion_point(class_scope:com.gitchat.netty.protobuf.Request)
-    private static final com.gitchat.netty.chat.ChatInfo.Request DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.gitchat.netty.chat.ChatInfo.Request();
-    }
-
-    public static com.gitchat.netty.chat.ChatInfo.Request getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Request>
-        PARSER = new com.google.protobuf.AbstractParser<Request>() {
-      @java.lang.Override
-      public Request parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Request(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Request> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Request> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.gitchat.netty.chat.ChatInfo.Request getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.protobuf.Response)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int32 code = 1;</code>
-     */
-    int getCode();
-
-    /**
-     * <code>string msg = 2;</code>
-     */
-    java.lang.String getMsg();
-    /**
-     * <code>string msg = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getMsgBytes();
-
-    /**
-     * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-     */
-    boolean hasLoginResponse();
-    /**
-     * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-     */
-    com.gitchat.netty.chat.ChatInfo.LoginResponse getLoginResponse();
-    /**
-     * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-     */
-    com.gitchat.netty.chat.ChatInfo.LoginResponseOrBuilder getLoginResponseOrBuilder();
-
-    public com.gitchat.netty.chat.ChatInfo.Response.DataCase getDataCase();
-  }
-  /**
-   * <pre>
-   * 响应消息
-   * </pre>
-   *
-   * Protobuf type {@code com.gitchat.netty.protobuf.Response}
-   */
-  public  static final class Response extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.gitchat.netty.protobuf.Response)
-      ResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Response.newBuilder() to construct.
-    private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Response() {
-      code_ = 0;
-      msg_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Response(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              code_ = input.readInt32();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              msg_ = s;
-              break;
-            }
-            case 26: {
-              com.gitchat.netty.chat.ChatInfo.LoginResponse.Builder subBuilder = null;
-              if (dataCase_ == 3) {
-                subBuilder = ((com.gitchat.netty.chat.ChatInfo.LoginResponse) data_).toBuilder();
-              }
-              data_ =
-                  input.readMessage(com.gitchat.netty.chat.ChatInfo.LoginResponse.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.gitchat.netty.chat.ChatInfo.LoginResponse) data_);
-                data_ = subBuilder.buildPartial();
-              }
-              dataCase_ = 3;
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Response_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Response_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.gitchat.netty.chat.ChatInfo.Response.class, com.gitchat.netty.chat.ChatInfo.Response.Builder.class);
-    }
-
-    private int dataCase_ = 0;
-    private java.lang.Object data_;
-    public enum DataCase
-        implements com.google.protobuf.Internal.EnumLite {
-      LOGIN_RESPONSE(3),
-      DATA_NOT_SET(0);
-      private final int value;
-      private DataCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static DataCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static DataCase forNumber(int value) {
-        switch (value) {
-          case 3: return LOGIN_RESPONSE;
-          case 0: return DATA_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public DataCase
-    getDataCase() {
-      return DataCase.forNumber(
-          dataCase_);
-    }
-
-    public static final int CODE_FIELD_NUMBER = 1;
-    private int code_;
-    /**
-     * <code>int32 code = 1;</code>
-     */
-    public int getCode() {
-      return code_;
-    }
-
-    public static final int MSG_FIELD_NUMBER = 2;
-    private volatile java.lang.Object msg_;
-    /**
-     * <code>string msg = 2;</code>
-     */
-    public java.lang.String getMsg() {
-      java.lang.Object ref = msg_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        msg_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string msg = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getMsgBytes() {
-      java.lang.Object ref = msg_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        msg_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int LOGIN_RESPONSE_FIELD_NUMBER = 3;
-    /**
-     * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-     */
-    public boolean hasLoginResponse() {
-      return dataCase_ == 3;
-    }
-    /**
-     * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-     */
-    public com.gitchat.netty.chat.ChatInfo.LoginResponse getLoginResponse() {
-      if (dataCase_ == 3) {
-         return (com.gitchat.netty.chat.ChatInfo.LoginResponse) data_;
-      }
-      return com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
-    }
-    /**
-     * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-     */
-    public com.gitchat.netty.chat.ChatInfo.LoginResponseOrBuilder getLoginResponseOrBuilder() {
-      if (dataCase_ == 3) {
-         return (com.gitchat.netty.chat.ChatInfo.LoginResponse) data_;
-      }
-      return com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (code_ != 0) {
-        output.writeInt32(1, code_);
-      }
-      if (!getMsgBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, msg_);
-      }
-      if (dataCase_ == 3) {
-        output.writeMessage(3, (com.gitchat.netty.chat.ChatInfo.LoginResponse) data_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (code_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, code_);
-      }
-      if (!getMsgBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, msg_);
-      }
-      if (dataCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.gitchat.netty.chat.ChatInfo.LoginResponse) data_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.gitchat.netty.chat.ChatInfo.Response)) {
-        return super.equals(obj);
-      }
-      com.gitchat.netty.chat.ChatInfo.Response other = (com.gitchat.netty.chat.ChatInfo.Response) obj;
-
-      boolean result = true;
-      result = result && (getCode()
-          == other.getCode());
-      result = result && getMsg()
-          .equals(other.getMsg());
-      result = result && getDataCase().equals(
-          other.getDataCase());
-      if (!result) return false;
-      switch (dataCase_) {
-        case 3:
-          result = result && getLoginResponse()
-              .equals(other.getLoginResponse());
-          break;
-        case 0:
-        default:
-      }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CODE_FIELD_NUMBER;
-      hash = (53 * hash) + getCode();
-      hash = (37 * hash) + MSG_FIELD_NUMBER;
-      hash = (53 * hash) + getMsg().hashCode();
-      switch (dataCase_) {
-        case 3:
-          hash = (37 * hash) + LOGIN_RESPONSE_FIELD_NUMBER;
-          hash = (53 * hash) + getLoginResponse().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.gitchat.netty.chat.ChatInfo.Response parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Response parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Response parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Response parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Response parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Response parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Response parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Response parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Response parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Response parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Response parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Response parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.gitchat.netty.chat.ChatInfo.Response prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * 响应消息
-     * </pre>
-     *
-     * Protobuf type {@code com.gitchat.netty.protobuf.Response}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.protobuf.Response)
-        com.gitchat.netty.chat.ChatInfo.ResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Response_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Response_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.gitchat.netty.chat.ChatInfo.Response.class, com.gitchat.netty.chat.ChatInfo.Response.Builder.class);
-      }
-
-      // Construct using com.gitchat.netty.chat.ChatInfo.Response.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        code_ = 0;
-
-        msg_ = "";
-
-        dataCase_ = 0;
-        data_ = null;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Response_descriptor;
-      }
-
-      @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.Response getDefaultInstanceForType() {
-        return com.gitchat.netty.chat.ChatInfo.Response.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.Response build() {
-        com.gitchat.netty.chat.ChatInfo.Response result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.Response buildPartial() {
-        com.gitchat.netty.chat.ChatInfo.Response result = new com.gitchat.netty.chat.ChatInfo.Response(this);
-        result.code_ = code_;
-        result.msg_ = msg_;
-        if (dataCase_ == 3) {
-          if (loginResponseBuilder_ == null) {
-            result.data_ = data_;
-          } else {
-            result.data_ = loginResponseBuilder_.build();
-          }
-        }
-        result.dataCase_ = dataCase_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.gitchat.netty.chat.ChatInfo.Response) {
-          return mergeFrom((com.gitchat.netty.chat.ChatInfo.Response)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.gitchat.netty.chat.ChatInfo.Response other) {
-        if (other == com.gitchat.netty.chat.ChatInfo.Response.getDefaultInstance()) return this;
-        if (other.getCode() != 0) {
-          setCode(other.getCode());
-        }
-        if (!other.getMsg().isEmpty()) {
-          msg_ = other.msg_;
-          onChanged();
-        }
-        switch (other.getDataCase()) {
-          case LOGIN_RESPONSE: {
-            mergeLoginResponse(other.getLoginResponse());
-            break;
-          }
-          case DATA_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.gitchat.netty.chat.ChatInfo.Response parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.gitchat.netty.chat.ChatInfo.Response) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int dataCase_ = 0;
-      private java.lang.Object data_;
-      public DataCase
-          getDataCase() {
-        return DataCase.forNumber(
-            dataCase_);
-      }
-
-      public Builder clearData() {
-        dataCase_ = 0;
-        data_ = null;
-        onChanged();
-        return this;
-      }
-
-
-      private int code_ ;
-      /**
-       * <code>int32 code = 1;</code>
-       */
-      public int getCode() {
-        return code_;
-      }
-      /**
-       * <code>int32 code = 1;</code>
-       */
-      public Builder setCode(int value) {
-        
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 code = 1;</code>
-       */
-      public Builder clearCode() {
-        
-        code_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object msg_ = "";
-      /**
-       * <code>string msg = 2;</code>
-       */
-      public java.lang.String getMsg() {
-        java.lang.Object ref = msg_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          msg_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string msg = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getMsgBytes() {
-        java.lang.Object ref = msg_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          msg_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string msg = 2;</code>
-       */
-      public Builder setMsg(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        msg_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string msg = 2;</code>
-       */
-      public Builder clearMsg() {
-        
-        msg_ = getDefaultInstance().getMsg();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string msg = 2;</code>
-       */
-      public Builder setMsgBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        msg_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.LoginResponse, com.gitchat.netty.chat.ChatInfo.LoginResponse.Builder, com.gitchat.netty.chat.ChatInfo.LoginResponseOrBuilder> loginResponseBuilder_;
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-       */
-      public boolean hasLoginResponse() {
-        return dataCase_ == 3;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.LoginResponse getLoginResponse() {
-        if (loginResponseBuilder_ == null) {
-          if (dataCase_ == 3) {
-            return (com.gitchat.netty.chat.ChatInfo.LoginResponse) data_;
-          }
-          return com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
-        } else {
-          if (dataCase_ == 3) {
-            return loginResponseBuilder_.getMessage();
-          }
-          return com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-       */
-      public Builder setLoginResponse(com.gitchat.netty.chat.ChatInfo.LoginResponse value) {
-        if (loginResponseBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          data_ = value;
-          onChanged();
-        } else {
-          loginResponseBuilder_.setMessage(value);
-        }
-        dataCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-       */
-      public Builder setLoginResponse(
-          com.gitchat.netty.chat.ChatInfo.LoginResponse.Builder builderForValue) {
-        if (loginResponseBuilder_ == null) {
-          data_ = builderForValue.build();
-          onChanged();
-        } else {
-          loginResponseBuilder_.setMessage(builderForValue.build());
-        }
-        dataCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-       */
-      public Builder mergeLoginResponse(com.gitchat.netty.chat.ChatInfo.LoginResponse value) {
-        if (loginResponseBuilder_ == null) {
-          if (dataCase_ == 3 &&
-              data_ != com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance()) {
-            data_ = com.gitchat.netty.chat.ChatInfo.LoginResponse.newBuilder((com.gitchat.netty.chat.ChatInfo.LoginResponse) data_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            data_ = value;
-          }
-          onChanged();
-        } else {
-          if (dataCase_ == 3) {
-            loginResponseBuilder_.mergeFrom(value);
-          }
-          loginResponseBuilder_.setMessage(value);
-        }
-        dataCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-       */
-      public Builder clearLoginResponse() {
-        if (loginResponseBuilder_ == null) {
-          if (dataCase_ == 3) {
-            dataCase_ = 0;
-            data_ = null;
-            onChanged();
-          }
-        } else {
-          if (dataCase_ == 3) {
-            dataCase_ = 0;
-            data_ = null;
-          }
-          loginResponseBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.LoginResponse.Builder getLoginResponseBuilder() {
-        return getLoginResponseFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.LoginResponseOrBuilder getLoginResponseOrBuilder() {
-        if ((dataCase_ == 3) && (loginResponseBuilder_ != null)) {
-          return loginResponseBuilder_.getMessageOrBuilder();
-        } else {
-          if (dataCase_ == 3) {
-            return (com.gitchat.netty.chat.ChatInfo.LoginResponse) data_;
-          }
-          return com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.LoginResponse login_response = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.LoginResponse, com.gitchat.netty.chat.ChatInfo.LoginResponse.Builder, com.gitchat.netty.chat.ChatInfo.LoginResponseOrBuilder> 
-          getLoginResponseFieldBuilder() {
-        if (loginResponseBuilder_ == null) {
-          if (!(dataCase_ == 3)) {
-            data_ = com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
-          }
-          loginResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.gitchat.netty.chat.ChatInfo.LoginResponse, com.gitchat.netty.chat.ChatInfo.LoginResponse.Builder, com.gitchat.netty.chat.ChatInfo.LoginResponseOrBuilder>(
-                  (com.gitchat.netty.chat.ChatInfo.LoginResponse) data_,
-                  getParentForChildren(),
-                  isClean());
-          data_ = null;
-        }
-        dataCase_ = 3;
-        onChanged();;
-        return loginResponseBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.protobuf.Response)
-    }
-
-    // @@protoc_insertion_point(class_scope:com.gitchat.netty.protobuf.Response)
-    private static final com.gitchat.netty.chat.ChatInfo.Response DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.gitchat.netty.chat.ChatInfo.Response();
-    }
-
-    public static com.gitchat.netty.chat.ChatInfo.Response getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Response>
-        PARSER = new com.google.protobuf.AbstractParser<Response>() {
-      @java.lang.Override
-      public Response parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Response(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Response> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Response> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.gitchat.netty.chat.ChatInfo.Response getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface UserOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.protobuf.User)
+      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.chat.User)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3513,11 +2132,11 @@ public final class ChatInfo {
    * 用户信息
    * </pre>
    *
-   * Protobuf type {@code com.gitchat.netty.protobuf.User}
+   * Protobuf type {@code com.gitchat.netty.chat.User}
    */
   public  static final class User extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.gitchat.netty.protobuf.User)
+      // @@protoc_insertion_point(message_implements:com.gitchat.netty.chat.User)
       UserOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use User.newBuilder() to construct.
@@ -3593,13 +2212,13 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_User_descriptor;
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_User_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_User_fieldAccessorTable
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_User_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.gitchat.netty.chat.ChatInfo.User.class, com.gitchat.netty.chat.ChatInfo.User.Builder.class);
     }
@@ -3886,21 +2505,21 @@ public final class ChatInfo {
      * 用户信息
      * </pre>
      *
-     * Protobuf type {@code com.gitchat.netty.protobuf.User}
+     * Protobuf type {@code com.gitchat.netty.chat.User}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.protobuf.User)
+        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.chat.User)
         com.gitchat.netty.chat.ChatInfo.UserOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_User_descriptor;
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_User_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_User_fieldAccessorTable
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_User_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.gitchat.netty.chat.ChatInfo.User.class, com.gitchat.netty.chat.ChatInfo.User.Builder.class);
       }
@@ -3935,7 +2554,7 @@ public final class ChatInfo {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_User_descriptor;
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_User_descriptor;
       }
 
       @java.lang.Override
@@ -4266,10 +2885,10 @@ public final class ChatInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.protobuf.User)
+      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.chat.User)
     }
 
-    // @@protoc_insertion_point(class_scope:com.gitchat.netty.protobuf.User)
+    // @@protoc_insertion_point(class_scope:com.gitchat.netty.chat.User)
     private static final com.gitchat.netty.chat.ChatInfo.User DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.gitchat.netty.chat.ChatInfo.User();
@@ -4306,42 +2925,49 @@ public final class ChatInfo {
 
   }
 
-  public interface NotificationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.protobuf.Notification)
+  public interface GroupOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.chat.Group)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
+     * <code>string group_id = 1;</code>
      */
-    boolean hasWelcome();
+    java.lang.String getGroupId();
     /**
-     * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
+     * <code>string group_id = 1;</code>
      */
-    com.gitchat.netty.chat.ChatInfo.WelcomeNotification getWelcome();
-    /**
-     * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
-     */
-    com.gitchat.netty.chat.ChatInfo.WelcomeNotificationOrBuilder getWelcomeOrBuilder();
+    com.google.protobuf.ByteString
+        getGroupIdBytes();
 
-    public com.gitchat.netty.chat.ChatInfo.Notification.NotifiCase getNotifiCase();
+    /**
+     * <code>string group_name = 2;</code>
+     */
+    java.lang.String getGroupName();
+    /**
+     * <code>string group_name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getGroupNameBytes();
   }
   /**
    * <pre>
-   * 通知消息
+   * 群组信息
    * </pre>
    *
-   * Protobuf type {@code com.gitchat.netty.protobuf.Notification}
+   * Protobuf type {@code com.gitchat.netty.chat.Group}
    */
-  public  static final class Notification extends
+  public  static final class Group extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.gitchat.netty.protobuf.Notification)
-      NotificationOrBuilder {
+      // @@protoc_insertion_point(message_implements:com.gitchat.netty.chat.Group)
+      GroupOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Notification.newBuilder() to construct.
-    private Notification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Group.newBuilder() to construct.
+    private Group(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Notification() {
+    private Group() {
+      groupId_ = "";
+      groupName_ = "";
     }
 
     @java.lang.Override
@@ -4349,707 +2975,7 @@ public final class ChatInfo {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Notification(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.gitchat.netty.chat.ChatInfo.WelcomeNotification.Builder subBuilder = null;
-              if (notifiCase_ == 1) {
-                subBuilder = ((com.gitchat.netty.chat.ChatInfo.WelcomeNotification) notifi_).toBuilder();
-              }
-              notifi_ =
-                  input.readMessage(com.gitchat.netty.chat.ChatInfo.WelcomeNotification.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.gitchat.netty.chat.ChatInfo.WelcomeNotification) notifi_);
-                notifi_ = subBuilder.buildPartial();
-              }
-              notifiCase_ = 1;
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Notification_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Notification_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.gitchat.netty.chat.ChatInfo.Notification.class, com.gitchat.netty.chat.ChatInfo.Notification.Builder.class);
-    }
-
-    private int notifiCase_ = 0;
-    private java.lang.Object notifi_;
-    public enum NotifiCase
-        implements com.google.protobuf.Internal.EnumLite {
-      WELCOME(1),
-      NOTIFI_NOT_SET(0);
-      private final int value;
-      private NotifiCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static NotifiCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static NotifiCase forNumber(int value) {
-        switch (value) {
-          case 1: return WELCOME;
-          case 0: return NOTIFI_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public NotifiCase
-    getNotifiCase() {
-      return NotifiCase.forNumber(
-          notifiCase_);
-    }
-
-    public static final int WELCOME_FIELD_NUMBER = 1;
-    /**
-     * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
-     */
-    public boolean hasWelcome() {
-      return notifiCase_ == 1;
-    }
-    /**
-     * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
-     */
-    public com.gitchat.netty.chat.ChatInfo.WelcomeNotification getWelcome() {
-      if (notifiCase_ == 1) {
-         return (com.gitchat.netty.chat.ChatInfo.WelcomeNotification) notifi_;
-      }
-      return com.gitchat.netty.chat.ChatInfo.WelcomeNotification.getDefaultInstance();
-    }
-    /**
-     * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
-     */
-    public com.gitchat.netty.chat.ChatInfo.WelcomeNotificationOrBuilder getWelcomeOrBuilder() {
-      if (notifiCase_ == 1) {
-         return (com.gitchat.netty.chat.ChatInfo.WelcomeNotification) notifi_;
-      }
-      return com.gitchat.netty.chat.ChatInfo.WelcomeNotification.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (notifiCase_ == 1) {
-        output.writeMessage(1, (com.gitchat.netty.chat.ChatInfo.WelcomeNotification) notifi_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (notifiCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.gitchat.netty.chat.ChatInfo.WelcomeNotification) notifi_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.gitchat.netty.chat.ChatInfo.Notification)) {
-        return super.equals(obj);
-      }
-      com.gitchat.netty.chat.ChatInfo.Notification other = (com.gitchat.netty.chat.ChatInfo.Notification) obj;
-
-      boolean result = true;
-      result = result && getNotifiCase().equals(
-          other.getNotifiCase());
-      if (!result) return false;
-      switch (notifiCase_) {
-        case 1:
-          result = result && getWelcome()
-              .equals(other.getWelcome());
-          break;
-        case 0:
-        default:
-      }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      switch (notifiCase_) {
-        case 1:
-          hash = (37 * hash) + WELCOME_FIELD_NUMBER;
-          hash = (53 * hash) + getWelcome().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.gitchat.netty.chat.ChatInfo.Notification parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Notification parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Notification parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Notification parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Notification parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Notification parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Notification parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Notification parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Notification parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Notification parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Notification parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Notification parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.gitchat.netty.chat.ChatInfo.Notification prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * 通知消息
-     * </pre>
-     *
-     * Protobuf type {@code com.gitchat.netty.protobuf.Notification}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.protobuf.Notification)
-        com.gitchat.netty.chat.ChatInfo.NotificationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Notification_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Notification_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.gitchat.netty.chat.ChatInfo.Notification.class, com.gitchat.netty.chat.ChatInfo.Notification.Builder.class);
-      }
-
-      // Construct using com.gitchat.netty.chat.ChatInfo.Notification.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        notifiCase_ = 0;
-        notifi_ = null;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Notification_descriptor;
-      }
-
-      @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.Notification getDefaultInstanceForType() {
-        return com.gitchat.netty.chat.ChatInfo.Notification.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.Notification build() {
-        com.gitchat.netty.chat.ChatInfo.Notification result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.Notification buildPartial() {
-        com.gitchat.netty.chat.ChatInfo.Notification result = new com.gitchat.netty.chat.ChatInfo.Notification(this);
-        if (notifiCase_ == 1) {
-          if (welcomeBuilder_ == null) {
-            result.notifi_ = notifi_;
-          } else {
-            result.notifi_ = welcomeBuilder_.build();
-          }
-        }
-        result.notifiCase_ = notifiCase_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.gitchat.netty.chat.ChatInfo.Notification) {
-          return mergeFrom((com.gitchat.netty.chat.ChatInfo.Notification)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.gitchat.netty.chat.ChatInfo.Notification other) {
-        if (other == com.gitchat.netty.chat.ChatInfo.Notification.getDefaultInstance()) return this;
-        switch (other.getNotifiCase()) {
-          case WELCOME: {
-            mergeWelcome(other.getWelcome());
-            break;
-          }
-          case NOTIFI_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.gitchat.netty.chat.ChatInfo.Notification parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.gitchat.netty.chat.ChatInfo.Notification) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int notifiCase_ = 0;
-      private java.lang.Object notifi_;
-      public NotifiCase
-          getNotifiCase() {
-        return NotifiCase.forNumber(
-            notifiCase_);
-      }
-
-      public Builder clearNotifi() {
-        notifiCase_ = 0;
-        notifi_ = null;
-        onChanged();
-        return this;
-      }
-
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.WelcomeNotification, com.gitchat.netty.chat.ChatInfo.WelcomeNotification.Builder, com.gitchat.netty.chat.ChatInfo.WelcomeNotificationOrBuilder> welcomeBuilder_;
-      /**
-       * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
-       */
-      public boolean hasWelcome() {
-        return notifiCase_ == 1;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.WelcomeNotification getWelcome() {
-        if (welcomeBuilder_ == null) {
-          if (notifiCase_ == 1) {
-            return (com.gitchat.netty.chat.ChatInfo.WelcomeNotification) notifi_;
-          }
-          return com.gitchat.netty.chat.ChatInfo.WelcomeNotification.getDefaultInstance();
-        } else {
-          if (notifiCase_ == 1) {
-            return welcomeBuilder_.getMessage();
-          }
-          return com.gitchat.netty.chat.ChatInfo.WelcomeNotification.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
-       */
-      public Builder setWelcome(com.gitchat.netty.chat.ChatInfo.WelcomeNotification value) {
-        if (welcomeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          notifi_ = value;
-          onChanged();
-        } else {
-          welcomeBuilder_.setMessage(value);
-        }
-        notifiCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
-       */
-      public Builder setWelcome(
-          com.gitchat.netty.chat.ChatInfo.WelcomeNotification.Builder builderForValue) {
-        if (welcomeBuilder_ == null) {
-          notifi_ = builderForValue.build();
-          onChanged();
-        } else {
-          welcomeBuilder_.setMessage(builderForValue.build());
-        }
-        notifiCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
-       */
-      public Builder mergeWelcome(com.gitchat.netty.chat.ChatInfo.WelcomeNotification value) {
-        if (welcomeBuilder_ == null) {
-          if (notifiCase_ == 1 &&
-              notifi_ != com.gitchat.netty.chat.ChatInfo.WelcomeNotification.getDefaultInstance()) {
-            notifi_ = com.gitchat.netty.chat.ChatInfo.WelcomeNotification.newBuilder((com.gitchat.netty.chat.ChatInfo.WelcomeNotification) notifi_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            notifi_ = value;
-          }
-          onChanged();
-        } else {
-          if (notifiCase_ == 1) {
-            welcomeBuilder_.mergeFrom(value);
-          }
-          welcomeBuilder_.setMessage(value);
-        }
-        notifiCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
-       */
-      public Builder clearWelcome() {
-        if (welcomeBuilder_ == null) {
-          if (notifiCase_ == 1) {
-            notifiCase_ = 0;
-            notifi_ = null;
-            onChanged();
-          }
-        } else {
-          if (notifiCase_ == 1) {
-            notifiCase_ = 0;
-            notifi_ = null;
-          }
-          welcomeBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.WelcomeNotification.Builder getWelcomeBuilder() {
-        return getWelcomeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
-       */
-      public com.gitchat.netty.chat.ChatInfo.WelcomeNotificationOrBuilder getWelcomeOrBuilder() {
-        if ((notifiCase_ == 1) && (welcomeBuilder_ != null)) {
-          return welcomeBuilder_.getMessageOrBuilder();
-        } else {
-          if (notifiCase_ == 1) {
-            return (com.gitchat.netty.chat.ChatInfo.WelcomeNotification) notifi_;
-          }
-          return com.gitchat.netty.chat.ChatInfo.WelcomeNotification.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.gitchat.netty.protobuf.WelcomeNotification welcome = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.gitchat.netty.chat.ChatInfo.WelcomeNotification, com.gitchat.netty.chat.ChatInfo.WelcomeNotification.Builder, com.gitchat.netty.chat.ChatInfo.WelcomeNotificationOrBuilder> 
-          getWelcomeFieldBuilder() {
-        if (welcomeBuilder_ == null) {
-          if (!(notifiCase_ == 1)) {
-            notifi_ = com.gitchat.netty.chat.ChatInfo.WelcomeNotification.getDefaultInstance();
-          }
-          welcomeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.gitchat.netty.chat.ChatInfo.WelcomeNotification, com.gitchat.netty.chat.ChatInfo.WelcomeNotification.Builder, com.gitchat.netty.chat.ChatInfo.WelcomeNotificationOrBuilder>(
-                  (com.gitchat.netty.chat.ChatInfo.WelcomeNotification) notifi_,
-                  getParentForChildren(),
-                  isClean());
-          notifi_ = null;
-        }
-        notifiCase_ = 1;
-        onChanged();;
-        return welcomeBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.protobuf.Notification)
-    }
-
-    // @@protoc_insertion_point(class_scope:com.gitchat.netty.protobuf.Notification)
-    private static final com.gitchat.netty.chat.ChatInfo.Notification DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.gitchat.netty.chat.ChatInfo.Notification();
-    }
-
-    public static com.gitchat.netty.chat.ChatInfo.Notification getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Notification>
-        PARSER = new com.google.protobuf.AbstractParser<Notification>() {
-      @java.lang.Override
-      public Notification parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Notification(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Notification> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Notification> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.gitchat.netty.chat.ChatInfo.Notification getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface WelcomeNotificationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.protobuf.WelcomeNotification)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string text = 1;</code>
-     */
-    java.lang.String getText();
-    /**
-     * <code>string text = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getTextBytes();
-  }
-  /**
-   * Protobuf type {@code com.gitchat.netty.protobuf.WelcomeNotification}
-   */
-  public  static final class WelcomeNotification extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.gitchat.netty.protobuf.WelcomeNotification)
-      WelcomeNotificationOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use WelcomeNotification.newBuilder() to construct.
-    private WelcomeNotification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private WelcomeNotification() {
-      text_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private WelcomeNotification(
+    private Group(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5071,7 +2997,13 @@ public final class ChatInfo {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              text_ = s;
+              groupId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              groupName_ = s;
               break;
             }
             default: {
@@ -5095,45 +3027,79 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_WelcomeNotification_descriptor;
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_Group_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_WelcomeNotification_fieldAccessorTable
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_Group_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.gitchat.netty.chat.ChatInfo.WelcomeNotification.class, com.gitchat.netty.chat.ChatInfo.WelcomeNotification.Builder.class);
+              com.gitchat.netty.chat.ChatInfo.Group.class, com.gitchat.netty.chat.ChatInfo.Group.Builder.class);
     }
 
-    public static final int TEXT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object text_;
+    public static final int GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object groupId_;
     /**
-     * <code>string text = 1;</code>
+     * <code>string group_id = 1;</code>
      */
-    public java.lang.String getText() {
-      java.lang.Object ref = text_;
+    public java.lang.String getGroupId() {
+      java.lang.Object ref = groupId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        text_ = s;
+        groupId_ = s;
         return s;
       }
     }
     /**
-     * <code>string text = 1;</code>
+     * <code>string group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getTextBytes() {
-      java.lang.Object ref = text_;
+        getGroupIdBytes() {
+      java.lang.Object ref = groupId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        text_ = b;
+        groupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GROUP_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object groupName_;
+    /**
+     * <code>string group_name = 2;</code>
+     */
+    public java.lang.String getGroupName() {
+      java.lang.Object ref = groupName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        groupName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string group_name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getGroupNameBytes() {
+      java.lang.Object ref = groupName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        groupName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -5154,8 +3120,11 @@ public final class ChatInfo {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTextBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
+      if (!getGroupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groupId_);
+      }
+      if (!getGroupNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, groupName_);
       }
       unknownFields.writeTo(output);
     }
@@ -5166,8 +3135,11 @@ public final class ChatInfo {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTextBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
+      if (!getGroupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, groupId_);
+      }
+      if (!getGroupNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, groupName_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5179,14 +3151,16 @@ public final class ChatInfo {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.gitchat.netty.chat.ChatInfo.WelcomeNotification)) {
+      if (!(obj instanceof com.gitchat.netty.chat.ChatInfo.Group)) {
         return super.equals(obj);
       }
-      com.gitchat.netty.chat.ChatInfo.WelcomeNotification other = (com.gitchat.netty.chat.ChatInfo.WelcomeNotification) obj;
+      com.gitchat.netty.chat.ChatInfo.Group other = (com.gitchat.netty.chat.ChatInfo.Group) obj;
 
       boolean result = true;
-      result = result && getText()
-          .equals(other.getText());
+      result = result && getGroupId()
+          .equals(other.getGroupId());
+      result = result && getGroupName()
+          .equals(other.getGroupName());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5198,76 +3172,78 @@ public final class ChatInfo {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TEXT_FIELD_NUMBER;
-      hash = (53 * hash) + getText().hashCode();
+      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupId().hashCode();
+      hash = (37 * hash) + GROUP_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.gitchat.netty.chat.ChatInfo.WelcomeNotification parseFrom(
+    public static com.gitchat.netty.chat.ChatInfo.Group parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.gitchat.netty.chat.ChatInfo.WelcomeNotification parseFrom(
+    public static com.gitchat.netty.chat.ChatInfo.Group parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.gitchat.netty.chat.ChatInfo.WelcomeNotification parseFrom(
+    public static com.gitchat.netty.chat.ChatInfo.Group parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.gitchat.netty.chat.ChatInfo.WelcomeNotification parseFrom(
+    public static com.gitchat.netty.chat.ChatInfo.Group parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.gitchat.netty.chat.ChatInfo.WelcomeNotification parseFrom(byte[] data)
+    public static com.gitchat.netty.chat.ChatInfo.Group parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.gitchat.netty.chat.ChatInfo.WelcomeNotification parseFrom(
+    public static com.gitchat.netty.chat.ChatInfo.Group parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.gitchat.netty.chat.ChatInfo.WelcomeNotification parseFrom(java.io.InputStream input)
+    public static com.gitchat.netty.chat.ChatInfo.Group parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.gitchat.netty.chat.ChatInfo.WelcomeNotification parseFrom(
+    public static com.gitchat.netty.chat.ChatInfo.Group parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.gitchat.netty.chat.ChatInfo.WelcomeNotification parseDelimitedFrom(java.io.InputStream input)
+    public static com.gitchat.netty.chat.ChatInfo.Group parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.gitchat.netty.chat.ChatInfo.WelcomeNotification parseDelimitedFrom(
+    public static com.gitchat.netty.chat.ChatInfo.Group parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.gitchat.netty.chat.ChatInfo.WelcomeNotification parseFrom(
+    public static com.gitchat.netty.chat.ChatInfo.Group parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.gitchat.netty.chat.ChatInfo.WelcomeNotification parseFrom(
+    public static com.gitchat.netty.chat.ChatInfo.Group parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5280,7 +3256,7 @@ public final class ChatInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.gitchat.netty.chat.ChatInfo.WelcomeNotification prototype) {
+    public static Builder newBuilder(com.gitchat.netty.chat.ChatInfo.Group prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5296,26 +3272,30 @@ public final class ChatInfo {
       return builder;
     }
     /**
-     * Protobuf type {@code com.gitchat.netty.protobuf.WelcomeNotification}
+     * <pre>
+     * 群组信息
+     * </pre>
+     *
+     * Protobuf type {@code com.gitchat.netty.chat.Group}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.protobuf.WelcomeNotification)
-        com.gitchat.netty.chat.ChatInfo.WelcomeNotificationOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.chat.Group)
+        com.gitchat.netty.chat.ChatInfo.GroupOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_WelcomeNotification_descriptor;
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_Group_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_WelcomeNotification_fieldAccessorTable
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_Group_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.gitchat.netty.chat.ChatInfo.WelcomeNotification.class, com.gitchat.netty.chat.ChatInfo.WelcomeNotification.Builder.class);
+                com.gitchat.netty.chat.ChatInfo.Group.class, com.gitchat.netty.chat.ChatInfo.Group.Builder.class);
       }
 
-      // Construct using com.gitchat.netty.chat.ChatInfo.WelcomeNotification.newBuilder()
+      // Construct using com.gitchat.netty.chat.ChatInfo.Group.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5333,7 +3313,9 @@ public final class ChatInfo {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        text_ = "";
+        groupId_ = "";
+
+        groupName_ = "";
 
         return this;
       }
@@ -5341,17 +3323,17 @@ public final class ChatInfo {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_WelcomeNotification_descriptor;
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_Group_descriptor;
       }
 
       @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.WelcomeNotification getDefaultInstanceForType() {
-        return com.gitchat.netty.chat.ChatInfo.WelcomeNotification.getDefaultInstance();
+      public com.gitchat.netty.chat.ChatInfo.Group getDefaultInstanceForType() {
+        return com.gitchat.netty.chat.ChatInfo.Group.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.WelcomeNotification build() {
-        com.gitchat.netty.chat.ChatInfo.WelcomeNotification result = buildPartial();
+      public com.gitchat.netty.chat.ChatInfo.Group build() {
+        com.gitchat.netty.chat.ChatInfo.Group result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5359,9 +3341,10 @@ public final class ChatInfo {
       }
 
       @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.WelcomeNotification buildPartial() {
-        com.gitchat.netty.chat.ChatInfo.WelcomeNotification result = new com.gitchat.netty.chat.ChatInfo.WelcomeNotification(this);
-        result.text_ = text_;
+      public com.gitchat.netty.chat.ChatInfo.Group buildPartial() {
+        com.gitchat.netty.chat.ChatInfo.Group result = new com.gitchat.netty.chat.ChatInfo.Group(this);
+        result.groupId_ = groupId_;
+        result.groupName_ = groupName_;
         onBuilt();
         return result;
       }
@@ -5400,18 +3383,22 @@ public final class ChatInfo {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.gitchat.netty.chat.ChatInfo.WelcomeNotification) {
-          return mergeFrom((com.gitchat.netty.chat.ChatInfo.WelcomeNotification)other);
+        if (other instanceof com.gitchat.netty.chat.ChatInfo.Group) {
+          return mergeFrom((com.gitchat.netty.chat.ChatInfo.Group)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.gitchat.netty.chat.ChatInfo.WelcomeNotification other) {
-        if (other == com.gitchat.netty.chat.ChatInfo.WelcomeNotification.getDefaultInstance()) return this;
-        if (!other.getText().isEmpty()) {
-          text_ = other.text_;
+      public Builder mergeFrom(com.gitchat.netty.chat.ChatInfo.Group other) {
+        if (other == com.gitchat.netty.chat.ChatInfo.Group.getDefaultInstance()) return this;
+        if (!other.getGroupId().isEmpty()) {
+          groupId_ = other.groupId_;
+          onChanged();
+        }
+        if (!other.getGroupName().isEmpty()) {
+          groupName_ = other.groupName_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -5429,11 +3416,11 @@ public final class ChatInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.gitchat.netty.chat.ChatInfo.WelcomeNotification parsedMessage = null;
+        com.gitchat.netty.chat.ChatInfo.Group parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.gitchat.netty.chat.ChatInfo.WelcomeNotification) e.getUnfinishedMessage();
+          parsedMessage = (com.gitchat.netty.chat.ChatInfo.Group) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5443,492 +3430,141 @@ public final class ChatInfo {
         return this;
       }
 
-      private java.lang.Object text_ = "";
+      private java.lang.Object groupId_ = "";
       /**
-       * <code>string text = 1;</code>
+       * <code>string group_id = 1;</code>
        */
-      public java.lang.String getText() {
-        java.lang.Object ref = text_;
+      public java.lang.String getGroupId() {
+        java.lang.Object ref = groupId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          text_ = s;
+          groupId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string text = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getTextBytes() {
-        java.lang.Object ref = text_;
+          getGroupIdBytes() {
+        java.lang.Object ref = groupId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          text_ = b;
+          groupId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string text = 1;</code>
+       * <code>string group_id = 1;</code>
        */
-      public Builder setText(
+      public Builder setGroupId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        text_ = value;
+        groupId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string text = 1;</code>
+       * <code>string group_id = 1;</code>
        */
-      public Builder clearText() {
+      public Builder clearGroupId() {
         
-        text_ = getDefaultInstance().getText();
+        groupId_ = getDefaultInstance().getGroupId();
         onChanged();
         return this;
       }
       /**
-       * <code>string text = 1;</code>
+       * <code>string group_id = 1;</code>
        */
-      public Builder setTextBytes(
+      public Builder setGroupIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        text_ = value;
+        groupId_ = value;
         onChanged();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.protobuf.WelcomeNotification)
-    }
-
-    // @@protoc_insertion_point(class_scope:com.gitchat.netty.protobuf.WelcomeNotification)
-    private static final com.gitchat.netty.chat.ChatInfo.WelcomeNotification DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.gitchat.netty.chat.ChatInfo.WelcomeNotification();
-    }
-
-    public static com.gitchat.netty.chat.ChatInfo.WelcomeNotification getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<WelcomeNotification>
-        PARSER = new com.google.protobuf.AbstractParser<WelcomeNotification>() {
-      @java.lang.Override
-      public WelcomeNotification parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new WelcomeNotification(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<WelcomeNotification> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<WelcomeNotification> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.gitchat.netty.chat.ChatInfo.WelcomeNotification getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CommandOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.protobuf.Command)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * <pre>
-   * 命令消息
-   * </pre>
-   *
-   * Protobuf type {@code com.gitchat.netty.protobuf.Command}
-   */
-  public  static final class Command extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.gitchat.netty.protobuf.Command)
-      CommandOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Command.newBuilder() to construct.
-    private Command(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Command() {
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Command(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Command_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Command_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.gitchat.netty.chat.ChatInfo.Command.class, com.gitchat.netty.chat.ChatInfo.Command.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.gitchat.netty.chat.ChatInfo.Command)) {
-        return super.equals(obj);
-      }
-      com.gitchat.netty.chat.ChatInfo.Command other = (com.gitchat.netty.chat.ChatInfo.Command) obj;
-
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.gitchat.netty.chat.ChatInfo.Command parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Command parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Command parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Command parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Command parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Command parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Command parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Command parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Command parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Command parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Command parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.gitchat.netty.chat.ChatInfo.Command parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.gitchat.netty.chat.ChatInfo.Command prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * 命令消息
-     * </pre>
-     *
-     * Protobuf type {@code com.gitchat.netty.protobuf.Command}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.protobuf.Command)
-        com.gitchat.netty.chat.ChatInfo.CommandOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Command_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Command_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.gitchat.netty.chat.ChatInfo.Command.class, com.gitchat.netty.chat.ChatInfo.Command.Builder.class);
-      }
-
-      // Construct using com.gitchat.netty.chat.ChatInfo.Command.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_Command_descriptor;
-      }
-
-      @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.Command getDefaultInstanceForType() {
-        return com.gitchat.netty.chat.ChatInfo.Command.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.Command build() {
-        com.gitchat.netty.chat.ChatInfo.Command result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.gitchat.netty.chat.ChatInfo.Command buildPartial() {
-        com.gitchat.netty.chat.ChatInfo.Command result = new com.gitchat.netty.chat.ChatInfo.Command(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.gitchat.netty.chat.ChatInfo.Command) {
-          return mergeFrom((com.gitchat.netty.chat.ChatInfo.Command)other);
+      private java.lang.Object groupName_ = "";
+      /**
+       * <code>string group_name = 2;</code>
+       */
+      public java.lang.String getGroupName() {
+        java.lang.Object ref = groupName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          groupName_ = s;
+          return s;
         } else {
-          super.mergeFrom(other);
-          return this;
+          return (java.lang.String) ref;
         }
       }
-
-      public Builder mergeFrom(com.gitchat.netty.chat.ChatInfo.Command other) {
-        if (other == com.gitchat.netty.chat.ChatInfo.Command.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
+      /**
+       * <code>string group_name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getGroupNameBytes() {
+        java.lang.Object ref = groupName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          groupName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string group_name = 2;</code>
+       */
+      public Builder setGroupName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        groupName_ = value;
         onChanged();
         return this;
       }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
+      /**
+       * <code>string group_name = 2;</code>
+       */
+      public Builder clearGroupName() {
+        
+        groupName_ = getDefaultInstance().getGroupName();
+        onChanged();
+        return this;
       }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.gitchat.netty.chat.ChatInfo.Command parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.gitchat.netty.chat.ChatInfo.Command) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+      /**
+       * <code>string group_name = 2;</code>
+       */
+      public Builder setGroupNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        groupName_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -5944,69 +3580,73 @@ public final class ChatInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.protobuf.Command)
+      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.chat.Group)
     }
 
-    // @@protoc_insertion_point(class_scope:com.gitchat.netty.protobuf.Command)
-    private static final com.gitchat.netty.chat.ChatInfo.Command DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.gitchat.netty.chat.Group)
+    private static final com.gitchat.netty.chat.ChatInfo.Group DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.gitchat.netty.chat.ChatInfo.Command();
+      DEFAULT_INSTANCE = new com.gitchat.netty.chat.ChatInfo.Group();
     }
 
-    public static com.gitchat.netty.chat.ChatInfo.Command getDefaultInstance() {
+    public static com.gitchat.netty.chat.ChatInfo.Group getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Command>
-        PARSER = new com.google.protobuf.AbstractParser<Command>() {
+    private static final com.google.protobuf.Parser<Group>
+        PARSER = new com.google.protobuf.AbstractParser<Group>() {
       @java.lang.Override
-      public Command parsePartialFrom(
+      public Group parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Command(input, extensionRegistry);
+        return new Group(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Command> parser() {
+    public static com.google.protobuf.Parser<Group> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Command> getParserForType() {
+    public com.google.protobuf.Parser<Group> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.gitchat.netty.chat.ChatInfo.Command getDefaultInstanceForType() {
+    public com.gitchat.netty.chat.ChatInfo.Group getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface LoginRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.protobuf.LoginRequest)
+      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.chat.LoginRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+     * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
      */
     boolean hasLoginUser();
     /**
-     * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+     * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
      */
     com.gitchat.netty.chat.ChatInfo.User getLoginUser();
     /**
-     * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+     * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
      */
     com.gitchat.netty.chat.ChatInfo.UserOrBuilder getLoginUserOrBuilder();
   }
   /**
-   * Protobuf type {@code com.gitchat.netty.protobuf.LoginRequest}
+   * <pre>
+   * 登录请求
+   * </pre>
+   *
+   * Protobuf type {@code com.gitchat.netty.chat.LoginRequest}
    */
   public  static final class LoginRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.gitchat.netty.protobuf.LoginRequest)
+      // @@protoc_insertion_point(message_implements:com.gitchat.netty.chat.LoginRequest)
       LoginRequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use LoginRequest.newBuilder() to construct.
@@ -6074,13 +3714,13 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_LoginRequest_descriptor;
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_LoginRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_LoginRequest_fieldAccessorTable
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_LoginRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.gitchat.netty.chat.ChatInfo.LoginRequest.class, com.gitchat.netty.chat.ChatInfo.LoginRequest.Builder.class);
     }
@@ -6088,19 +3728,19 @@ public final class ChatInfo {
     public static final int LOGIN_USER_FIELD_NUMBER = 1;
     private com.gitchat.netty.chat.ChatInfo.User loginUser_;
     /**
-     * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+     * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
      */
     public boolean hasLoginUser() {
       return loginUser_ != null;
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+     * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
      */
     public com.gitchat.netty.chat.ChatInfo.User getLoginUser() {
       return loginUser_ == null ? com.gitchat.netty.chat.ChatInfo.User.getDefaultInstance() : loginUser_;
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+     * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
      */
     public com.gitchat.netty.chat.ChatInfo.UserOrBuilder getLoginUserOrBuilder() {
       return getLoginUser();
@@ -6268,21 +3908,25 @@ public final class ChatInfo {
       return builder;
     }
     /**
-     * Protobuf type {@code com.gitchat.netty.protobuf.LoginRequest}
+     * <pre>
+     * 登录请求
+     * </pre>
+     *
+     * Protobuf type {@code com.gitchat.netty.chat.LoginRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.protobuf.LoginRequest)
+        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.chat.LoginRequest)
         com.gitchat.netty.chat.ChatInfo.LoginRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_LoginRequest_descriptor;
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_LoginRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_LoginRequest_fieldAccessorTable
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_LoginRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.gitchat.netty.chat.ChatInfo.LoginRequest.class, com.gitchat.netty.chat.ChatInfo.LoginRequest.Builder.class);
       }
@@ -6317,7 +3961,7 @@ public final class ChatInfo {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_LoginRequest_descriptor;
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_LoginRequest_descriptor;
       }
 
       @java.lang.Override
@@ -6426,13 +4070,13 @@ public final class ChatInfo {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.gitchat.netty.chat.ChatInfo.User, com.gitchat.netty.chat.ChatInfo.User.Builder, com.gitchat.netty.chat.ChatInfo.UserOrBuilder> loginUserBuilder_;
       /**
-       * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
        */
       public boolean hasLoginUser() {
         return loginUserBuilder_ != null || loginUser_ != null;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.User getLoginUser() {
         if (loginUserBuilder_ == null) {
@@ -6442,7 +4086,7 @@ public final class ChatInfo {
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
        */
       public Builder setLoginUser(com.gitchat.netty.chat.ChatInfo.User value) {
         if (loginUserBuilder_ == null) {
@@ -6458,7 +4102,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
        */
       public Builder setLoginUser(
           com.gitchat.netty.chat.ChatInfo.User.Builder builderForValue) {
@@ -6472,7 +4116,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
        */
       public Builder mergeLoginUser(com.gitchat.netty.chat.ChatInfo.User value) {
         if (loginUserBuilder_ == null) {
@@ -6490,7 +4134,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
        */
       public Builder clearLoginUser() {
         if (loginUserBuilder_ == null) {
@@ -6504,7 +4148,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.User.Builder getLoginUserBuilder() {
         
@@ -6512,7 +4156,7 @@ public final class ChatInfo {
         return getLoginUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.UserOrBuilder getLoginUserOrBuilder() {
         if (loginUserBuilder_ != null) {
@@ -6523,7 +4167,7 @@ public final class ChatInfo {
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User login_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User login_user = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.gitchat.netty.chat.ChatInfo.User, com.gitchat.netty.chat.ChatInfo.User.Builder, com.gitchat.netty.chat.ChatInfo.UserOrBuilder> 
@@ -6551,10 +4195,10 @@ public final class ChatInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.protobuf.LoginRequest)
+      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.chat.LoginRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:com.gitchat.netty.protobuf.LoginRequest)
+    // @@protoc_insertion_point(class_scope:com.gitchat.netty.chat.LoginRequest)
     private static final com.gitchat.netty.chat.ChatInfo.LoginRequest DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.gitchat.netty.chat.ChatInfo.LoginRequest();
@@ -6592,7 +4236,7 @@ public final class ChatInfo {
   }
 
   public interface LoginResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.protobuf.LoginResponse)
+      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.chat.LoginResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6606,24 +4250,43 @@ public final class ChatInfo {
         getTokenBytes();
 
     /**
-     * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+     * <code>int32 code = 2;</code>
+     */
+    int getCode();
+
+    /**
+     * <code>string msg = 3;</code>
+     */
+    java.lang.String getMsg();
+    /**
+     * <code>string msg = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getMsgBytes();
+
+    /**
+     * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
      */
     boolean hasUserInfo();
     /**
-     * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+     * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
      */
     com.gitchat.netty.chat.ChatInfo.User getUserInfo();
     /**
-     * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+     * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
      */
     com.gitchat.netty.chat.ChatInfo.UserOrBuilder getUserInfoOrBuilder();
   }
   /**
-   * Protobuf type {@code com.gitchat.netty.protobuf.LoginResponse}
+   * <pre>
+   * 登录响应
+   * </pre>
+   *
+   * Protobuf type {@code com.gitchat.netty.chat.LoginResponse}
    */
   public  static final class LoginResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.gitchat.netty.protobuf.LoginResponse)
+      // @@protoc_insertion_point(message_implements:com.gitchat.netty.chat.LoginResponse)
       LoginResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use LoginResponse.newBuilder() to construct.
@@ -6632,6 +4295,8 @@ public final class ChatInfo {
     }
     private LoginResponse() {
       token_ = "";
+      code_ = 0;
+      msg_ = "";
     }
 
     @java.lang.Override
@@ -6664,7 +4329,18 @@ public final class ChatInfo {
               token_ = s;
               break;
             }
-            case 18: {
+            case 16: {
+
+              code_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              msg_ = s;
+              break;
+            }
+            case 34: {
               com.gitchat.netty.chat.ChatInfo.User.Builder subBuilder = null;
               if (userInfo_ != null) {
                 subBuilder = userInfo_.toBuilder();
@@ -6698,13 +4374,13 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_LoginResponse_descriptor;
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_LoginResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_LoginResponse_fieldAccessorTable
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_LoginResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.gitchat.netty.chat.ChatInfo.LoginResponse.class, com.gitchat.netty.chat.ChatInfo.LoginResponse.Builder.class);
     }
@@ -6743,22 +4419,65 @@ public final class ChatInfo {
       }
     }
 
-    public static final int USER_INFO_FIELD_NUMBER = 2;
+    public static final int CODE_FIELD_NUMBER = 2;
+    private int code_;
+    /**
+     * <code>int32 code = 2;</code>
+     */
+    public int getCode() {
+      return code_;
+    }
+
+    public static final int MSG_FIELD_NUMBER = 3;
+    private volatile java.lang.Object msg_;
+    /**
+     * <code>string msg = 3;</code>
+     */
+    public java.lang.String getMsg() {
+      java.lang.Object ref = msg_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        msg_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string msg = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMsgBytes() {
+      java.lang.Object ref = msg_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        msg_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USER_INFO_FIELD_NUMBER = 4;
     private com.gitchat.netty.chat.ChatInfo.User userInfo_;
     /**
-     * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+     * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
      */
     public boolean hasUserInfo() {
       return userInfo_ != null;
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+     * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
      */
     public com.gitchat.netty.chat.ChatInfo.User getUserInfo() {
       return userInfo_ == null ? com.gitchat.netty.chat.ChatInfo.User.getDefaultInstance() : userInfo_;
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+     * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
      */
     public com.gitchat.netty.chat.ChatInfo.UserOrBuilder getUserInfoOrBuilder() {
       return getUserInfo();
@@ -6781,8 +4500,14 @@ public final class ChatInfo {
       if (!getTokenBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, token_);
       }
+      if (code_ != 0) {
+        output.writeInt32(2, code_);
+      }
+      if (!getMsgBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, msg_);
+      }
       if (userInfo_ != null) {
-        output.writeMessage(2, getUserInfo());
+        output.writeMessage(4, getUserInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -6796,9 +4521,16 @@ public final class ChatInfo {
       if (!getTokenBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, token_);
       }
+      if (code_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, code_);
+      }
+      if (!getMsgBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, msg_);
+      }
       if (userInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getUserInfo());
+          .computeMessageSize(4, getUserInfo());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6818,6 +4550,10 @@ public final class ChatInfo {
       boolean result = true;
       result = result && getToken()
           .equals(other.getToken());
+      result = result && (getCode()
+          == other.getCode());
+      result = result && getMsg()
+          .equals(other.getMsg());
       result = result && (hasUserInfo() == other.hasUserInfo());
       if (hasUserInfo()) {
         result = result && getUserInfo()
@@ -6836,6 +4572,10 @@ public final class ChatInfo {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getToken().hashCode();
+      hash = (37 * hash) + CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCode();
+      hash = (37 * hash) + MSG_FIELD_NUMBER;
+      hash = (53 * hash) + getMsg().hashCode();
       if (hasUserInfo()) {
         hash = (37 * hash) + USER_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getUserInfo().hashCode();
@@ -6936,21 +4676,25 @@ public final class ChatInfo {
       return builder;
     }
     /**
-     * Protobuf type {@code com.gitchat.netty.protobuf.LoginResponse}
+     * <pre>
+     * 登录响应
+     * </pre>
+     *
+     * Protobuf type {@code com.gitchat.netty.chat.LoginResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.protobuf.LoginResponse)
+        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.chat.LoginResponse)
         com.gitchat.netty.chat.ChatInfo.LoginResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_LoginResponse_descriptor;
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_LoginResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_LoginResponse_fieldAccessorTable
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_LoginResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.gitchat.netty.chat.ChatInfo.LoginResponse.class, com.gitchat.netty.chat.ChatInfo.LoginResponse.Builder.class);
       }
@@ -6975,6 +4719,10 @@ public final class ChatInfo {
         super.clear();
         token_ = "";
 
+        code_ = 0;
+
+        msg_ = "";
+
         if (userInfoBuilder_ == null) {
           userInfo_ = null;
         } else {
@@ -6987,7 +4735,7 @@ public final class ChatInfo {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_LoginResponse_descriptor;
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_LoginResponse_descriptor;
       }
 
       @java.lang.Override
@@ -7008,6 +4756,8 @@ public final class ChatInfo {
       public com.gitchat.netty.chat.ChatInfo.LoginResponse buildPartial() {
         com.gitchat.netty.chat.ChatInfo.LoginResponse result = new com.gitchat.netty.chat.ChatInfo.LoginResponse(this);
         result.token_ = token_;
+        result.code_ = code_;
+        result.msg_ = msg_;
         if (userInfoBuilder_ == null) {
           result.userInfo_ = userInfo_;
         } else {
@@ -7063,6 +4813,13 @@ public final class ChatInfo {
         if (other == com.gitchat.netty.chat.ChatInfo.LoginResponse.getDefaultInstance()) return this;
         if (!other.getToken().isEmpty()) {
           token_ = other.token_;
+          onChanged();
+        }
+        if (other.getCode() != 0) {
+          setCode(other.getCode());
+        }
+        if (!other.getMsg().isEmpty()) {
+          msg_ = other.msg_;
           onChanged();
         }
         if (other.hasUserInfo()) {
@@ -7166,17 +4923,112 @@ public final class ChatInfo {
         return this;
       }
 
+      private int code_ ;
+      /**
+       * <code>int32 code = 2;</code>
+       */
+      public int getCode() {
+        return code_;
+      }
+      /**
+       * <code>int32 code = 2;</code>
+       */
+      public Builder setCode(int value) {
+        
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 code = 2;</code>
+       */
+      public Builder clearCode() {
+        
+        code_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object msg_ = "";
+      /**
+       * <code>string msg = 3;</code>
+       */
+      public java.lang.String getMsg() {
+        java.lang.Object ref = msg_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          msg_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string msg = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMsgBytes() {
+        java.lang.Object ref = msg_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          msg_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string msg = 3;</code>
+       */
+      public Builder setMsg(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        msg_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string msg = 3;</code>
+       */
+      public Builder clearMsg() {
+        
+        msg_ = getDefaultInstance().getMsg();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string msg = 3;</code>
+       */
+      public Builder setMsgBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        msg_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.gitchat.netty.chat.ChatInfo.User userInfo_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.gitchat.netty.chat.ChatInfo.User, com.gitchat.netty.chat.ChatInfo.User.Builder, com.gitchat.netty.chat.ChatInfo.UserOrBuilder> userInfoBuilder_;
       /**
-       * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+       * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
        */
       public boolean hasUserInfo() {
         return userInfoBuilder_ != null || userInfo_ != null;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+       * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.User getUserInfo() {
         if (userInfoBuilder_ == null) {
@@ -7186,7 +5038,7 @@ public final class ChatInfo {
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+       * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
        */
       public Builder setUserInfo(com.gitchat.netty.chat.ChatInfo.User value) {
         if (userInfoBuilder_ == null) {
@@ -7202,7 +5054,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+       * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
        */
       public Builder setUserInfo(
           com.gitchat.netty.chat.ChatInfo.User.Builder builderForValue) {
@@ -7216,7 +5068,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+       * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
        */
       public Builder mergeUserInfo(com.gitchat.netty.chat.ChatInfo.User value) {
         if (userInfoBuilder_ == null) {
@@ -7234,7 +5086,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+       * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
        */
       public Builder clearUserInfo() {
         if (userInfoBuilder_ == null) {
@@ -7248,7 +5100,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+       * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.User.Builder getUserInfoBuilder() {
         
@@ -7256,7 +5108,7 @@ public final class ChatInfo {
         return getUserInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+       * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.UserOrBuilder getUserInfoOrBuilder() {
         if (userInfoBuilder_ != null) {
@@ -7267,7 +5119,7 @@ public final class ChatInfo {
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User user_info = 2;</code>
+       * <code>.com.gitchat.netty.chat.User user_info = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.gitchat.netty.chat.ChatInfo.User, com.gitchat.netty.chat.ChatInfo.User.Builder, com.gitchat.netty.chat.ChatInfo.UserOrBuilder> 
@@ -7295,10 +5147,10 @@ public final class ChatInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.protobuf.LoginResponse)
+      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.chat.LoginResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:com.gitchat.netty.protobuf.LoginResponse)
+    // @@protoc_insertion_point(class_scope:com.gitchat.netty.chat.LoginResponse)
     private static final com.gitchat.netty.chat.ChatInfo.LoginResponse DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.gitchat.netty.chat.ChatInfo.LoginResponse();
@@ -7335,33 +5187,1657 @@ public final class ChatInfo {
 
   }
 
-  public interface SingleChatOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.protobuf.SingleChat)
+  public interface CreateGroupRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.chat.CreateGroupRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+     * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+     */
+    boolean hasCreator();
+    /**
+     * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+     */
+    com.gitchat.netty.chat.ChatInfo.User getCreator();
+    /**
+     * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+     */
+    com.gitchat.netty.chat.ChatInfo.UserOrBuilder getCreatorOrBuilder();
+
+    /**
+     * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+     */
+    boolean hasGroup();
+    /**
+     * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+     */
+    com.gitchat.netty.chat.ChatInfo.Group getGroup();
+    /**
+     * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+     */
+    com.gitchat.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder();
+  }
+  /**
+   * <pre>
+   * 创建群组请求
+   * </pre>
+   *
+   * Protobuf type {@code com.gitchat.netty.chat.CreateGroupRequest}
+   */
+  public  static final class CreateGroupRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.gitchat.netty.chat.CreateGroupRequest)
+      CreateGroupRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateGroupRequest.newBuilder() to construct.
+    private CreateGroupRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateGroupRequest() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateGroupRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.gitchat.netty.chat.ChatInfo.User.Builder subBuilder = null;
+              if (creator_ != null) {
+                subBuilder = creator_.toBuilder();
+              }
+              creator_ = input.readMessage(com.gitchat.netty.chat.ChatInfo.User.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(creator_);
+                creator_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.gitchat.netty.chat.ChatInfo.Group.Builder subBuilder = null;
+              if (group_ != null) {
+                subBuilder = group_.toBuilder();
+              }
+              group_ = input.readMessage(com.gitchat.netty.chat.ChatInfo.Group.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(group_);
+                group_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_CreateGroupRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_CreateGroupRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.class, com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    private com.gitchat.netty.chat.ChatInfo.User creator_;
+    /**
+     * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+     */
+    public boolean hasCreator() {
+      return creator_ != null;
+    }
+    /**
+     * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+     */
+    public com.gitchat.netty.chat.ChatInfo.User getCreator() {
+      return creator_ == null ? com.gitchat.netty.chat.ChatInfo.User.getDefaultInstance() : creator_;
+    }
+    /**
+     * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+     */
+    public com.gitchat.netty.chat.ChatInfo.UserOrBuilder getCreatorOrBuilder() {
+      return getCreator();
+    }
+
+    public static final int GROUP_FIELD_NUMBER = 2;
+    private com.gitchat.netty.chat.ChatInfo.Group group_;
+    /**
+     * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+     */
+    public boolean hasGroup() {
+      return group_ != null;
+    }
+    /**
+     * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+     */
+    public com.gitchat.netty.chat.ChatInfo.Group getGroup() {
+      return group_ == null ? com.gitchat.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+    }
+    /**
+     * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+     */
+    public com.gitchat.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder() {
+      return getGroup();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (creator_ != null) {
+        output.writeMessage(1, getCreator());
+      }
+      if (group_ != null) {
+        output.writeMessage(2, getGroup());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (creator_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCreator());
+      }
+      if (group_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getGroup());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gitchat.netty.chat.ChatInfo.CreateGroupRequest)) {
+        return super.equals(obj);
+      }
+      com.gitchat.netty.chat.ChatInfo.CreateGroupRequest other = (com.gitchat.netty.chat.ChatInfo.CreateGroupRequest) obj;
+
+      boolean result = true;
+      result = result && (hasCreator() == other.hasCreator());
+      if (hasCreator()) {
+        result = result && getCreator()
+            .equals(other.getCreator());
+      }
+      result = result && (hasGroup() == other.hasGroup());
+      if (hasGroup()) {
+        result = result && getGroup()
+            .equals(other.getGroup());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCreator()) {
+        hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+        hash = (53 * hash) + getCreator().hashCode();
+      }
+      if (hasGroup()) {
+        hash = (37 * hash) + GROUP_FIELD_NUMBER;
+        hash = (53 * hash) + getGroup().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gitchat.netty.chat.ChatInfo.CreateGroupRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * 创建群组请求
+     * </pre>
+     *
+     * Protobuf type {@code com.gitchat.netty.chat.CreateGroupRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.chat.CreateGroupRequest)
+        com.gitchat.netty.chat.ChatInfo.CreateGroupRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_CreateGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_CreateGroupRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.class, com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.Builder.class);
+      }
+
+      // Construct using com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (creatorBuilder_ == null) {
+          creator_ = null;
+        } else {
+          creator_ = null;
+          creatorBuilder_ = null;
+        }
+        if (groupBuilder_ == null) {
+          group_ = null;
+        } else {
+          group_ = null;
+          groupBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_CreateGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gitchat.netty.chat.ChatInfo.CreateGroupRequest getDefaultInstanceForType() {
+        return com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gitchat.netty.chat.ChatInfo.CreateGroupRequest build() {
+        com.gitchat.netty.chat.ChatInfo.CreateGroupRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gitchat.netty.chat.ChatInfo.CreateGroupRequest buildPartial() {
+        com.gitchat.netty.chat.ChatInfo.CreateGroupRequest result = new com.gitchat.netty.chat.ChatInfo.CreateGroupRequest(this);
+        if (creatorBuilder_ == null) {
+          result.creator_ = creator_;
+        } else {
+          result.creator_ = creatorBuilder_.build();
+        }
+        if (groupBuilder_ == null) {
+          result.group_ = group_;
+        } else {
+          result.group_ = groupBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gitchat.netty.chat.ChatInfo.CreateGroupRequest) {
+          return mergeFrom((com.gitchat.netty.chat.ChatInfo.CreateGroupRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gitchat.netty.chat.ChatInfo.CreateGroupRequest other) {
+        if (other == com.gitchat.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance()) return this;
+        if (other.hasCreator()) {
+          mergeCreator(other.getCreator());
+        }
+        if (other.hasGroup()) {
+          mergeGroup(other.getGroup());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.gitchat.netty.chat.ChatInfo.CreateGroupRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.gitchat.netty.chat.ChatInfo.CreateGroupRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.gitchat.netty.chat.ChatInfo.User creator_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gitchat.netty.chat.ChatInfo.User, com.gitchat.netty.chat.ChatInfo.User.Builder, com.gitchat.netty.chat.ChatInfo.UserOrBuilder> creatorBuilder_;
+      /**
+       * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+       */
+      public boolean hasCreator() {
+        return creatorBuilder_ != null || creator_ != null;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.User getCreator() {
+        if (creatorBuilder_ == null) {
+          return creator_ == null ? com.gitchat.netty.chat.ChatInfo.User.getDefaultInstance() : creator_;
+        } else {
+          return creatorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+       */
+      public Builder setCreator(com.gitchat.netty.chat.ChatInfo.User value) {
+        if (creatorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          creator_ = value;
+          onChanged();
+        } else {
+          creatorBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+       */
+      public Builder setCreator(
+          com.gitchat.netty.chat.ChatInfo.User.Builder builderForValue) {
+        if (creatorBuilder_ == null) {
+          creator_ = builderForValue.build();
+          onChanged();
+        } else {
+          creatorBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+       */
+      public Builder mergeCreator(com.gitchat.netty.chat.ChatInfo.User value) {
+        if (creatorBuilder_ == null) {
+          if (creator_ != null) {
+            creator_ =
+              com.gitchat.netty.chat.ChatInfo.User.newBuilder(creator_).mergeFrom(value).buildPartial();
+          } else {
+            creator_ = value;
+          }
+          onChanged();
+        } else {
+          creatorBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+       */
+      public Builder clearCreator() {
+        if (creatorBuilder_ == null) {
+          creator_ = null;
+          onChanged();
+        } else {
+          creator_ = null;
+          creatorBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.User.Builder getCreatorBuilder() {
+        
+        onChanged();
+        return getCreatorFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.UserOrBuilder getCreatorOrBuilder() {
+        if (creatorBuilder_ != null) {
+          return creatorBuilder_.getMessageOrBuilder();
+        } else {
+          return creator_ == null ?
+              com.gitchat.netty.chat.ChatInfo.User.getDefaultInstance() : creator_;
+        }
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.User creator = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gitchat.netty.chat.ChatInfo.User, com.gitchat.netty.chat.ChatInfo.User.Builder, com.gitchat.netty.chat.ChatInfo.UserOrBuilder> 
+          getCreatorFieldBuilder() {
+        if (creatorBuilder_ == null) {
+          creatorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.gitchat.netty.chat.ChatInfo.User, com.gitchat.netty.chat.ChatInfo.User.Builder, com.gitchat.netty.chat.ChatInfo.UserOrBuilder>(
+                  getCreator(),
+                  getParentForChildren(),
+                  isClean());
+          creator_ = null;
+        }
+        return creatorBuilder_;
+      }
+
+      private com.gitchat.netty.chat.ChatInfo.Group group_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gitchat.netty.chat.ChatInfo.Group, com.gitchat.netty.chat.ChatInfo.Group.Builder, com.gitchat.netty.chat.ChatInfo.GroupOrBuilder> groupBuilder_;
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+       */
+      public boolean hasGroup() {
+        return groupBuilder_ != null || group_ != null;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.Group getGroup() {
+        if (groupBuilder_ == null) {
+          return group_ == null ? com.gitchat.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+        } else {
+          return groupBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+       */
+      public Builder setGroup(com.gitchat.netty.chat.ChatInfo.Group value) {
+        if (groupBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          group_ = value;
+          onChanged();
+        } else {
+          groupBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+       */
+      public Builder setGroup(
+          com.gitchat.netty.chat.ChatInfo.Group.Builder builderForValue) {
+        if (groupBuilder_ == null) {
+          group_ = builderForValue.build();
+          onChanged();
+        } else {
+          groupBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+       */
+      public Builder mergeGroup(com.gitchat.netty.chat.ChatInfo.Group value) {
+        if (groupBuilder_ == null) {
+          if (group_ != null) {
+            group_ =
+              com.gitchat.netty.chat.ChatInfo.Group.newBuilder(group_).mergeFrom(value).buildPartial();
+          } else {
+            group_ = value;
+          }
+          onChanged();
+        } else {
+          groupBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+       */
+      public Builder clearGroup() {
+        if (groupBuilder_ == null) {
+          group_ = null;
+          onChanged();
+        } else {
+          group_ = null;
+          groupBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.Group.Builder getGroupBuilder() {
+        
+        onChanged();
+        return getGroupFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder() {
+        if (groupBuilder_ != null) {
+          return groupBuilder_.getMessageOrBuilder();
+        } else {
+          return group_ == null ?
+              com.gitchat.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+        }
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gitchat.netty.chat.ChatInfo.Group, com.gitchat.netty.chat.ChatInfo.Group.Builder, com.gitchat.netty.chat.ChatInfo.GroupOrBuilder> 
+          getGroupFieldBuilder() {
+        if (groupBuilder_ == null) {
+          groupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.gitchat.netty.chat.ChatInfo.Group, com.gitchat.netty.chat.ChatInfo.Group.Builder, com.gitchat.netty.chat.ChatInfo.GroupOrBuilder>(
+                  getGroup(),
+                  getParentForChildren(),
+                  isClean());
+          group_ = null;
+        }
+        return groupBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.chat.CreateGroupRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.gitchat.netty.chat.CreateGroupRequest)
+    private static final com.gitchat.netty.chat.ChatInfo.CreateGroupRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gitchat.netty.chat.ChatInfo.CreateGroupRequest();
+    }
+
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateGroupRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateGroupRequest>() {
+      @java.lang.Override
+      public CreateGroupRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateGroupRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateGroupRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateGroupRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gitchat.netty.chat.ChatInfo.CreateGroupRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateGroupResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.chat.CreateGroupResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 code = 1;</code>
+     */
+    int getCode();
+
+    /**
+     * <code>string msg = 2;</code>
+     */
+    java.lang.String getMsg();
+    /**
+     * <code>string msg = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getMsgBytes();
+
+    /**
+     * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+     */
+    boolean hasGroup();
+    /**
+     * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+     */
+    com.gitchat.netty.chat.ChatInfo.Group getGroup();
+    /**
+     * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+     */
+    com.gitchat.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder();
+  }
+  /**
+   * <pre>
+   * 创建群组响应
+   * </pre>
+   *
+   * Protobuf type {@code com.gitchat.netty.chat.CreateGroupResponse}
+   */
+  public  static final class CreateGroupResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.gitchat.netty.chat.CreateGroupResponse)
+      CreateGroupResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateGroupResponse.newBuilder() to construct.
+    private CreateGroupResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateGroupResponse() {
+      code_ = 0;
+      msg_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateGroupResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              code_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              msg_ = s;
+              break;
+            }
+            case 26: {
+              com.gitchat.netty.chat.ChatInfo.Group.Builder subBuilder = null;
+              if (group_ != null) {
+                subBuilder = group_.toBuilder();
+              }
+              group_ = input.readMessage(com.gitchat.netty.chat.ChatInfo.Group.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(group_);
+                group_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_CreateGroupResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_CreateGroupResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.class, com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.Builder.class);
+    }
+
+    public static final int CODE_FIELD_NUMBER = 1;
+    private int code_;
+    /**
+     * <code>int32 code = 1;</code>
+     */
+    public int getCode() {
+      return code_;
+    }
+
+    public static final int MSG_FIELD_NUMBER = 2;
+    private volatile java.lang.Object msg_;
+    /**
+     * <code>string msg = 2;</code>
+     */
+    public java.lang.String getMsg() {
+      java.lang.Object ref = msg_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        msg_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string msg = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMsgBytes() {
+      java.lang.Object ref = msg_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        msg_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GROUP_FIELD_NUMBER = 3;
+    private com.gitchat.netty.chat.ChatInfo.Group group_;
+    /**
+     * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+     */
+    public boolean hasGroup() {
+      return group_ != null;
+    }
+    /**
+     * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+     */
+    public com.gitchat.netty.chat.ChatInfo.Group getGroup() {
+      return group_ == null ? com.gitchat.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+    }
+    /**
+     * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+     */
+    public com.gitchat.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder() {
+      return getGroup();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (code_ != 0) {
+        output.writeInt32(1, code_);
+      }
+      if (!getMsgBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, msg_);
+      }
+      if (group_ != null) {
+        output.writeMessage(3, getGroup());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (code_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, code_);
+      }
+      if (!getMsgBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, msg_);
+      }
+      if (group_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getGroup());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gitchat.netty.chat.ChatInfo.CreateGroupResponse)) {
+        return super.equals(obj);
+      }
+      com.gitchat.netty.chat.ChatInfo.CreateGroupResponse other = (com.gitchat.netty.chat.ChatInfo.CreateGroupResponse) obj;
+
+      boolean result = true;
+      result = result && (getCode()
+          == other.getCode());
+      result = result && getMsg()
+          .equals(other.getMsg());
+      result = result && (hasGroup() == other.hasGroup());
+      if (hasGroup()) {
+        result = result && getGroup()
+            .equals(other.getGroup());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCode();
+      hash = (37 * hash) + MSG_FIELD_NUMBER;
+      hash = (53 * hash) + getMsg().hashCode();
+      if (hasGroup()) {
+        hash = (37 * hash) + GROUP_FIELD_NUMBER;
+        hash = (53 * hash) + getGroup().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gitchat.netty.chat.ChatInfo.CreateGroupResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * 创建群组响应
+     * </pre>
+     *
+     * Protobuf type {@code com.gitchat.netty.chat.CreateGroupResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.chat.CreateGroupResponse)
+        com.gitchat.netty.chat.ChatInfo.CreateGroupResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_CreateGroupResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_CreateGroupResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.class, com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.Builder.class);
+      }
+
+      // Construct using com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        code_ = 0;
+
+        msg_ = "";
+
+        if (groupBuilder_ == null) {
+          group_ = null;
+        } else {
+          group_ = null;
+          groupBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_CreateGroupResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gitchat.netty.chat.ChatInfo.CreateGroupResponse getDefaultInstanceForType() {
+        return com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gitchat.netty.chat.ChatInfo.CreateGroupResponse build() {
+        com.gitchat.netty.chat.ChatInfo.CreateGroupResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gitchat.netty.chat.ChatInfo.CreateGroupResponse buildPartial() {
+        com.gitchat.netty.chat.ChatInfo.CreateGroupResponse result = new com.gitchat.netty.chat.ChatInfo.CreateGroupResponse(this);
+        result.code_ = code_;
+        result.msg_ = msg_;
+        if (groupBuilder_ == null) {
+          result.group_ = group_;
+        } else {
+          result.group_ = groupBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gitchat.netty.chat.ChatInfo.CreateGroupResponse) {
+          return mergeFrom((com.gitchat.netty.chat.ChatInfo.CreateGroupResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gitchat.netty.chat.ChatInfo.CreateGroupResponse other) {
+        if (other == com.gitchat.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance()) return this;
+        if (other.getCode() != 0) {
+          setCode(other.getCode());
+        }
+        if (!other.getMsg().isEmpty()) {
+          msg_ = other.msg_;
+          onChanged();
+        }
+        if (other.hasGroup()) {
+          mergeGroup(other.getGroup());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.gitchat.netty.chat.ChatInfo.CreateGroupResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.gitchat.netty.chat.ChatInfo.CreateGroupResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int code_ ;
+      /**
+       * <code>int32 code = 1;</code>
+       */
+      public int getCode() {
+        return code_;
+      }
+      /**
+       * <code>int32 code = 1;</code>
+       */
+      public Builder setCode(int value) {
+        
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 code = 1;</code>
+       */
+      public Builder clearCode() {
+        
+        code_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object msg_ = "";
+      /**
+       * <code>string msg = 2;</code>
+       */
+      public java.lang.String getMsg() {
+        java.lang.Object ref = msg_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          msg_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string msg = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMsgBytes() {
+        java.lang.Object ref = msg_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          msg_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string msg = 2;</code>
+       */
+      public Builder setMsg(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        msg_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string msg = 2;</code>
+       */
+      public Builder clearMsg() {
+        
+        msg_ = getDefaultInstance().getMsg();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string msg = 2;</code>
+       */
+      public Builder setMsgBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        msg_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.gitchat.netty.chat.ChatInfo.Group group_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gitchat.netty.chat.ChatInfo.Group, com.gitchat.netty.chat.ChatInfo.Group.Builder, com.gitchat.netty.chat.ChatInfo.GroupOrBuilder> groupBuilder_;
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+       */
+      public boolean hasGroup() {
+        return groupBuilder_ != null || group_ != null;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.Group getGroup() {
+        if (groupBuilder_ == null) {
+          return group_ == null ? com.gitchat.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+        } else {
+          return groupBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+       */
+      public Builder setGroup(com.gitchat.netty.chat.ChatInfo.Group value) {
+        if (groupBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          group_ = value;
+          onChanged();
+        } else {
+          groupBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+       */
+      public Builder setGroup(
+          com.gitchat.netty.chat.ChatInfo.Group.Builder builderForValue) {
+        if (groupBuilder_ == null) {
+          group_ = builderForValue.build();
+          onChanged();
+        } else {
+          groupBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+       */
+      public Builder mergeGroup(com.gitchat.netty.chat.ChatInfo.Group value) {
+        if (groupBuilder_ == null) {
+          if (group_ != null) {
+            group_ =
+              com.gitchat.netty.chat.ChatInfo.Group.newBuilder(group_).mergeFrom(value).buildPartial();
+          } else {
+            group_ = value;
+          }
+          onChanged();
+        } else {
+          groupBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+       */
+      public Builder clearGroup() {
+        if (groupBuilder_ == null) {
+          group_ = null;
+          onChanged();
+        } else {
+          group_ = null;
+          groupBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.Group.Builder getGroupBuilder() {
+        
+        onChanged();
+        return getGroupFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder() {
+        if (groupBuilder_ != null) {
+          return groupBuilder_.getMessageOrBuilder();
+        } else {
+          return group_ == null ?
+              com.gitchat.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+        }
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gitchat.netty.chat.ChatInfo.Group, com.gitchat.netty.chat.ChatInfo.Group.Builder, com.gitchat.netty.chat.ChatInfo.GroupOrBuilder> 
+          getGroupFieldBuilder() {
+        if (groupBuilder_ == null) {
+          groupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.gitchat.netty.chat.ChatInfo.Group, com.gitchat.netty.chat.ChatInfo.Group.Builder, com.gitchat.netty.chat.ChatInfo.GroupOrBuilder>(
+                  getGroup(),
+                  getParentForChildren(),
+                  isClean());
+          group_ = null;
+        }
+        return groupBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.chat.CreateGroupResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.gitchat.netty.chat.CreateGroupResponse)
+    private static final com.gitchat.netty.chat.ChatInfo.CreateGroupResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gitchat.netty.chat.ChatInfo.CreateGroupResponse();
+    }
+
+    public static com.gitchat.netty.chat.ChatInfo.CreateGroupResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateGroupResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CreateGroupResponse>() {
+      @java.lang.Override
+      public CreateGroupResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateGroupResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateGroupResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateGroupResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gitchat.netty.chat.ChatInfo.CreateGroupResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SingleChatOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.chat.SingleChat)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
      */
     boolean hasFromUser();
     /**
-     * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+     * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
      */
     com.gitchat.netty.chat.ChatInfo.User getFromUser();
     /**
-     * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+     * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
      */
     com.gitchat.netty.chat.ChatInfo.UserOrBuilder getFromUserOrBuilder();
 
     /**
-     * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+     * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
      */
     boolean hasToUser();
     /**
-     * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+     * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
      */
     com.gitchat.netty.chat.ChatInfo.User getToUser();
     /**
-     * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+     * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
      */
     com.gitchat.netty.chat.ChatInfo.UserOrBuilder getToUserOrBuilder();
 
@@ -7376,11 +6852,15 @@ public final class ChatInfo {
         getMsgContentBytes();
   }
   /**
-   * Protobuf type {@code com.gitchat.netty.protobuf.SingleChat}
+   * <pre>
+   * 单聊
+   * </pre>
+   *
+   * Protobuf type {@code com.gitchat.netty.chat.SingleChat}
    */
   public  static final class SingleChat extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.gitchat.netty.protobuf.SingleChat)
+      // @@protoc_insertion_point(message_implements:com.gitchat.netty.chat.SingleChat)
       SingleChatOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SingleChat.newBuilder() to construct.
@@ -7468,13 +6948,13 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_SingleChat_descriptor;
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_SingleChat_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_SingleChat_fieldAccessorTable
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_SingleChat_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.gitchat.netty.chat.ChatInfo.SingleChat.class, com.gitchat.netty.chat.ChatInfo.SingleChat.Builder.class);
     }
@@ -7482,19 +6962,19 @@ public final class ChatInfo {
     public static final int FROM_USER_FIELD_NUMBER = 1;
     private com.gitchat.netty.chat.ChatInfo.User fromUser_;
     /**
-     * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+     * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
      */
     public boolean hasFromUser() {
       return fromUser_ != null;
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+     * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
      */
     public com.gitchat.netty.chat.ChatInfo.User getFromUser() {
       return fromUser_ == null ? com.gitchat.netty.chat.ChatInfo.User.getDefaultInstance() : fromUser_;
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+     * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
      */
     public com.gitchat.netty.chat.ChatInfo.UserOrBuilder getFromUserOrBuilder() {
       return getFromUser();
@@ -7503,19 +6983,19 @@ public final class ChatInfo {
     public static final int TO_USER_FIELD_NUMBER = 2;
     private com.gitchat.netty.chat.ChatInfo.User toUser_;
     /**
-     * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+     * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
      */
     public boolean hasToUser() {
       return toUser_ != null;
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+     * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
      */
     public com.gitchat.netty.chat.ChatInfo.User getToUser() {
       return toUser_ == null ? com.gitchat.netty.chat.ChatInfo.User.getDefaultInstance() : toUser_;
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+     * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
      */
     public com.gitchat.netty.chat.ChatInfo.UserOrBuilder getToUserOrBuilder() {
       return getToUser();
@@ -7743,21 +7223,25 @@ public final class ChatInfo {
       return builder;
     }
     /**
-     * Protobuf type {@code com.gitchat.netty.protobuf.SingleChat}
+     * <pre>
+     * 单聊
+     * </pre>
+     *
+     * Protobuf type {@code com.gitchat.netty.chat.SingleChat}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.protobuf.SingleChat)
+        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.chat.SingleChat)
         com.gitchat.netty.chat.ChatInfo.SingleChatOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_SingleChat_descriptor;
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_SingleChat_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_SingleChat_fieldAccessorTable
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_SingleChat_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.gitchat.netty.chat.ChatInfo.SingleChat.class, com.gitchat.netty.chat.ChatInfo.SingleChat.Builder.class);
       }
@@ -7800,7 +7284,7 @@ public final class ChatInfo {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_SingleChat_descriptor;
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_SingleChat_descriptor;
       }
 
       @java.lang.Override
@@ -7922,13 +7406,13 @@ public final class ChatInfo {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.gitchat.netty.chat.ChatInfo.User, com.gitchat.netty.chat.ChatInfo.User.Builder, com.gitchat.netty.chat.ChatInfo.UserOrBuilder> fromUserBuilder_;
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
        */
       public boolean hasFromUser() {
         return fromUserBuilder_ != null || fromUser_ != null;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.User getFromUser() {
         if (fromUserBuilder_ == null) {
@@ -7938,7 +7422,7 @@ public final class ChatInfo {
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
        */
       public Builder setFromUser(com.gitchat.netty.chat.ChatInfo.User value) {
         if (fromUserBuilder_ == null) {
@@ -7954,7 +7438,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
        */
       public Builder setFromUser(
           com.gitchat.netty.chat.ChatInfo.User.Builder builderForValue) {
@@ -7968,7 +7452,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
        */
       public Builder mergeFromUser(com.gitchat.netty.chat.ChatInfo.User value) {
         if (fromUserBuilder_ == null) {
@@ -7986,7 +7470,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
        */
       public Builder clearFromUser() {
         if (fromUserBuilder_ == null) {
@@ -8000,7 +7484,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.User.Builder getFromUserBuilder() {
         
@@ -8008,7 +7492,7 @@ public final class ChatInfo {
         return getFromUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.UserOrBuilder getFromUserOrBuilder() {
         if (fromUserBuilder_ != null) {
@@ -8019,7 +7503,7 @@ public final class ChatInfo {
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 1;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.gitchat.netty.chat.ChatInfo.User, com.gitchat.netty.chat.ChatInfo.User.Builder, com.gitchat.netty.chat.ChatInfo.UserOrBuilder> 
@@ -8039,13 +7523,13 @@ public final class ChatInfo {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.gitchat.netty.chat.ChatInfo.User, com.gitchat.netty.chat.ChatInfo.User.Builder, com.gitchat.netty.chat.ChatInfo.UserOrBuilder> toUserBuilder_;
       /**
-       * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
        */
       public boolean hasToUser() {
         return toUserBuilder_ != null || toUser_ != null;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.User getToUser() {
         if (toUserBuilder_ == null) {
@@ -8055,7 +7539,7 @@ public final class ChatInfo {
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
        */
       public Builder setToUser(com.gitchat.netty.chat.ChatInfo.User value) {
         if (toUserBuilder_ == null) {
@@ -8071,7 +7555,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
        */
       public Builder setToUser(
           com.gitchat.netty.chat.ChatInfo.User.Builder builderForValue) {
@@ -8085,7 +7569,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
        */
       public Builder mergeToUser(com.gitchat.netty.chat.ChatInfo.User value) {
         if (toUserBuilder_ == null) {
@@ -8103,7 +7587,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
        */
       public Builder clearToUser() {
         if (toUserBuilder_ == null) {
@@ -8117,7 +7601,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.User.Builder getToUserBuilder() {
         
@@ -8125,7 +7609,7 @@ public final class ChatInfo {
         return getToUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.UserOrBuilder getToUserOrBuilder() {
         if (toUserBuilder_ != null) {
@@ -8136,7 +7620,7 @@ public final class ChatInfo {
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User to_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User to_user = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.gitchat.netty.chat.ChatInfo.User, com.gitchat.netty.chat.ChatInfo.User.Builder, com.gitchat.netty.chat.ChatInfo.UserOrBuilder> 
@@ -8233,10 +7717,10 @@ public final class ChatInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.protobuf.SingleChat)
+      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.chat.SingleChat)
     }
 
-    // @@protoc_insertion_point(class_scope:com.gitchat.netty.protobuf.SingleChat)
+    // @@protoc_insertion_point(class_scope:com.gitchat.netty.chat.SingleChat)
     private static final com.gitchat.netty.chat.ChatInfo.SingleChat DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.gitchat.netty.chat.ChatInfo.SingleChat();
@@ -8274,29 +7758,32 @@ public final class ChatInfo {
   }
 
   public interface GroupChatOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.protobuf.GroupChat)
+      // @@protoc_insertion_point(interface_extends:com.gitchat.netty.chat.GroupChat)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string group_id = 1;</code>
+     * <code>.com.gitchat.netty.chat.Group group = 1;</code>
      */
-    java.lang.String getGroupId();
+    boolean hasGroup();
     /**
-     * <code>string group_id = 1;</code>
+     * <code>.com.gitchat.netty.chat.Group group = 1;</code>
      */
-    com.google.protobuf.ByteString
-        getGroupIdBytes();
+    com.gitchat.netty.chat.ChatInfo.Group getGroup();
+    /**
+     * <code>.com.gitchat.netty.chat.Group group = 1;</code>
+     */
+    com.gitchat.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder();
 
     /**
-     * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+     * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
      */
     boolean hasFromUser();
     /**
-     * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+     * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
      */
     com.gitchat.netty.chat.ChatInfo.User getFromUser();
     /**
-     * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+     * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
      */
     com.gitchat.netty.chat.ChatInfo.UserOrBuilder getFromUserOrBuilder();
 
@@ -8311,11 +7798,15 @@ public final class ChatInfo {
         getMsgContentBytes();
   }
   /**
-   * Protobuf type {@code com.gitchat.netty.protobuf.GroupChat}
+   * <pre>
+   * 群聊
+   * </pre>
+   *
+   * Protobuf type {@code com.gitchat.netty.chat.GroupChat}
    */
   public  static final class GroupChat extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.gitchat.netty.protobuf.GroupChat)
+      // @@protoc_insertion_point(message_implements:com.gitchat.netty.chat.GroupChat)
       GroupChatOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use GroupChat.newBuilder() to construct.
@@ -8323,7 +7814,6 @@ public final class ChatInfo {
       super(builder);
     }
     private GroupChat() {
-      groupId_ = "";
       msgContent_ = "";
     }
 
@@ -8352,9 +7842,16 @@ public final class ChatInfo {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.gitchat.netty.chat.ChatInfo.Group.Builder subBuilder = null;
+              if (group_ != null) {
+                subBuilder = group_.toBuilder();
+              }
+              group_ = input.readMessage(com.gitchat.netty.chat.ChatInfo.Group.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(group_);
+                group_ = subBuilder.buildPartial();
+              }
 
-              groupId_ = s;
               break;
             }
             case 18: {
@@ -8397,67 +7894,54 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_GroupChat_descriptor;
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_GroupChat_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_GroupChat_fieldAccessorTable
+      return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_GroupChat_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.gitchat.netty.chat.ChatInfo.GroupChat.class, com.gitchat.netty.chat.ChatInfo.GroupChat.Builder.class);
     }
 
-    public static final int GROUP_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object groupId_;
+    public static final int GROUP_FIELD_NUMBER = 1;
+    private com.gitchat.netty.chat.ChatInfo.Group group_;
     /**
-     * <code>string group_id = 1;</code>
+     * <code>.com.gitchat.netty.chat.Group group = 1;</code>
      */
-    public java.lang.String getGroupId() {
-      java.lang.Object ref = groupId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        groupId_ = s;
-        return s;
-      }
+    public boolean hasGroup() {
+      return group_ != null;
     }
     /**
-     * <code>string group_id = 1;</code>
+     * <code>.com.gitchat.netty.chat.Group group = 1;</code>
      */
-    public com.google.protobuf.ByteString
-        getGroupIdBytes() {
-      java.lang.Object ref = groupId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        groupId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public com.gitchat.netty.chat.ChatInfo.Group getGroup() {
+      return group_ == null ? com.gitchat.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+    }
+    /**
+     * <code>.com.gitchat.netty.chat.Group group = 1;</code>
+     */
+    public com.gitchat.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder() {
+      return getGroup();
     }
 
     public static final int FROM_USER_FIELD_NUMBER = 2;
     private com.gitchat.netty.chat.ChatInfo.User fromUser_;
     /**
-     * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+     * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
      */
     public boolean hasFromUser() {
       return fromUser_ != null;
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+     * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
      */
     public com.gitchat.netty.chat.ChatInfo.User getFromUser() {
       return fromUser_ == null ? com.gitchat.netty.chat.ChatInfo.User.getDefaultInstance() : fromUser_;
     }
     /**
-     * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+     * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
      */
     public com.gitchat.netty.chat.ChatInfo.UserOrBuilder getFromUserOrBuilder() {
       return getFromUser();
@@ -8511,8 +7995,8 @@ public final class ChatInfo {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getGroupIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groupId_);
+      if (group_ != null) {
+        output.writeMessage(1, getGroup());
       }
       if (fromUser_ != null) {
         output.writeMessage(2, getFromUser());
@@ -8529,8 +8013,9 @@ public final class ChatInfo {
       if (size != -1) return size;
 
       size = 0;
-      if (!getGroupIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, groupId_);
+      if (group_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getGroup());
       }
       if (fromUser_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -8555,8 +8040,11 @@ public final class ChatInfo {
       com.gitchat.netty.chat.ChatInfo.GroupChat other = (com.gitchat.netty.chat.ChatInfo.GroupChat) obj;
 
       boolean result = true;
-      result = result && getGroupId()
-          .equals(other.getGroupId());
+      result = result && (hasGroup() == other.hasGroup());
+      if (hasGroup()) {
+        result = result && getGroup()
+            .equals(other.getGroup());
+      }
       result = result && (hasFromUser() == other.hasFromUser());
       if (hasFromUser()) {
         result = result && getFromUser()
@@ -8575,8 +8063,10 @@ public final class ChatInfo {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getGroupId().hashCode();
+      if (hasGroup()) {
+        hash = (37 * hash) + GROUP_FIELD_NUMBER;
+        hash = (53 * hash) + getGroup().hashCode();
+      }
       if (hasFromUser()) {
         hash = (37 * hash) + FROM_USER_FIELD_NUMBER;
         hash = (53 * hash) + getFromUser().hashCode();
@@ -8679,21 +8169,25 @@ public final class ChatInfo {
       return builder;
     }
     /**
-     * Protobuf type {@code com.gitchat.netty.protobuf.GroupChat}
+     * <pre>
+     * 群聊
+     * </pre>
+     *
+     * Protobuf type {@code com.gitchat.netty.chat.GroupChat}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.protobuf.GroupChat)
+        // @@protoc_insertion_point(builder_implements:com.gitchat.netty.chat.GroupChat)
         com.gitchat.netty.chat.ChatInfo.GroupChatOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_GroupChat_descriptor;
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_GroupChat_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_GroupChat_fieldAccessorTable
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_GroupChat_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.gitchat.netty.chat.ChatInfo.GroupChat.class, com.gitchat.netty.chat.ChatInfo.GroupChat.Builder.class);
       }
@@ -8716,8 +8210,12 @@ public final class ChatInfo {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        groupId_ = "";
-
+        if (groupBuilder_ == null) {
+          group_ = null;
+        } else {
+          group_ = null;
+          groupBuilder_ = null;
+        }
         if (fromUserBuilder_ == null) {
           fromUser_ = null;
         } else {
@@ -8732,7 +8230,7 @@ public final class ChatInfo {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_protobuf_GroupChat_descriptor;
+        return com.gitchat.netty.chat.ChatInfo.internal_static_com_gitchat_netty_chat_GroupChat_descriptor;
       }
 
       @java.lang.Override
@@ -8752,7 +8250,11 @@ public final class ChatInfo {
       @java.lang.Override
       public com.gitchat.netty.chat.ChatInfo.GroupChat buildPartial() {
         com.gitchat.netty.chat.ChatInfo.GroupChat result = new com.gitchat.netty.chat.ChatInfo.GroupChat(this);
-        result.groupId_ = groupId_;
+        if (groupBuilder_ == null) {
+          result.group_ = group_;
+        } else {
+          result.group_ = groupBuilder_.build();
+        }
         if (fromUserBuilder_ == null) {
           result.fromUser_ = fromUser_;
         } else {
@@ -8807,9 +8309,8 @@ public final class ChatInfo {
 
       public Builder mergeFrom(com.gitchat.netty.chat.ChatInfo.GroupChat other) {
         if (other == com.gitchat.netty.chat.ChatInfo.GroupChat.getDefaultInstance()) return this;
-        if (!other.getGroupId().isEmpty()) {
-          groupId_ = other.groupId_;
-          onChanged();
+        if (other.hasGroup()) {
+          mergeGroup(other.getGroup());
         }
         if (other.hasFromUser()) {
           mergeFromUser(other.getFromUser());
@@ -8847,86 +8348,134 @@ public final class ChatInfo {
         return this;
       }
 
-      private java.lang.Object groupId_ = "";
+      private com.gitchat.netty.chat.ChatInfo.Group group_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gitchat.netty.chat.ChatInfo.Group, com.gitchat.netty.chat.ChatInfo.Group.Builder, com.gitchat.netty.chat.ChatInfo.GroupOrBuilder> groupBuilder_;
       /**
-       * <code>string group_id = 1;</code>
+       * <code>.com.gitchat.netty.chat.Group group = 1;</code>
        */
-      public java.lang.String getGroupId() {
-        java.lang.Object ref = groupId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          groupId_ = s;
-          return s;
+      public boolean hasGroup() {
+        return groupBuilder_ != null || group_ != null;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 1;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.Group getGroup() {
+        if (groupBuilder_ == null) {
+          return group_ == null ? com.gitchat.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
         } else {
-          return (java.lang.String) ref;
+          return groupBuilder_.getMessage();
         }
       }
       /**
-       * <code>string group_id = 1;</code>
+       * <code>.com.gitchat.netty.chat.Group group = 1;</code>
        */
-      public com.google.protobuf.ByteString
-          getGroupIdBytes() {
-        java.lang.Object ref = groupId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          groupId_ = b;
-          return b;
+      public Builder setGroup(com.gitchat.netty.chat.ChatInfo.Group value) {
+        if (groupBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          group_ = value;
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          groupBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 1;</code>
+       */
+      public Builder setGroup(
+          com.gitchat.netty.chat.ChatInfo.Group.Builder builderForValue) {
+        if (groupBuilder_ == null) {
+          group_ = builderForValue.build();
+          onChanged();
+        } else {
+          groupBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 1;</code>
+       */
+      public Builder mergeGroup(com.gitchat.netty.chat.ChatInfo.Group value) {
+        if (groupBuilder_ == null) {
+          if (group_ != null) {
+            group_ =
+              com.gitchat.netty.chat.ChatInfo.Group.newBuilder(group_).mergeFrom(value).buildPartial();
+          } else {
+            group_ = value;
+          }
+          onChanged();
+        } else {
+          groupBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 1;</code>
+       */
+      public Builder clearGroup() {
+        if (groupBuilder_ == null) {
+          group_ = null;
+          onChanged();
+        } else {
+          group_ = null;
+          groupBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 1;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.Group.Builder getGroupBuilder() {
+        
+        onChanged();
+        return getGroupFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.gitchat.netty.chat.Group group = 1;</code>
+       */
+      public com.gitchat.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder() {
+        if (groupBuilder_ != null) {
+          return groupBuilder_.getMessageOrBuilder();
+        } else {
+          return group_ == null ?
+              com.gitchat.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
         }
       }
       /**
-       * <code>string group_id = 1;</code>
+       * <code>.com.gitchat.netty.chat.Group group = 1;</code>
        */
-      public Builder setGroupId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        groupId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string group_id = 1;</code>
-       */
-      public Builder clearGroupId() {
-        
-        groupId_ = getDefaultInstance().getGroupId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string group_id = 1;</code>
-       */
-      public Builder setGroupIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        groupId_ = value;
-        onChanged();
-        return this;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gitchat.netty.chat.ChatInfo.Group, com.gitchat.netty.chat.ChatInfo.Group.Builder, com.gitchat.netty.chat.ChatInfo.GroupOrBuilder> 
+          getGroupFieldBuilder() {
+        if (groupBuilder_ == null) {
+          groupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.gitchat.netty.chat.ChatInfo.Group, com.gitchat.netty.chat.ChatInfo.Group.Builder, com.gitchat.netty.chat.ChatInfo.GroupOrBuilder>(
+                  getGroup(),
+                  getParentForChildren(),
+                  isClean());
+          group_ = null;
+        }
+        return groupBuilder_;
       }
 
       private com.gitchat.netty.chat.ChatInfo.User fromUser_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.gitchat.netty.chat.ChatInfo.User, com.gitchat.netty.chat.ChatInfo.User.Builder, com.gitchat.netty.chat.ChatInfo.UserOrBuilder> fromUserBuilder_;
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
        */
       public boolean hasFromUser() {
         return fromUserBuilder_ != null || fromUser_ != null;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.User getFromUser() {
         if (fromUserBuilder_ == null) {
@@ -8936,7 +8485,7 @@ public final class ChatInfo {
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
        */
       public Builder setFromUser(com.gitchat.netty.chat.ChatInfo.User value) {
         if (fromUserBuilder_ == null) {
@@ -8952,7 +8501,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
        */
       public Builder setFromUser(
           com.gitchat.netty.chat.ChatInfo.User.Builder builderForValue) {
@@ -8966,7 +8515,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
        */
       public Builder mergeFromUser(com.gitchat.netty.chat.ChatInfo.User value) {
         if (fromUserBuilder_ == null) {
@@ -8984,7 +8533,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
        */
       public Builder clearFromUser() {
         if (fromUserBuilder_ == null) {
@@ -8998,7 +8547,7 @@ public final class ChatInfo {
         return this;
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.User.Builder getFromUserBuilder() {
         
@@ -9006,7 +8555,7 @@ public final class ChatInfo {
         return getFromUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
        */
       public com.gitchat.netty.chat.ChatInfo.UserOrBuilder getFromUserOrBuilder() {
         if (fromUserBuilder_ != null) {
@@ -9017,7 +8566,7 @@ public final class ChatInfo {
         }
       }
       /**
-       * <code>.com.gitchat.netty.protobuf.User from_user = 2;</code>
+       * <code>.com.gitchat.netty.chat.User from_user = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.gitchat.netty.chat.ChatInfo.User, com.gitchat.netty.chat.ChatInfo.User.Builder, com.gitchat.netty.chat.ChatInfo.UserOrBuilder> 
@@ -9114,10 +8663,10 @@ public final class ChatInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.protobuf.GroupChat)
+      // @@protoc_insertion_point(builder_scope:com.gitchat.netty.chat.GroupChat)
     }
 
-    // @@protoc_insertion_point(class_scope:com.gitchat.netty.protobuf.GroupChat)
+    // @@protoc_insertion_point(class_scope:com.gitchat.netty.chat.GroupChat)
     private static final com.gitchat.netty.chat.ChatInfo.GroupChat DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.gitchat.netty.chat.ChatInfo.GroupChat();
@@ -9155,60 +8704,50 @@ public final class ChatInfo {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_gitchat_netty_protobuf_Chat_descriptor;
+    internal_static_com_gitchat_netty_chat_Chat_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_gitchat_netty_protobuf_Chat_fieldAccessorTable;
+      internal_static_com_gitchat_netty_chat_Chat_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_gitchat_netty_protobuf_Request_descriptor;
+    internal_static_com_gitchat_netty_chat_User_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_gitchat_netty_protobuf_Request_fieldAccessorTable;
+      internal_static_com_gitchat_netty_chat_User_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_gitchat_netty_protobuf_Response_descriptor;
+    internal_static_com_gitchat_netty_chat_Group_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_gitchat_netty_protobuf_Response_fieldAccessorTable;
+      internal_static_com_gitchat_netty_chat_Group_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_gitchat_netty_protobuf_User_descriptor;
+    internal_static_com_gitchat_netty_chat_LoginRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_gitchat_netty_protobuf_User_fieldAccessorTable;
+      internal_static_com_gitchat_netty_chat_LoginRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_gitchat_netty_protobuf_Notification_descriptor;
+    internal_static_com_gitchat_netty_chat_LoginResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_gitchat_netty_protobuf_Notification_fieldAccessorTable;
+      internal_static_com_gitchat_netty_chat_LoginResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_gitchat_netty_protobuf_WelcomeNotification_descriptor;
+    internal_static_com_gitchat_netty_chat_CreateGroupRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_gitchat_netty_protobuf_WelcomeNotification_fieldAccessorTable;
+      internal_static_com_gitchat_netty_chat_CreateGroupRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_gitchat_netty_protobuf_Command_descriptor;
+    internal_static_com_gitchat_netty_chat_CreateGroupResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_gitchat_netty_protobuf_Command_fieldAccessorTable;
+      internal_static_com_gitchat_netty_chat_CreateGroupResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_gitchat_netty_protobuf_LoginRequest_descriptor;
+    internal_static_com_gitchat_netty_chat_SingleChat_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_gitchat_netty_protobuf_LoginRequest_fieldAccessorTable;
+      internal_static_com_gitchat_netty_chat_SingleChat_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_gitchat_netty_protobuf_LoginResponse_descriptor;
+    internal_static_com_gitchat_netty_chat_GroupChat_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_gitchat_netty_protobuf_LoginResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_gitchat_netty_protobuf_SingleChat_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_gitchat_netty_protobuf_SingleChat_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_gitchat_netty_protobuf_GroupChat_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_gitchat_netty_protobuf_GroupChat_fieldAccessorTable;
+      internal_static_com_gitchat_netty_chat_GroupChat_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -9219,40 +8758,43 @@ public final class ChatInfo {
   static {
     java.lang.String[] descriptorData = {
       "\n+src/main/resources/protobuf/chat/Chat." +
-      "proto\022\032com.gitchat.netty.protobuf\"\334\002\n\004Ch" +
-      "at\022\017\n\007version\030\001 \001(\014\022>\n\010msg_type\030\002 \001(\0162,." +
-      "com.gitchat.netty.protobuf.Chat.MessageT" +
-      "ype\0222\n\003req\030\003 \001(\0132#.com.gitchat.netty.pro" +
-      "tobuf.RequestH\000\0224\n\004resp\030\004 \001(\0132$.com.gitc" +
-      "hat.netty.protobuf.ResponseH\000\022:\n\006notifi\030" +
-      "\005 \001(\0132(.com.gitchat.netty.protobuf.Notif" +
-      "icationH\000\"U\n\013MessageType\022\021\n\rLOGIN_REQUES" +
-      "T\020\000\022\022\n\016LOGIN_RESPONSE\020\001\022\017\n\013SINGLE_CHAT\020\002" +
-      "\022\016\n\nGROUP_CHAT\020\003B\006\n\004data\"\307\001\n\007Request\0229\n\005" +
-      "login\030\001 \001(\0132(.com.gitchat.netty.protobuf" +
-      ".LoginRequestH\000\022=\n\013single_chat\030\002 \001(\0132&.c" +
-      "om.gitchat.netty.protobuf.SingleChatH\000\022;" +
-      "\n\ngroup_chat\030\003 \001(\0132%.com.gitchat.netty.p" +
-      "rotobuf.GroupChatH\000B\005\n\003req\"r\n\010Response\022\014" +
-      "\n\004code\030\001 \001(\005\022\013\n\003msg\030\002 \001(\t\022C\n\016login_respo" +
-      "nse\030\003 \001(\0132).com.gitchat.netty.protobuf.L" +
-      "oginResponseH\000B\006\n\004data\";\n\004User\022\017\n\007user_i" +
+      "proto\022\026com.gitchat.netty.chat\"\366\004\n\004Chat\022\017" +
+      "\n\007version\030\001 \001(\014\022:\n\010msg_type\030\002 \001(\0162(.com." +
+      "gitchat.netty.chat.Chat.MessageType\022=\n\rl" +
+      "ogin_request\030\003 \001(\0132$.com.gitchat.netty.c" +
+      "hat.LoginRequestH\000\022?\n\016login_response\030\004 \001" +
+      "(\0132%.com.gitchat.netty.chat.LoginRespons" +
+      "eH\000\022J\n\024create_group_request\030\005 \001(\0132*.com." +
+      "gitchat.netty.chat.CreateGroupRequestH\000\022" +
+      "L\n\025create_group_response\030\006 \001(\0132+.com.git" +
+      "chat.netty.chat.CreateGroupResponseH\000\0229\n" +
+      "\013single_chat\030\007 \001(\0132\".com.gitchat.netty.c" +
+      "hat.SingleChatH\000\0227\n\ngroup_chat\030\010 \001(\0132!.c" +
+      "om.gitchat.netty.chat.GroupChatH\000\"\212\001\n\013Me" +
+      "ssageType\022\021\n\rLOGIN_REQUEST\020\000\022\022\n\016LOGIN_RE" +
+      "SPONSE\020\001\022\030\n\024CREATE_GROUP_REQUEST\020\002\022\031\n\025CR" +
+      "EATE_GROUP_RESPONSE\020\003\022\017\n\013SINGLE_CHAT\020\004\022\016" +
+      "\n\nGROUP_CHAT\020\005B\006\n\004data\";\n\004User\022\017\n\007user_i" +
       "d\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\020\n\010password\030\003 " +
-      "\001(\t\"\\\n\014Notification\022B\n\007welcome\030\001 \001(\0132/.c" +
-      "om.gitchat.netty.protobuf.WelcomeNotific" +
-      "ationH\000B\010\n\006notifi\"#\n\023WelcomeNotification" +
-      "\022\014\n\004text\030\001 \001(\t\"\t\n\007Command\"D\n\014LoginReques" +
-      "t\0224\n\nlogin_user\030\001 \001(\0132 .com.gitchat.nett" +
-      "y.protobuf.User\"S\n\rLoginResponse\022\r\n\005toke" +
-      "n\030\001 \001(\t\0223\n\tuser_info\030\002 \001(\0132 .com.gitchat" +
-      ".netty.protobuf.User\"\211\001\n\nSingleChat\0223\n\tf" +
-      "rom_user\030\001 \001(\0132 .com.gitchat.netty.proto" +
-      "buf.User\0221\n\007to_user\030\002 \001(\0132 .com.gitchat." +
-      "netty.protobuf.User\022\023\n\013msg_content\030\003 \001(\t" +
-      "\"g\n\tGroupChat\022\020\n\010group_id\030\001 \001(\t\0223\n\tfrom_" +
-      "user\030\002 \001(\0132 .com.gitchat.netty.protobuf." +
-      "User\022\023\n\013msg_content\030\003 \001(\tB$\n\026com.gitchat" +
-      ".netty.chatB\010ChatInfoP\000b\006proto3"
+      "\001(\t\"-\n\005Group\022\020\n\010group_id\030\001 \001(\t\022\022\n\ngroup_" +
+      "name\030\002 \001(\t\"@\n\014LoginRequest\0220\n\nlogin_user" +
+      "\030\001 \001(\0132\034.com.gitchat.netty.chat.User\"j\n\r" +
+      "LoginResponse\022\r\n\005token\030\001 \001(\t\022\014\n\004code\030\002 \001" +
+      "(\005\022\013\n\003msg\030\003 \001(\t\022/\n\tuser_info\030\004 \001(\0132\034.com" +
+      ".gitchat.netty.chat.User\"q\n\022CreateGroupR" +
+      "equest\022-\n\007creator\030\001 \001(\0132\034.com.gitchat.ne" +
+      "tty.chat.User\022,\n\005group\030\002 \001(\0132\035.com.gitch" +
+      "at.netty.chat.Group\"^\n\023CreateGroupRespon" +
+      "se\022\014\n\004code\030\001 \001(\005\022\013\n\003msg\030\002 \001(\t\022,\n\005group\030\003" +
+      " \001(\0132\035.com.gitchat.netty.chat.Group\"\201\001\n\n" +
+      "SingleChat\022/\n\tfrom_user\030\001 \001(\0132\034.com.gitc" +
+      "hat.netty.chat.User\022-\n\007to_user\030\002 \001(\0132\034.c" +
+      "om.gitchat.netty.chat.User\022\023\n\013msg_conten" +
+      "t\030\003 \001(\t\"\177\n\tGroupChat\022,\n\005group\030\001 \001(\0132\035.co" +
+      "m.gitchat.netty.chat.Group\022/\n\tfrom_user\030" +
+      "\002 \001(\0132\034.com.gitchat.netty.chat.User\022\023\n\013m" +
+      "sg_content\030\003 \001(\tB$\n\026com.gitchat.netty.ch" +
+      "atB\010ChatInfoP\000b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9266,72 +8808,60 @@ public final class ChatInfo {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_gitchat_netty_protobuf_Chat_descriptor =
+    internal_static_com_gitchat_netty_chat_Chat_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_gitchat_netty_protobuf_Chat_fieldAccessorTable = new
+    internal_static_com_gitchat_netty_chat_Chat_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_gitchat_netty_protobuf_Chat_descriptor,
-        new java.lang.String[] { "Version", "MsgType", "Req", "Resp", "Notifi", "Data", });
-    internal_static_com_gitchat_netty_protobuf_Request_descriptor =
+        internal_static_com_gitchat_netty_chat_Chat_descriptor,
+        new java.lang.String[] { "Version", "MsgType", "LoginRequest", "LoginResponse", "CreateGroupRequest", "CreateGroupResponse", "SingleChat", "GroupChat", "Data", });
+    internal_static_com_gitchat_netty_chat_User_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_gitchat_netty_protobuf_Request_fieldAccessorTable = new
+    internal_static_com_gitchat_netty_chat_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_gitchat_netty_protobuf_Request_descriptor,
-        new java.lang.String[] { "Login", "SingleChat", "GroupChat", "Req", });
-    internal_static_com_gitchat_netty_protobuf_Response_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_com_gitchat_netty_protobuf_Response_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_gitchat_netty_protobuf_Response_descriptor,
-        new java.lang.String[] { "Code", "Msg", "LoginResponse", "Data", });
-    internal_static_com_gitchat_netty_protobuf_User_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_com_gitchat_netty_protobuf_User_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_gitchat_netty_protobuf_User_descriptor,
+        internal_static_com_gitchat_netty_chat_User_descriptor,
         new java.lang.String[] { "UserId", "Username", "Password", });
-    internal_static_com_gitchat_netty_protobuf_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_com_gitchat_netty_protobuf_Notification_fieldAccessorTable = new
+    internal_static_com_gitchat_netty_chat_Group_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_gitchat_netty_chat_Group_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_gitchat_netty_protobuf_Notification_descriptor,
-        new java.lang.String[] { "Welcome", "Notifi", });
-    internal_static_com_gitchat_netty_protobuf_WelcomeNotification_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_com_gitchat_netty_protobuf_WelcomeNotification_fieldAccessorTable = new
+        internal_static_com_gitchat_netty_chat_Group_descriptor,
+        new java.lang.String[] { "GroupId", "GroupName", });
+    internal_static_com_gitchat_netty_chat_LoginRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_gitchat_netty_chat_LoginRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_gitchat_netty_protobuf_WelcomeNotification_descriptor,
-        new java.lang.String[] { "Text", });
-    internal_static_com_gitchat_netty_protobuf_Command_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_com_gitchat_netty_protobuf_Command_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_gitchat_netty_protobuf_Command_descriptor,
-        new java.lang.String[] { });
-    internal_static_com_gitchat_netty_protobuf_LoginRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_com_gitchat_netty_protobuf_LoginRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_gitchat_netty_protobuf_LoginRequest_descriptor,
+        internal_static_com_gitchat_netty_chat_LoginRequest_descriptor,
         new java.lang.String[] { "LoginUser", });
-    internal_static_com_gitchat_netty_protobuf_LoginResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_com_gitchat_netty_protobuf_LoginResponse_fieldAccessorTable = new
+    internal_static_com_gitchat_netty_chat_LoginResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_com_gitchat_netty_chat_LoginResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_gitchat_netty_protobuf_LoginResponse_descriptor,
-        new java.lang.String[] { "Token", "UserInfo", });
-    internal_static_com_gitchat_netty_protobuf_SingleChat_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_com_gitchat_netty_protobuf_SingleChat_fieldAccessorTable = new
+        internal_static_com_gitchat_netty_chat_LoginResponse_descriptor,
+        new java.lang.String[] { "Token", "Code", "Msg", "UserInfo", });
+    internal_static_com_gitchat_netty_chat_CreateGroupRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_com_gitchat_netty_chat_CreateGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_gitchat_netty_protobuf_SingleChat_descriptor,
+        internal_static_com_gitchat_netty_chat_CreateGroupRequest_descriptor,
+        new java.lang.String[] { "Creator", "Group", });
+    internal_static_com_gitchat_netty_chat_CreateGroupResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_com_gitchat_netty_chat_CreateGroupResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_gitchat_netty_chat_CreateGroupResponse_descriptor,
+        new java.lang.String[] { "Code", "Msg", "Group", });
+    internal_static_com_gitchat_netty_chat_SingleChat_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_com_gitchat_netty_chat_SingleChat_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_gitchat_netty_chat_SingleChat_descriptor,
         new java.lang.String[] { "FromUser", "ToUser", "MsgContent", });
-    internal_static_com_gitchat_netty_protobuf_GroupChat_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_com_gitchat_netty_protobuf_GroupChat_fieldAccessorTable = new
+    internal_static_com_gitchat_netty_chat_GroupChat_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_com_gitchat_netty_chat_GroupChat_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_gitchat_netty_protobuf_GroupChat_descriptor,
-        new java.lang.String[] { "GroupId", "FromUser", "MsgContent", });
+        internal_static_com_gitchat_netty_chat_GroupChat_descriptor,
+        new java.lang.String[] { "Group", "FromUser", "MsgContent", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

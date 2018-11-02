@@ -10,7 +10,7 @@ public class SingleChatHandler extends SimpleChannelInboundHandler<ChatInfo.Chat
     protected void channelRead0(ChannelHandlerContext ctx, ChatInfo.Chat msg) throws Exception {
         ChatInfo.Chat.MessageType msgType = msg.getMsgType();
         if(msgType == ChatInfo.Chat.MessageType.SINGLE_CHAT) {
-            ChatInfo.SingleChat singleChat = msg.getReq().getSingleChat();
+            ChatInfo.SingleChat singleChat = msg.getSingleChat();
 
             ChatInfo.User fromUser = singleChat.getFromUser();
             ChatInfo.User toUser = singleChat.getToUser();

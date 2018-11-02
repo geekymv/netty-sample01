@@ -2,8 +2,8 @@ package com.gitchat.netty.chat.server.handler;
 
 import com.gitchat.netty.chat.ChatInfo;
 import com.gitchat.netty.chat.common.Constant;
-import com.gitchat.netty.chat.util.SessionUtil;
 import com.gitchat.netty.chat.server.repository.UserRepository;
+import com.gitchat.netty.chat.util.SessionUtil;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
@@ -19,7 +19,7 @@ public class LoginRequestHandler extends SimpleChannelInboundHandler<ChatInfo.Ch
         ChatInfo.Chat.MessageType msgType = msg.getMsgType();
         if(ChatInfo.Chat.MessageType.LOGIN_REQUEST == msgType) {
             // 是登录请求，验证用户信息是否正确
-            ChatInfo.User loginUser = msg.getReq().getLogin().getLoginUser();
+            ChatInfo.User loginUser = msg.getLoginRequest().getLoginUser();
             ChatInfo.Chat chat = null;
 
             ChatInfo.User userInfo = loginCheck(loginUser.getUsername(), loginUser.getPassword());
@@ -51,13 +51,10 @@ public class LoginRequestHandler extends SimpleChannelInboundHandler<ChatInfo.Ch
     private ChatInfo.Chat loginSuccess(ChatInfo.User loginUser) {
         String token = UUID.randomUUID().toString().replace("-", "");
         ChatInfo.LoginResponse loginResponse = ChatInfo.LoginResponse.newBuilder()
-                .setToken(token).setUserInfo(loginUser).build();
-        ChatInfo.Response response = ChatInfo.Response.newBuilder()
-                .setCode(Constant.STATUS.SUCCESS)
-                .setLoginResponse(loginResponse).build();
+                .setToken(token).setCode(Constant.STATUS.SUCCESS).setMsg("登录成功").setUserInfo(loginUser).build();
 
         ChatInfo.Chat chat = ChatInfo.Chat.newBuilder()
-                .setResp(response).setMsgType(ChatInfo.Chat.MessageType.LOGIN_RESPONSE).build();
+                .setLoginResponse(loginResponse).setMsgType(ChatInfo.Chat.MessageType.LOGIN_RESPONSE).build();
 
         return chat;
     }
@@ -69,13 +66,11 @@ public class LoginRequestHandler extends SimpleChannelInboundHandler<ChatInfo.Ch
      */
     private ChatInfo.Chat loginFail(ChatInfo.User loginUser) {
         ChatInfo.LoginResponse loginResponse = ChatInfo.LoginResponse.newBuilder()
-                .setUserInfo(loginUser).build();
-        ChatInfo.Response response = ChatInfo.Response.newBuilder()
-                .setCode(Constant.STATUS.LOGIN_FAIL)
-                .setMsg("登录失败，帐号或密码错误").setLoginResponse(loginResponse).build();
+                .setUserInfo(loginUser).setCode(Constant.STATUS.LOGIN_FAIL).
+                        setMsg("登录失败，帐号或密码错误").build();
 
         ChatInfo.Chat chat = ChatInfo.Chat.newBuilder()
-                .setResp(response).setMsgType(ChatInfo.Chat.MessageType.LOGIN_RESPONSE).build();
+                .setLoginResponse(loginResponse).setMsgType(ChatInfo.Chat.MessageType.LOGIN_RESPONSE).build();
 
         return chat;
     }

@@ -1,4 +1,4 @@
-package com.gitchat.netty.chat.client.commamd;
+package com.gitchat.netty.chat.client.command;
 
 
 import com.gitchat.netty.chat.ChatInfo;
@@ -30,10 +30,9 @@ public class LoginCommand extends AbstractCommand {
                 .setUsername(username).setPassword(password).build();
         ChatInfo.LoginRequest loginRequest = ChatInfo.LoginRequest.newBuilder()
                 .setLoginUser(user).build();
-        ChatInfo.Request request = ChatInfo.Request.newBuilder()
-                .setLogin(loginRequest).build();
+
         ChatInfo.Chat chat = ChatInfo.Chat.newBuilder()
-                .setMsgType(ChatInfo.Chat.MessageType.LOGIN_REQUEST).setReq(request).build();
+                .setMsgType(ChatInfo.Chat.MessageType.LOGIN_REQUEST).setLoginRequest(loginRequest).build();
 
         return chat;
     }

@@ -1,8 +1,8 @@
 package com.gitchat.netty.chat.client;
 
-import com.gitchat.netty.chat.client.commamd.Command;
-import com.gitchat.netty.chat.client.commamd.LoginCommand;
-import com.gitchat.netty.chat.client.commamd.SingleChatCommand;
+import com.gitchat.netty.chat.client.command.Command;
+import com.gitchat.netty.chat.client.command.LoginCommand;
+import com.gitchat.netty.chat.client.command.SingleChatCommand;
 import com.gitchat.netty.chat.util.SessionUtil;
 import com.gitchat.netty.chat.util.StringUtil;
 import io.netty.bootstrap.Bootstrap;

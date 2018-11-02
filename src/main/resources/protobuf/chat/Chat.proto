@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package com.gitchat.netty.protobuf;
+package com.gitchat.netty.chat;
 
 option java_multiple_files = false;
 option java_package = "com.gitchat.netty.chat";
@@ -11,9 +11,13 @@ message Chat {
     enum MessageType {
         LOGIN_REQUEST = 0;
         LOGIN_RESPONSE = 1;
+        CREATE_GROUP_REQUEST = 2;
+        CREATE_GROUP_RESPONSE = 3;
+        JOIN_GROUP_REQUEST = 4;
+        JOIN_GROUP_RESPONSE = 5;
 
-        SINGLE_CHAT = 2;
-        GROUP_CHAT = 3;
+        SINGLE_CHAT = 6;
+        GROUP_CHAT = 7;
     }
 
     bytes version = 1;
@@ -23,7 +27,10 @@ message Chat {
     oneof data {
         LoginRequest login_request = 3;
         LoginResponse login_response = 4;
-        SingleChat single_chat = 5;
+        CreateGroupRequest create_group_request = 5;
+        CreateGroupResponse create_group_response = 6;
+        SingleChat single_chat = 7;
+        GroupChat group_chat = 8;
     }
 }
 
@@ -34,19 +41,60 @@ message User {
     string password = 3;
 }
 
+// 群组信息
+message Group {
+    string group_id = 1;
+    string group_name = 2;
+}
 
+// 登录请求
 message LoginRequest {
     User login_user = 1;
 }
 
+// 登录响应
 message LoginResponse {
     string token = 1;
-    User user_info = 2;
+    int32 code = 2;
+    string msg = 3;
+    User user_info = 4;
 }
 
+// 创建群组请求
+message CreateGroupRequest {
+    User creator = 1;
+    Group group = 2;
+}
+
+// 创建群组响应
+message CreateGroupResponse {
+    int32 code = 1;
+    string msg = 2;
+    Group group = 3;
+}
+
+// 加入群组请求
+message JoinGroupRequest {
+
+}
+
+// 加入群组响应
+message JoinGroupResponse {
+    int32 code = 1;
+    string msg = 2;
+    Group group = 3;
+}
+
+// 单聊
 message SingleChat {
     User from_user = 1;
     User to_user = 2;
     string msg_content = 3;
 }
 
+// 群聊
+message GroupChat {
+    Group group = 1;
+    User from_user = 2;
+    string msg_content = 3;
+}

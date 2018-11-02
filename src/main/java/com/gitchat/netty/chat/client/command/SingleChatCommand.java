@@ -1,4 +1,4 @@
-package com.gitchat.netty.chat.client.commamd;
+package com.gitchat.netty.chat.client.command;
 
 import com.gitchat.netty.chat.ChatInfo;
 import com.gitchat.netty.chat.util.SessionUtil;
@@ -32,10 +32,9 @@ public class SingleChatCommand extends AbstractCommand {
         ChatInfo.SingleChat singleChat = ChatInfo.SingleChat.newBuilder()
                 .setFromUser(fromUser).setToUser(toUser).setMsgContent(content).build();
 
-        ChatInfo.Request request = ChatInfo.Request.newBuilder()
-                .setSingleChat(singleChat).build();
+
         ChatInfo.Chat chat = ChatInfo.Chat.newBuilder()
-                .setMsgType(ChatInfo.Chat.MessageType.SINGLE_CHAT).setReq(request).build();
+                .setMsgType(ChatInfo.Chat.MessageType.SINGLE_CHAT).setSingleChat(singleChat).build();
 
         return chat;
     }

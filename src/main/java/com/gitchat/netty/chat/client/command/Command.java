@@ -1,4 +1,4 @@
-package com.gitchat.netty.chat.client.commamd;
+package com.gitchat.netty.chat.client.command;
 
 
 public interface Command {
