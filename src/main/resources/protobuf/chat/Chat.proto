@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package com.gitchat.netty.protobuf;
+
+option java_multiple_files = false;
+option java_package = "com.gitchat.netty.chat";
+option java_outer_classname = "ChatInfo";
+
+message Chat {
+
+    enum MessageType {
+        LOGIN_REQUEST = 0;
+        LOGIN_RESPONSE = 1;
+
+        SINGLE_CHAT = 2;
+        GROUP_CHAT = 3;
+    }
+
+    bytes version = 1;
+
+    MessageType msg_type = 2;
+
+    oneof data {
+        LoginRequest login_request = 3;
+        LoginResponse login_response = 4;
+        SingleChat single_chat = 5;
+    }
+}
+
+// 用户信息
+message User {
+    string user_id = 1;
+    string username = 2;
+    string password = 3;
+}
+
+
+message LoginRequest {
+    User login_user = 1;
+}
+
+message LoginResponse {
+    string token = 1;
+    User user_info = 2;
+}
+
+message SingleChat {
+    User from_user = 1;
+    User to_user = 2;
+    string msg_content = 3;
+}
+

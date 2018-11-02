@@ -1,12 +1,26 @@
 package com.gitchat.netty.chat.common;
 
-import io.netty.handler.codec.string.LineSeparator;
+/**
+ * @author geekymv
+ */
+public class Constant {
 
-public final class Constant {
 
-    /**
-     * 分隔符
-     */
-    public final static String DELIMITER = LineSeparator.DEFAULT.value();
+    public static final String CHAT_VERSION = "1.0";
+
+
+    public interface STATUS {
+
+        /**
+         * 操作成功
+         */
+        int SUCCESS = 200;
+
+        /**
+         * 登录失败
+         */
+        int LOGIN_FAIL = 2001;
+
+    }
 
 }

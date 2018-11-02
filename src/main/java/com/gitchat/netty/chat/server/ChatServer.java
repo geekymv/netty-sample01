@@ -2,14 +2,9 @@ package com.gitchat.netty.chat.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
-import io.netty.channel.ChannelPipeline;
 import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.handler.codec.string.StringDecoder;
-import io.netty.handler.codec.string.StringEncoder;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
@@ -30,7 +25,6 @@ public class ChatServer {
                 .childHandler(new ChatServerChannelInitializer());
 
         try {
-            // 绑定端口，同步等待完成
             ChannelFuture channelFuture = serverBootstrap.bind(PORT).sync();
             System.out.println("ChatServer 启动成功，port = " + PORT);
 

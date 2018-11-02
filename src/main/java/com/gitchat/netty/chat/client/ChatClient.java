@@ -1,6 +1,10 @@
 package com.gitchat.netty.chat.client;
 
-import com.gitchat.netty.chat.common.Constant;
+import com.gitchat.netty.chat.client.commamd.Command;
+import com.gitchat.netty.chat.client.commamd.LoginCommand;
+import com.gitchat.netty.chat.client.commamd.SingleChatCommand;
+import com.gitchat.netty.chat.util.SessionUtil;
+import com.gitchat.netty.chat.util.StringUtil;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
@@ -47,7 +51,11 @@ public class ChatClient {
 
             // 使用线程组中的线程异步执行
             group.execute(()-> {
-                send();
+                try {
+                    send();
+                }catch (Exception e) {
+                    e.printStackTrace();
+                }
             });
 
             future.channel().closeFuture().sync();
@@ -60,17 +68,33 @@ public class ChatClient {
     /**
      * 通过控制台输入消息，并使用channel发送出去
      */
-    private void send() {
-        while (true) {
-            try {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-                String line = reader.readLine() + Constant.DELIMITER;
+    private void send() throws Exception {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-                client.writeAndFlush(line);
+        while (StringUtil.isBlank(SessionUtil.getUserId(client))) {
+            System.out.println("请先登录哦，格式：用户名,密码");
+            try {
+                String line = reader.readLine();
+
+                // 发送登录请求
+                Command command = new LoginCommand(client);
+                command.execute(line);
+
+                Thread.sleep(2000);
 
             }catch (Exception e) {
                 e.printStackTrace();
             }
         }
+
+
+        String line = "";
+        while(!"exit".equals(line = reader.readLine())) {
+            Command command = new SingleChatCommand(client);
+            command.execute(line);
+        }
+
+        System.out.println("ByeBye");
+
     }
 }
