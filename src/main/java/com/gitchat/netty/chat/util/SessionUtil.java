@@ -8,6 +8,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public final class SessionUtil {
 
+    private SessionUtil(){}
+
     // <userId, Channel>
     private static final Map<String, Channel> CHANNELS = new ConcurrentHashMap<>();
 
